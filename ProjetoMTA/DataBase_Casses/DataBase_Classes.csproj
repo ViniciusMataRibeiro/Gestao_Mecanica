@@ -1,9 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>DataBase_Classes</AssemblyName>
-    <RootNamespace>DataBase_Classes</RootNamespace>
-  </PropertyGroup>
-
-</Project>

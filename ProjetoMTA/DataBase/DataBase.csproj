@@ -53,21 +53,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ThemeColor.cs" />
-    <Compile Include="Forms\FormCadastroProduto.cs">
+    <Compile Include="FormsBase\FormCadastroBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormCadastroProduto.Designer.cs">
-      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
+    <Compile Include="FormsBase\FormCadastroBase.Designer.cs">
+      <DependentUpon>FormCadastroBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBase\FormConsultaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsBase\FormConsultaBase.Designer.cs">
+      <DependentUpon>FormConsultaBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\FormCadastroProduto.resx">
-      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
