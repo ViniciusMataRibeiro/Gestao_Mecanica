@@ -1,7 +1,7 @@
 ﻿
-namespace DataBase.FormsBase
+namespace ProjetoMTA.UI.Base
 {
-    partial class FormConsultaBase
+    partial class FormCadastroBase
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace DataBase.FormsBase
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormConsulta";
+            this.Text = "FormCadastroBase";
         }
 
         #endregion

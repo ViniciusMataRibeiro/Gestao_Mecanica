@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataBase.UI.Cadastro.Cliente
+namespace ProjetoMTA.UI.Cadastro.Cliente
 {
     public partial class ClienteCadastro : Form
     {

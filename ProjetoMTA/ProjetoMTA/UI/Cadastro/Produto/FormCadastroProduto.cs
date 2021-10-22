@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataBase.Forms
+namespace ProjetoMTA.UI.Cadastro.Produto
 {
     public partial class FormCadastroProduto : Form
     {

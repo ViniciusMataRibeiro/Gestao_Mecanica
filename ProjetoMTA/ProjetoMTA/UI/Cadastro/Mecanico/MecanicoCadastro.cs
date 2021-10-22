@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataBase.UI.Cadastro.Mecanico
+namespace ProjetoMTA.UI.Cadastro.Mecanico
 {
     public partial class MecanicoCadastro : Form
     {

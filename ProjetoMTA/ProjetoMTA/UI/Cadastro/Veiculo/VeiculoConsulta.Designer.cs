@@ -1,5 +1,5 @@
 ﻿
-namespace DataBase.UI.Cadastro.Veiculo
+namespace ProjetoMTA.UI.Cadastro.Veiculo
 {
     partial class VeiculoConsulta
     {

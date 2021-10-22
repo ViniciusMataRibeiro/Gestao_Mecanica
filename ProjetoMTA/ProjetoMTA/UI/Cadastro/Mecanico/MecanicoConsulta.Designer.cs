@@ -1,5 +1,5 @@
 ﻿
-namespace DataBase.UI.Cadastro
+namespace ProjetoMTA.UI.Cadastro.Mecanico
 {
     partial class MecanicoConsulta
     {

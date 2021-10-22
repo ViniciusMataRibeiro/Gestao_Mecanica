@@ -53,18 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ThemeColor.cs" />
-    <Compile Include="FormsBase\FormCadastroBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsBase\FormCadastroBase.Designer.cs">
-      <DependentUpon>FormCadastroBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormsBase\FormConsultaBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsBase\FormConsultaBase.Designer.cs">
-      <DependentUpon>FormConsultaBase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

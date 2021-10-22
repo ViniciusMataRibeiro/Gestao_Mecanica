@@ -1,5 +1,5 @@
 ﻿
-namespace DataBase.UI.Produto
+namespace ProjetoMTA.UI.Cadastro.Produto
 {
     partial class ConsultaProduto
     {

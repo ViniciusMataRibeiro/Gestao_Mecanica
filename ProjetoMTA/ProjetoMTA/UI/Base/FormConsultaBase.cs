@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataBase.FormsBase
+namespace ProjetoMTA.UI.Base
 {
     public partial class FormConsultaBase : Form
     {

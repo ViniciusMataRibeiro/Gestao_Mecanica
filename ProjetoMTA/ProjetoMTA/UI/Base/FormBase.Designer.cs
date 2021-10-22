@@ -1,7 +1,6 @@
-﻿
-namespace DataBase.FormsBase
+﻿namespace ProjetoMTA.UI.Base
 {
-    partial class FormCadastroBase
+    partial class FormBase
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +28,19 @@ namespace DataBase.FormsBase
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // FormBase
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormCadastroBase";
+            this.ClientSize = new System.Drawing.Size(601, 344);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormBase";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
