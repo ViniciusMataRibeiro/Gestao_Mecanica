@@ -1,7 +1,6 @@
-﻿
-namespace ProjetoMTA.UI.Cadastro.Produto
+﻿namespace ProjetoMTA.Base
 {
-    partial class FormCadastroProduto
+    partial class FormBaseCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +30,15 @@ namespace ProjetoMTA.UI.Cadastro.Produto
         {
             this.SuspendLayout();
             // 
-            // FormCadastroProduto
+            // FormBaseCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormCadastroProduto";
-            this.Text = "FormCadastroProduto";
+            this.Name = "FormBaseCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "FormBaseCadastro";
             this.ResumeLayout(false);
 
         }

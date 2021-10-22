@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoMTA.UI.Base
+namespace ProjetoMTA.Base
 {
-    public partial class FormBase : Form
+    public partial class FormBaseConsulta : Form
     {
-        public FormBase()
+        public FormBaseConsulta()
         {
             InitializeComponent();
         }
@@ -23,18 +23,10 @@ namespace ProjetoMTA.UI.Base
             OficinaMessageBox.Show(x, titulo);
         }
 
-        public static T DirectCast<T>(object o, Type type) where T : class
+        public void SetDadosGrid<T>(DataGridView grid, List<T> lista)
         {
-            if (!(type.IsInstanceOfType(o)))
-            {
-                throw new ArgumentException();
-            }
-            T value = o as T;
-            if (value == null && o != null)
-            {
-                throw new InvalidCastException();
-            }
-            return value;
+            bindingSource.DataSource = lista;
+            //grid.CurrentRow = null;
         }
     }
 }

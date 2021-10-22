@@ -57,6 +57,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\FormBaseCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FormBaseCadastro.Designer.cs">
+      <DependentUpon>FormBaseCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormBaseConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FormBaseConsulta.Designer.cs">
+      <DependentUpon>FormBaseConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\OficinaGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\OficinaMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,72 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Base\FormBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Base\FormBase.Designer.cs">
-      <DependentUpon>FormBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Base\FormCadastroBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Base\FormCadastroBase.Designer.cs">
-      <DependentUpon>FormCadastroBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Base\FormConsultaBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Base\FormConsultaBase.Designer.cs">
-      <DependentUpon>FormConsultaBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Cliente\ClienteCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Cliente\ClienteCadastro.Designer.cs">
-      <DependentUpon>ClienteCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Cliente\ClienteConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Cliente\ClienteConsulta.Designer.cs">
-      <DependentUpon>ClienteConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Mecanico\MecanicoCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Mecanico\MecanicoCadastro.Designer.cs">
-      <DependentUpon>MecanicoCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Mecanico\MecanicoConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Mecanico\MecanicoConsulta.Designer.cs">
-      <DependentUpon>MecanicoConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Produto\ConsultaProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Produto\ConsultaProduto.Designer.cs">
-      <DependentUpon>ConsultaProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Produto\FormCadastroProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Produto\FormCadastroProduto.Designer.cs">
-      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Veiculo\VeiculoCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Veiculo\VeiculoCadastro.Designer.cs">
-      <DependentUpon>VeiculoCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cadastro\Veiculo\VeiculoConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Cadastro\Veiculo\VeiculoConsulta.Designer.cs">
-      <DependentUpon>VeiculoConsulta.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Base\FormBaseCadastro.resx">
+      <DependentUpon>FormBaseCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormBaseConsulta.resx">
+      <DependentUpon>FormBaseConsulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,15 +102,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Base\FormBase.resx">
-      <DependentUpon>FormBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cadastro\Produto\ConsultaProduto.resx">
-      <DependentUpon>ConsultaProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cadastro\Produto\FormCadastroProduto.resx">
-      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

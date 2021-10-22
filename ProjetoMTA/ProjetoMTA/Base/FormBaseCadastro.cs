@@ -1,5 +1,4 @@
 ﻿using ProjetoMTA.Components;
-using ProjetoMTA.UI.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,17 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoMTA.UI.Base
+namespace ProjetoMTA.Base
 {
-    public partial class FormCadastroBase : FormBase
+    public partial class FormBaseCadastro : Form
     {
-        public FormCadastroBase()
+        public bool Gravou { get; set; }
+        public bool CriarNovo { get; set; }
+
+        public FormBaseCadastro()
         {
             InitializeComponent();
         }
-        
-        public bool Gravou { get; set; }
-        public bool CriarNovo { get; set; }
+
+        public void DisplayMessage(string x, string titulo = "Alerta", OFIcon icon = OFIcon.Application)
+        {
+            OficinaMessageBox.Show(x, titulo);
+        }
+
 
         private void FormBaseCadastro_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
