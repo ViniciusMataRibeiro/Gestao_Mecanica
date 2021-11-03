@@ -111,6 +111,7 @@ namespace ProjetoMTA
             // 
             // btCliente
             // 
+            this.btCliente.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btCliente.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btCliente, "btCliente");
             this.btCliente.Name = "btCliente";
@@ -119,6 +120,7 @@ namespace ProjetoMTA
             // 
             // btMecanico
             // 
+            this.btMecanico.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btMecanico.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btMecanico, "btMecanico");
             this.btMecanico.Name = "btMecanico";
@@ -127,6 +129,7 @@ namespace ProjetoMTA
             // 
             // btProduto
             // 
+            this.btProduto.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btProduto.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btProduto, "btProduto");
             this.btProduto.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -137,6 +140,7 @@ namespace ProjetoMTA
             // btRelatorio
             // 
             resources.ApplyResources(this.btRelatorio, "btRelatorio");
+            this.btRelatorio.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btRelatorio.FlatAppearance.BorderSize = 0;
             this.btRelatorio.Name = "btRelatorio";
             this.btRelatorio.UseVisualStyleBackColor = true;
@@ -144,6 +148,7 @@ namespace ProjetoMTA
             // btServico
             // 
             resources.ApplyResources(this.btServico, "btServico");
+            this.btServico.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btServico.FlatAppearance.BorderSize = 0;
             this.btServico.Name = "btServico";
             this.btServico.UseVisualStyleBackColor = true;
@@ -152,6 +157,7 @@ namespace ProjetoMTA
             // BtCadastro
             // 
             resources.ApplyResources(this.BtCadastro, "BtCadastro");
+            this.BtCadastro.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.BtCadastro.FlatAppearance.BorderSize = 0;
             this.BtCadastro.Name = "BtCadastro";
             this.BtCadastro.UseVisualStyleBackColor = true;
@@ -160,6 +166,7 @@ namespace ProjetoMTA
             // btvoltar
             // 
             resources.ApplyResources(this.btvoltar, "btvoltar");
+            this.btvoltar.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btvoltar.FlatAppearance.BorderSize = 0;
             this.btvoltar.Image = global::ProjetoMTA.Properties.Resources.arrow_left_icon;
             this.btvoltar.Name = "btvoltar";

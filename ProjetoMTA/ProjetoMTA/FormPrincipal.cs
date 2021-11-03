@@ -1,4 +1,5 @@
 ﻿using DataBase.Classes;
+using ProjetoMTA.Base;
 using ProjetoMTA.Components;
 using System;
 using System.Drawing;
@@ -183,7 +184,6 @@ namespace ProjetoMTA
 
         private void btCadastro_Click(object sender, EventArgs e)
         {
-            OficinaMessageBox.Show("Teste", "Titulo Teste");
             Checket = true;
             FormataButton(Checket, 1);
         }

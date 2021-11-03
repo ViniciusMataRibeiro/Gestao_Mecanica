@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="metroLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
     <value>metroLabel1</value>
   </data>
@@ -144,6 +133,7 @@
   <data name="metroPanelLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="metroPanelLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -153,6 +143,7 @@
   <data name="metroPanelLogo.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 117</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="metroPanelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -167,6 +158,27 @@
   </data>
   <data name="&gt;&gt;metroPanelLogo.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="metroLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
+    <value>metroLabel1</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Parent" xml:space="preserve">
+    <value>metroPanelLogo</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="metroPanel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +196,7 @@
     <value>1, 474</value>
   </data>
   <data name="btCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 78</value>
+    <value>168, 78</value>
   </data>
   <data name="btCliente.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -208,7 +220,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btCliente.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="btMecanico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -220,10 +232,10 @@
     <value>NoControl</value>
   </data>
   <data name="btMecanico.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 426</value>
+    <value>1, 423</value>
   </data>
   <data name="btMecanico.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 78</value>
+    <value>168, 78</value>
   </data>
   <data name="btMecanico.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -247,7 +259,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btMecanico.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="btProduto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -259,10 +271,10 @@
     <value>NoControl</value>
   </data>
   <data name="btProduto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 381</value>
+    <value>1, 378</value>
   </data>
   <data name="btProduto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 78</value>
+    <value>168, 78</value>
   </data>
   <data name="btProduto.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -286,7 +298,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btProduto.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="btRelatorio.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -325,7 +337,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btRelatorio.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="btServico.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -364,7 +376,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btServico.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="BtCadastro.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -403,7 +415,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;BtCadastro.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="btvoltar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -439,7 +451,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btvoltar.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="metroPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>

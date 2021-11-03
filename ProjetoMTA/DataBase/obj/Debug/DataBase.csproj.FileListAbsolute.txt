@@ -34,3 +34,13 @@ C:\Users\vinim\Google Drive\Faculdade\4ª Periodo\Projeto_Integrador\ProjetoMTA\
 C:\Users\vinim\Google Drive\Faculdade\4ª Periodo\Projeto_Integrador\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CopyComplete
 C:\Users\vinim\Google Drive\Faculdade\4ª Periodo\Projeto_Integrador\ProjetoMTA\DataBase\obj\Debug\DataBase.dll
 C:\Users\vinim\Google Drive\Faculdade\4ª Periodo\Projeto_Integrador\ProjetoMTA\DataBase\obj\Debug\DataBase.pdb
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\DataBase.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\DataBase.pdb
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.Design.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CopyComplete
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.pdb
