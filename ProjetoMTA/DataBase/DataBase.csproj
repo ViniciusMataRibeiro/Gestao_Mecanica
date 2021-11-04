@@ -53,13 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ThemeColor.cs" />
+    <Compile Include="Dto\ClienteDto.cs" />
+    <Compile Include="Dto\MecanicoDto.cs" />
+    <Compile Include="Dto\ProdutoDto.cs" />
+    <Compile Include="Dto\Produto_Servico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dto\ServicoDto.cs" />
+    <Compile Include="Dto\VeiculoDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
