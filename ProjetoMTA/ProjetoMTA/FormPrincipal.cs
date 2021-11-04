@@ -1,6 +1,7 @@
 ﻿using DataBase.Classes;
 using ProjetoMTA.Base;
 using ProjetoMTA.Components;
+using ProjetoMTA.UI.Produto;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -196,6 +197,7 @@ namespace ProjetoMTA
         {
             ActivateButton(sender);
             btClose.Visible = true;
+            openChildForm(new ProdutoConsulta(), sender);
         }
 
         private void btMecanico_Click(object sender, EventArgs e)

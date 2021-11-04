@@ -64,4 +64,4 @@ C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\Proje
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.pdb
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.Base.FormBaseCadastro.resources
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.Base.FormBaseConsulta.resources
-C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Produto.ProdutoConsulta.resources

@@ -17,5 +17,27 @@ namespace ProjetoMTA.UI.Produto
         {
             InitializeComponent();
         }
+
+        private void ProdutoConsulta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtIncluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
