@@ -39,7 +39,6 @@ C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\DataBas
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.Design.dll
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.dll
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CopyComplete
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.dll
