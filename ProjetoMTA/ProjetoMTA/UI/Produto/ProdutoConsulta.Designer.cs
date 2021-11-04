@@ -182,10 +182,13 @@ namespace ProjetoMTA.UI.Produto
             this.Name = "ProdutoConsulta";
             this.Text = "ProdutoConsulta";
             this.Load += new System.EventHandler(this.ProdutoConsulta_Load);
+            this.Controls.SetChildIndex(this.PainelOpcao, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.PainelOpcao.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
