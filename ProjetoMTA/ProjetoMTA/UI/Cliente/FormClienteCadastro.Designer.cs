@@ -272,8 +272,9 @@
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
             this.btGravarContinuar.TabIndex = 44;
-            this.btGravarContinuar.Text = "Gravar e Continuar";
+            this.btGravarContinuar.Text = "Gravar e Criar Novo";
             this.btGravarContinuar.UseSelectable = true;
+            this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
             // 
             // BtGravar
             // 
@@ -283,6 +284,7 @@
             this.BtGravar.TabIndex = 43;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
+            this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
             // 
             // btCancelar
             // 
@@ -294,6 +296,7 @@
             this.btCancelar.TabIndex = 42;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // FormClienteCadastro
             // 
