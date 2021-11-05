@@ -28,5 +28,15 @@ namespace ProjetoMTA.Base
             bindingSource.DataSource = lista;
             //grid.CurrentRow = null;
         }
+
+        public void InitGridBaseConsulta<T>(DataGridView grid)
+        {
+            bindingSource.DataSource = new List<T>();
+        }
+
+        private void BindingSource_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
+        {
+            lblTotalRegistro.Text = bindingSource.Count + @" itens";
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class ClienteDto
+    public class ClienteDto
     {
         public int IdCliente { get; set; }
         public string NomeCliente { get; set; }

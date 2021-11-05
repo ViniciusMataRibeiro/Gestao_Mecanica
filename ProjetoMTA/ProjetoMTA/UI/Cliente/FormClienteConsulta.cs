@@ -1,4 +1,5 @@
-﻿using ProjetoMTA.Base;
+﻿using DataBase;
+using ProjetoMTA.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,32 @@ namespace ProjetoMTA.UI.Cliente
 {
     public partial class FormClienteConsulta : FormBaseConsulta
     {
+        public List<ClienteDto> a { get; set; }
         public FormClienteConsulta()
         {
             InitializeComponent();
+            a = new List<ClienteDto>();
+            InitGridBaseConsulta<ClienteDto>(Grid);
+        }
+
+        private void FormClienteConsulta_Load(object sender, EventArgs e)
+        {
+            ClienteDto Ob = new ClienteDto();
+            Ob.NomeCliente = "VInicius";
+            Ob.CPF = "15222569624";
+            Ob.Telefone = "35999086268";
+            
+            a.Add(Ob);
+
+            Ob = new ClienteDto();
+            Ob.NomeCliente = "VInicius";
+            Ob.CPF = "15222569624";
+            Ob.Telefone = "35999086268";
+            a.Add(Ob);
+            SetDadosGrid(Grid, a);
+            Grid.DataSource = a;
+
+            //var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
         }
 
         private void BtIncluir_Click(object sender, EventArgs e)
@@ -31,11 +55,6 @@ namespace ProjetoMTA.UI.Cliente
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormClienteConsulta_Load(object sender, EventArgs e)
         {
 
         }
