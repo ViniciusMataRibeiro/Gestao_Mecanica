@@ -34,9 +34,10 @@ namespace ProjetoMTA.UI.Cliente
             Ob = new ClienteDto();
             Ob.NomeCliente = "VInicius";
             Ob.CPF = "15222569624";
-            Ob.Telefone = "35999086268";
+            Ob.Telefone = "asd";
             a.Add(Ob);
             SetDadosGrid(Grid, a);
+            Grid.DataSource = new List<ClienteDto>();
             Grid.DataSource = a;
 
             //var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
