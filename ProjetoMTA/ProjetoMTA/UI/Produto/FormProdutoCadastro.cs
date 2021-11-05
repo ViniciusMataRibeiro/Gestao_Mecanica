@@ -23,5 +23,11 @@ namespace ProjetoMTA.UI.Produto
         {
 
         }
+
+        private void txtObservacao_TextChanged(object sender, EventArgs e)
+        {
+            var contagem = txtObservacao.Text.Count();
+            lblContagemObservacao.Text = contagem.ToString("000") + "/200";
+        }
     }
 }

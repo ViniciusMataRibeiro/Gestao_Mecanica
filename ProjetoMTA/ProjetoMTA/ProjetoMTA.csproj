@@ -83,6 +83,12 @@
     <Compile Include="Components\OficinaMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Components\OFTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\OFTextBox.Designer.cs">
+      <DependentUpon>OFTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Base\FormBaseConsulta.resx">
       <DependentUpon>FormBaseConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\OFTextBox.resx">
+      <DependentUpon>OFTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

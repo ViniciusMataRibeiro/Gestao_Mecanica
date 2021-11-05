@@ -12,6 +12,6 @@ namespace DataBase
         public int IdProduto { get; set; }
         public int IdServico { get; set; }
         public int QuantidadePecas { get; set; }
-        public float ValorProduto { get; set; }
+        public decimal ValorProduto { get; set; }
     }
 }

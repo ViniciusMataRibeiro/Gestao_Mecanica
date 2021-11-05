@@ -12,9 +12,9 @@ namespace DataBase
         public int IdMercanico { get; set; }
         public int IdVeiculo { get; set; }
         public DateTime DataManutencao { get; set; }
-        public float ValorMaoDeObra { get; set; }
-        public float ValorTotal { get; set; }
-        public float ValorPago { get; set; }
+        public decimal ValorMaoDeObra { get; set; }
+        public decimal ValorTotal { get; set; }
+        public decimal ValorPago { get; set; }
 
     }
 }
