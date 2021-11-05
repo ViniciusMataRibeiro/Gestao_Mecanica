@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoMTA.Components
 {
-    public class OficinaGrid : DataGridView
+    public class OficinaGrid : MetroFramework.Controls.MetroGrid
     {
         public BindingSource BindingSource { get; set; }
 

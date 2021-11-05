@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3308019d-4009-4c7b-a31e-c557679587ad": {
+      "ProjectGuid": "3308019d-4009-4c7b-a31e-c557679587ad",
+      "DisplayName": "DataBase",
+      "ColorIndex": 0
+    },
+    "a37d9d10-93b8-4d71-9c4b-1b9797ebdd62": {
+      "ProjectGuid": "a37d9d10-93b8-4d71-9c4b-1b9797ebdd62",
+      "DisplayName": "ProjetoMTA",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -34,11 +34,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(544, 314);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBaseCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormBaseCadastro";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormBaseCadastro_FormClosing);
             this.ResumeLayout(false);
 
         }

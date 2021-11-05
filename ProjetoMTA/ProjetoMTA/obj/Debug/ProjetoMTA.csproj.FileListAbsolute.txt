@@ -64,9 +64,14 @@ C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\Proje
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.pdb
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.Base.FormBaseCadastro.resources
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.Base.FormBaseConsulta.resources
-C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Produto.ProdutoConsulta.resources
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\bin\Debug\Dapper.Contrib.dll
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\bin\Debug\Dapper.dll
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\bin\Debug\Dapper.xml
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\bin\Debug\Dapper.Contrib.xml
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.csproj.SuggestedBindingRedirects.cache
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Produto.FormProdutoCadastro.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Produto.FormProdutoConsulta.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Mecanico.FormMecanicoCadastro.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Mecanico.FormMecanicoConsulta.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Cliente.FormClienteCadastro.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Cliente.FormClienteConsulta.resources

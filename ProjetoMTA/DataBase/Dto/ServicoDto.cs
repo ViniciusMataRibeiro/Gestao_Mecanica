@@ -16,6 +16,5 @@ namespace DataBase
         public float ValorTotal { get; set; }
         public float ValorPago { get; set; }
 
-        public Servico() { }
     }
 }

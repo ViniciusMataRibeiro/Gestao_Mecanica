@@ -9,28 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoMTA.UI.Produto
+namespace ProjetoMTA.UI.Cliente
 {
-    public partial class ProdutoConsulta : FormBaseConsulta
+    public partial class FormClienteConsulta : FormBaseConsulta
     {
-        public ProdutoConsulta()
+        public FormClienteConsulta()
         {
             InitializeComponent();
         }
 
-        private void ProdutoConsulta_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtIncluir_Click(object sender, EventArgs e)
         {
-
+            FormClienteCadastro FCC = new FormClienteCadastro("incluir");
+            FCC.ShowDialog();
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-
+            FormClienteCadastro FCC = new FormClienteCadastro("Alterar");
+            FCC.ShowDialog();
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
@@ -38,6 +35,9 @@ namespace ProjetoMTA.UI.Produto
 
         }
 
-        
+        private void FormClienteConsulta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

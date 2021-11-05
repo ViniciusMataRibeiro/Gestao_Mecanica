@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProjetoMTA.Base
 {
-    public partial class FormBaseCadastro : Form
+    public partial class FormBaseCadastro : MetroFramework.Forms.MetroForm
     {
         public bool Gravou { get; set; }
         public bool CriarNovo { get; set; }

@@ -1,6 +1,8 @@
 ﻿using DataBase.Classes;
 using ProjetoMTA.Base;
 using ProjetoMTA.Components;
+using ProjetoMTA.UI.Cliente;
+using ProjetoMTA.UI.Mecanico;
 using ProjetoMTA.UI.Produto;
 using System;
 using System.Drawing;
@@ -197,13 +199,14 @@ namespace ProjetoMTA
         {
             ActivateButton(sender);
             btClose.Visible = true;
-            openChildForm(new ProdutoConsulta(), sender);
+            openChildForm(new FormProdutoConsulta(), sender);
         }
 
         private void btMecanico_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             btClose.Visible = true;
+            openChildForm(new FormMecanicoConsulta(), sender);
 
         }
 
@@ -211,7 +214,7 @@ namespace ProjetoMTA
         {
             ActivateButton(sender);
             btClose.Visible = true;
-
+            openChildForm(new FormClienteConsulta(), sender);
         }
         
     }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class ProdutoDto
+    public class ProdutoDto
     {
         public int IdProduto { get; set; }
         public string NomeProduto { get; set; }
         public int Quantidade { get; set; }
         public string TipoProduto { get; set; }
-        public float ValorUni { get; set; }
+        public decimal ValorUni { get; set; }
         public string Descricao { get; set; }
     }
 }
