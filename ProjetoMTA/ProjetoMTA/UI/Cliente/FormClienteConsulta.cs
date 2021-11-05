@@ -15,11 +15,9 @@ namespace ProjetoMTA.UI.Cliente
 {
     public partial class FormClienteConsulta : FormBaseConsulta
     {
-        public List<ClienteDto> a { get; set; }
         public FormClienteConsulta()
         {
             InitializeComponent();
-            a = new List<ClienteDto>();
             InitGridBaseConsulta<ClienteDto>(Grid);
         }
 
