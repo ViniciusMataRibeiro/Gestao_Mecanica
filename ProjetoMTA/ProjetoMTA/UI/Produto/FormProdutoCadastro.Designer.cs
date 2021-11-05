@@ -97,6 +97,7 @@
             this.txtObservacao.SetText = null;
             this.txtObservacao.Size = new System.Drawing.Size(478, 75);
             this.txtObservacao.TabIndex = 42;
+            this.txtObservacao.Text = "OFTextBox";
             this.txtObservacao.Tipo_Controle = ProjetoMTA.Components.OFTextBox.TipoControle.texto;
             this.txtObservacao.TextChanged += new System.EventHandler(this.txtObservacao_TextChanged);
             // 
@@ -224,6 +225,7 @@
             this.btGravarContinuar.TabIndex = 40;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
+            this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
             // 
             // BtGravar
             // 
@@ -233,6 +235,7 @@
             this.BtGravar.TabIndex = 39;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
+            this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
             // 
             // btCancelar
             // 
@@ -244,6 +247,7 @@
             this.btCancelar.TabIndex = 38;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // FormProdutoCadastro
             // 

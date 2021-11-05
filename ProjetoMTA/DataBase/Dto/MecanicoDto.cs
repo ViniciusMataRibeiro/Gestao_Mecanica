@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class MecanicoDto
+    public class MecanicoDto
     {
         public int IdMercanico { get; set; }
         public string NomeMecanico { get; set; }

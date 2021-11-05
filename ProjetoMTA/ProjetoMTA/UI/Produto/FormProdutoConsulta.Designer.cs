@@ -38,12 +38,12 @@ namespace ProjetoMTA.UI.Produto
             this.btAlterar = new System.Windows.Forms.Button();
             this.BtIncluir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.oficinaGrid1 = new ProjetoMTA.Components.OficinaGrid();
-            this.IdProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grid = new MetroFramework.Controls.MetroGrid();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PainelOpcao.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.oficinaGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // PainelOpcao
@@ -123,23 +123,22 @@ namespace ProjetoMTA.UI.Produto
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.oficinaGrid1);
+            this.panel1.Controls.Add(this.Grid);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 373);
             this.panel1.TabIndex = 2;
             // 
-            // oficinaGrid1
+            // Grid
             // 
-            this.oficinaGrid1.AllowUserToAddRows = false;
-            this.oficinaGrid1.AllowUserToDeleteRows = false;
-            this.oficinaGrid1.AllowUserToResizeRows = false;
-            this.oficinaGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.oficinaGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.oficinaGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.oficinaGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.oficinaGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AllowUserToResizeRows = false;
+            this.Grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -147,11 +146,8 @@ namespace ProjetoMTA.UI.Produto
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.oficinaGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.oficinaGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.oficinaGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdProduto,
-            this.NomeProduto});
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -159,15 +155,15 @@ namespace ProjetoMTA.UI.Produto
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.oficinaGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.oficinaGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.oficinaGrid1.EnableHeadersVisualStyles = false;
-            this.oficinaGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.oficinaGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.oficinaGrid1.Location = new System.Drawing.Point(0, 0);
-            this.oficinaGrid1.Name = "oficinaGrid1";
-            this.oficinaGrid1.ReadOnly = true;
-            this.oficinaGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Grid.Location = new System.Drawing.Point(0, 0);
+            this.Grid.Name = "Grid";
+            this.Grid.ReadOnly = true;
+            this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -175,25 +171,13 @@ namespace ProjetoMTA.UI.Produto
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.oficinaGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.oficinaGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.oficinaGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.oficinaGrid1.Size = new System.Drawing.Size(800, 373);
-            this.oficinaGrid1.TabIndex = 0;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(800, 373);
+            this.Grid.TabIndex = 0;
             // 
-            // IdProduto
-            // 
-            this.IdProduto.HeaderText = "Id";
-            this.IdProduto.Name = "IdProduto";
-            this.IdProduto.ReadOnly = true;
-            // 
-            // NomeProduto
-            // 
-            this.NomeProduto.HeaderText = "Nome";
-            this.NomeProduto.Name = "NomeProduto";
-            this.NomeProduto.ReadOnly = true;
-            // 
-            // ProdutoConsulta
+            // FormProdutoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,14 +185,15 @@ namespace ProjetoMTA.UI.Produto
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PainelOpcao);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "ProdutoConsulta";
+            this.Name = "FormProdutoConsulta";
             this.Text = "ProdutoConsulta";
             this.Load += new System.EventHandler(this.ProdutoConsulta_Load);
             this.Controls.SetChildIndex(this.PainelOpcao, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.PainelOpcao.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.oficinaGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,8 +206,7 @@ namespace ProjetoMTA.UI.Produto
         public System.Windows.Forms.Button btAlterar;
         public System.Windows.Forms.Button BtIncluir;
         private System.Windows.Forms.Panel panel1;
-        private Components.OficinaGrid oficinaGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
+        private MetroFramework.Controls.MetroGrid Grid;
+        private System.Windows.Forms.BindingSource bindingSource;
     }
 }

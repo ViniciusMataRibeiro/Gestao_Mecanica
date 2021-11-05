@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class VeiculoDto
+    public class VeiculoDto
     {
         public int IdVeiculo { get; set; }
         public int IdCliente { get; set; }

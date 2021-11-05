@@ -17,6 +17,7 @@ namespace ProjetoMTA.UI.Cliente
     {
         public ClienteDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
+
         public FormClienteCadastro(string Status, ClienteDto dto)
         {
             InitializeComponent();

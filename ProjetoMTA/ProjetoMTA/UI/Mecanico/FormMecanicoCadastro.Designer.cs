@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
-            this.BtGravar = new MetroFramework.Controls.MetroButton();
-            this.btCancelar = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
+            this.BtGravar = new MetroFramework.Controls.MetroButton();
+            this.btCancelar = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,35 +55,6 @@
             this.groupBox1.Size = new System.Drawing.Size(363, 160);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // btGravarContinuar
-            // 
-            this.btGravarContinuar.Location = new System.Drawing.Point(20, 226);
-            this.btGravarContinuar.Name = "btGravarContinuar";
-            this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 43;
-            this.btGravarContinuar.Text = "Gravar e Continuar";
-            this.btGravarContinuar.UseSelectable = true;
-            // 
-            // BtGravar
-            // 
-            this.BtGravar.Location = new System.Drawing.Point(159, 226);
-            this.BtGravar.Name = "BtGravar";
-            this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 42;
-            this.BtGravar.Text = "Gravar";
-            this.BtGravar.UseSelectable = true;
-            // 
-            // btCancelar
-            // 
-            this.btCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btCancelar.Location = new System.Drawing.Point(274, 226);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 41;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -172,6 +143,38 @@
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.UseStyleColors = true;
             this.metroLabel3.UseWaitCursor = true;
+            // 
+            // btGravarContinuar
+            // 
+            this.btGravarContinuar.Location = new System.Drawing.Point(20, 226);
+            this.btGravarContinuar.Name = "btGravarContinuar";
+            this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
+            this.btGravarContinuar.TabIndex = 43;
+            this.btGravarContinuar.Text = "Gravar e Continuar";
+            this.btGravarContinuar.UseSelectable = true;
+            this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
+            // 
+            // BtGravar
+            // 
+            this.BtGravar.Location = new System.Drawing.Point(159, 226);
+            this.BtGravar.Name = "BtGravar";
+            this.BtGravar.Size = new System.Drawing.Size(109, 45);
+            this.BtGravar.TabIndex = 42;
+            this.BtGravar.Text = "Gravar";
+            this.BtGravar.UseSelectable = true;
+            this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btCancelar.ForeColor = System.Drawing.Color.Transparent;
+            this.btCancelar.Location = new System.Drawing.Point(274, 226);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(109, 45);
+            this.btCancelar.TabIndex = 41;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseSelectable = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // FormMecanicoCadastro
             // 
