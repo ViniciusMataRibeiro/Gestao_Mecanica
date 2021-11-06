@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="metroLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
     <value>metroLabel1</value>
   </data>
@@ -133,7 +144,6 @@
   <data name="metroPanelLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="metroPanelLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -143,7 +153,6 @@
   <data name="metroPanelLogo.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 117</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="metroPanelLogo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -158,27 +167,6 @@
   </data>
   <data name="&gt;&gt;metroPanelLogo.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="metroLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="metroLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
-    <value>metroLabel1</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.Parent" xml:space="preserve">
-    <value>metroPanelLogo</value>
-  </data>
-  <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="metroPanel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,7 +208,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btCliente.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="btMecanico.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -259,7 +247,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btMecanico.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btProduto.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -298,7 +286,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btProduto.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btRelatorio.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -337,7 +325,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btRelatorio.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btServico.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -376,7 +364,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btServico.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="BtCadastro.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -415,7 +403,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;BtCadastro.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="btvoltar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -451,7 +439,7 @@
     <value>metroPanel1</value>
   </data>
   <data name="&gt;&gt;btvoltar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="metroPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -475,126 +463,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroPanel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panelTitulo</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btClose.Name" xml:space="preserve">
-    <value>btClose</value>
-  </data>
-  <data name="&gt;&gt;btClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btClose.Parent" xml:space="preserve">
-    <value>panelTitulo</value>
-  </data>
-  <data name="&gt;&gt;btClose.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;metrolblTitulo.Name" xml:space="preserve">
-    <value>metrolblTitulo</value>
-  </data>
-  <data name="&gt;&gt;metrolblTitulo.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metrolblTitulo.Parent" xml:space="preserve">
-    <value>panelTitulo</value>
-  </data>
-  <data name="&gt;&gt;metrolblTitulo.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panelTitulo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panelTitulo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 0</value>
-  </data>
-  <data name="panelTitulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 74</value>
-  </data>
-  <data name="panelTitulo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelTitulo.Name" xml:space="preserve">
-    <value>panelTitulo</value>
-  </data>
-  <data name="&gt;&gt;panelTitulo.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;panelTitulo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelTitulo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btMaximizar.Name" xml:space="preserve">
-    <value>btMaximizar</value>
-  </data>
-  <data name="&gt;&gt;btMaximizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btMaximizar.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btMaximizar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btCloseForm.Name" xml:space="preserve">
-    <value>btCloseForm</value>
-  </data>
-  <data name="&gt;&gt;btCloseForm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btCloseForm.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btCloseForm.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btMinimizar.Name" xml:space="preserve">
-    <value>btMinimizar</value>
-  </data>
-  <data name="&gt;&gt;btMinimizar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btMinimizar.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btMinimizar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 0</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 74</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panelTitulo</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="btMaximizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -705,6 +573,30 @@
   <data name="&gt;&gt;btMinimizar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>895, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 74</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>panelTitulo</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btClose.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -714,7 +606,7 @@
   <data name="btClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAJNJREFUOE+VkUsKwzAMBX2MQLvI7YJVrNBtFPCB0nV3Ta8WlPZBTD6WZmtmZFsh
+        EgAACxIB0t1+/AAAAJNJREFUOE+VkUsKwzAMBX2MQLvI7YJVrNBtFPCB0nV3Ta8WlPZBTD6WZmtmZFsh
         skzdc7gFJ+qoG4hyQyzvrs/t/6xKSvm+OhjsiexkYImcyuAqUpXBUcQsg23ELQONPFhm4vHrlpXf5OFD
         vcyW7RRsr23ZTsHRm82Rqw+rRiy/fRqxyGAX8cigiMQ0vjwyUCeyTAvpC5GiBbaWHAAAAABJRU5ErkJg
         gg==
@@ -776,6 +668,30 @@
   </data>
   <data name="&gt;&gt;metrolblTitulo.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="panelTitulo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 0</value>
+  </data>
+  <data name="panelTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 74</value>
+  </data>
+  <data name="panelTitulo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelTitulo.Name" xml:space="preserve">
+    <value>panelTitulo</value>
+  </data>
+  <data name="&gt;&gt;panelTitulo.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;panelTitulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelTitulo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="PanelDesktop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

@@ -140,6 +140,12 @@
     <Compile Include="UI\Produto\FormProdutoConsulta.Designer.cs">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Veiculo\FormVeiculocadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Veiculo\FormVeiculocadastro.Designer.cs">
+      <DependentUpon>FormVeiculocadastro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Base\FormBaseCadastro.resx">
       <DependentUpon>FormBaseCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="UI\Produto\FormProdutoConsulta.resx">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Veiculo\FormVeiculocadastro.resx">
+      <DependentUpon>FormVeiculocadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,5 +225,14 @@
     <None Include="Resources\Delete_32.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Menu_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pessoa_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

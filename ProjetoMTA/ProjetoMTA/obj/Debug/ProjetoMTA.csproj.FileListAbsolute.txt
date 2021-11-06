@@ -76,3 +76,4 @@ C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\Proje
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Cliente.FormClienteCadastro.resources
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Cliente.FormClienteConsulta.resources
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.Components.OFTextBox.resources
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\ProjetoMTA\obj\Debug\ProjetoMTA.UI.Veiculo.FormVeiculocadastro.resources

@@ -1,6 +1,7 @@
 ﻿using DataBase;
 using ProjetoMTA.Base;
 using ProjetoMTA.Components;
+using ProjetoMTA.UI.Veiculo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,18 +17,20 @@ namespace ProjetoMTA.UI.Cliente
     public partial class FormClienteConsulta : FormBaseConsulta
     {
         ClienteDto clientedto;
+        VeiculoDto veiculoDto;
         public FormClienteConsulta()
         {
             InitializeComponent();
             InitGridBaseConsulta<ClienteDto>(Grid);
+            InitGridBaseConsulta<VeiculoDto>(GridVeiculo);
         }
 
         private  void FormClienteConsulta_Load(object sender, EventArgs e)
         {
-            CarregarGrid();
+            CarregarGridCliente();
         }
 
-        private void CarregarGrid()
+        private void CarregarGridCliente()
         {
             clientedto = new ClienteDto();
             var Result = clientedto.GetAll();
@@ -36,57 +39,124 @@ namespace ProjetoMTA.UI.Cliente
                 Grid.DataSource = Result;
             }
         }
-
+        private void CarregarGridVeiculo()
+        {
+            veiculoDto = new VeiculoDto();
+            var Result = veiculoDto.GetAll();
+            if (Result != null)
+            {
+                GridVeiculo.DataSource = Result;
+            }
+        }
         private void BtIncluir_Click(object sender, EventArgs e)
         {
-            AdicionarDado();
+            if (btOpcao.Text == "   Veiculos")
+            {
+                AdicionarDado();
+            }
+            else
+            {
+                AdicionarDadoVeiculo();
+            }
         }
 
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-            var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
-            if (obj == null) return;
+            if (btOpcao.Text == "   Veiculos")
+            {
+                var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
+                if (obj == null) return;
 
-            FormClienteCadastro frm = new FormClienteCadastro("Alterar", obj);
-            frm.ShowDialog();
-            if (frm.ErroAoGravar) CarregarGrid();
+                FormClienteCadastro frm = new FormClienteCadastro("Alterar", obj);
+                frm.ShowDialog();
+                if (frm.ErroAoGravar) CarregarGridCliente();
+                else
+                {
+                    bindingSource.ResetBindings(false);
+                }
+                frm.Dispose();
+            }
             else
             {
-                bindingSource.ResetBindings(false);
+                var obj = (VeiculoDto)GridVeiculo.CurrentRow?.DataBoundItem;
+                if (obj == null) return;
+
+                FormVeiculocadastro frm = new FormVeiculocadastro("Alterar", obj);
+                frm.ShowDialog();
+                if (frm.ErroAoGravar) CarregarGridVeiculo();
+                else
+                {
+                    bindingSourceVeiculo.ResetBindings(false);
+                }
+                frm.Dispose();
             }
-            frm.Dispose();
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-            var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
-            if (obj == null) return;
+            if (btOpcao.Text == "   Veiculos")
+            {
+                var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
+                if (obj == null) return;
 
-            clientedto = new ClienteDto();
+                clientedto = new ClienteDto();
 
-            try
-            {
-                if (OficinaMessageBox.Show("Deseja realmente remover este Cliente?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
-                    return;
-                var deletou = clientedto.Delete(obj.Id);
-                if (deletou)
+                try
                 {
-                    bindingSource.Remove(obj);
-                    DisplayMessage("Equipamento removido com sucesso", "Dado deletado");
+                    if (OficinaMessageBox.Show("Deseja realmente remover este Cliente?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
+                        return;
+                    var deletou = clientedto.Delete(obj.Id);
+                    if (deletou)
+                    {
+                        bindingSource.Remove(obj);
+                        DisplayMessage("Equipamento removido com sucesso", "Dado deletado");
+                    }
+                    else
+                    {
+                        throw new Exception("Não foi possível deletar equipamento");
+                    }
                 }
-                else
+                catch (Exception x)
                 {
-                    throw new Exception("Não foi possível deletar equipamento");
+                    DisplayMessage(x.Message, "Problema ao deletar registro", OFIcon.Warning);
                 }
+                finally
+                {
+                    CarregarGridCliente();
+                }
+
             }
-            catch (Exception x)
+            else
             {
-                DisplayMessage(x.Message, "Problema ao deletar registro", OFIcon.Warning);
-            }
-            finally
-            {
-                CarregarGrid();
+                var obj = (VeiculoDto)GridVeiculo.CurrentRow?.DataBoundItem;
+                if (obj == null) return;
+
+                veiculoDto = new VeiculoDto();
+
+                try
+                {
+                    if (OficinaMessageBox.Show("Deseja realmente remover este Veiculo?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
+                        return;
+                    var deletou = veiculoDto.Delete(obj.Id);
+                    if (deletou)
+                    {
+                        bindingSourceVeiculo.Remove(obj);
+                        DisplayMessage("Veiculo removido com sucesso", "Dado deletado");
+                    }
+                    else
+                    {
+                        throw new Exception("Não foi possível deletar o Veiculo");
+                    }
+                }
+                catch (Exception x)
+                {
+                    DisplayMessage(x.Message, "Problema ao deletar registro", OFIcon.Warning);
+                }
+                finally
+                {
+                    CarregarGridVeiculo();
+                }
             }
         }
 
@@ -101,7 +171,42 @@ namespace ProjetoMTA.UI.Cliente
                 else bindingSource.ResetBindings(false);
             }
             frm.Dispose();
-            CarregarGrid();
+            CarregarGridCliente();
+        }
+        private void AdicionarDadoVeiculo()
+        {
+            FormVeiculocadastro frm = new FormVeiculocadastro("incluir", new VeiculoDto());
+            frm.ShowDialog();
+            if (frm.Gravou)
+            {
+                bindingSourceVeiculo.Add(frm.Dto);
+                if (frm.CriarNovo) AdicionarDado();
+                else bindingSourceVeiculo.ResetBindings(false);
+            }
+            frm.Dispose();
+            CarregarGridVeiculo();
+        }
+
+        private void btOpcao_Click(object sender, EventArgs e)
+        {
+            if (btOpcao.Text == "   Veiculos")
+            {
+                btOpcao.Text = "   Clientes";
+                btOpcao.Image = Properties.Resources.Pessoa_32;
+                Grid.Visible = false;
+                GridVeiculo.Visible = true;
+
+                CarregarGridVeiculo();
+            }
+            else if (btOpcao.Text == "   Clientes")
+            {
+                btOpcao.Text = "   Veiculos";
+                btOpcao.Image = Properties.Resources.Carro_32;
+                Grid.Visible = true;
+                GridVeiculo.Visible = false;
+                CarregarGridCliente();
+            }
+            
         }
     }
 }
