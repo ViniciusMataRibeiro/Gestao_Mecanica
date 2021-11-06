@@ -39,8 +39,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Grid = new MetroFramework.Controls.MetroGrid();
-            this.IdMercanico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeMecanico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PainelOpcao.SuspendLayout();
@@ -150,8 +150,8 @@
             this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdMercanico,
-            this.NomeMecanico,
+            this.Id,
+            this.Nome,
             this.CPF,
             this.Telefone});
             this.Grid.DataSource = this.bindingSource;
@@ -183,21 +183,21 @@
             this.Grid.Size = new System.Drawing.Size(800, 373);
             this.Grid.TabIndex = 4;
             // 
-            // IdMercanico
+            // Id
             // 
-            this.IdMercanico.DataPropertyName = "IdMercanico";
-            this.IdMercanico.FillWeight = 101.5228F;
-            this.IdMercanico.HeaderText = "Id";
-            this.IdMercanico.Name = "IdMercanico";
-            this.IdMercanico.ReadOnly = true;
+            this.Id.DataPropertyName = "Id";
+            this.Id.FillWeight = 101.5228F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
-            // NomeMecanico
+            // Nome
             // 
-            this.NomeMecanico.DataPropertyName = "NomeMecanico";
-            this.NomeMecanico.FillWeight = 99.49239F;
-            this.NomeMecanico.HeaderText = "Nome";
-            this.NomeMecanico.Name = "NomeMecanico";
-            this.NomeMecanico.ReadOnly = true;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.FillWeight = 99.49239F;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
             // CPF
             // 
@@ -247,8 +247,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource bindingSource;
         private MetroFramework.Controls.MetroGrid Grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMercanico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeMecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
     }

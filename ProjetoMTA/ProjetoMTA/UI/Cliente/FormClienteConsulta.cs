@@ -15,20 +15,26 @@ namespace ProjetoMTA.UI.Cliente
 {
     public partial class FormClienteConsulta : FormBaseConsulta
     {
+        ClienteDto clientedto;
         public FormClienteConsulta()
         {
             InitializeComponent();
             InitGridBaseConsulta<ClienteDto>(Grid);
         }
 
-        private async void FormClienteConsulta_Load(object sender, EventArgs e)
+        private  void FormClienteConsulta_Load(object sender, EventArgs e)
         {
-            await CarregarGrid();
+            CarregarGrid();
         }
 
-        private async Task CarregarGrid()
+        private void CarregarGrid()
         {
-            
+            clientedto = new ClienteDto();
+            var Result = clientedto.GetAll();
+            if (Result != null)
+            {
+                Grid.DataSource = Result;
+            }
         }
 
         private void BtIncluir_Click(object sender, EventArgs e)
@@ -37,17 +43,16 @@ namespace ProjetoMTA.UI.Cliente
         }
 
 
-        private async void btAlterar_Click(object sender, EventArgs e)
+        private void btAlterar_Click(object sender, EventArgs e)
         {
             var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
             if (obj == null) return;
 
             FormClienteCadastro frm = new FormClienteCadastro("Alterar", obj);
             frm.ShowDialog();
-            if (frm.ErroAoGravar) await CarregarGrid();
+            if (frm.ErroAoGravar) CarregarGrid();
             else
             {
-                //AtualizarGrid(); apenas coloca os valores denovo no grid caso der erro
                 bindingSource.ResetBindings(false);
             }
             frm.Dispose();
@@ -58,24 +63,30 @@ namespace ProjetoMTA.UI.Cliente
             var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
             if (obj == null) return;
 
+            clientedto = new ClienteDto();
+
             try
             {
                 if (OficinaMessageBox.Show("Deseja realmente remover este Cliente?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
                     return;
-                //var deletou = await  delete
-                //if (deletou)
-                //{
+                var deletou = clientedto.Delete(obj.Id);
+                if (deletou)
+                {
                     bindingSource.Remove(obj);
                     DisplayMessage("Equipamento removido com sucesso", "Dado deletado");
-                //}
-                //else
-                //{
-                    //throw new Exception("Não foi possível deletar equipamento");
-                //}
+                }
+                else
+                {
+                    throw new Exception("Não foi possível deletar equipamento");
+                }
             }
             catch (Exception x)
             {
                 DisplayMessage(x.Message, "Problema ao deletar registro", OFIcon.Warning);
+            }
+            finally
+            {
+                CarregarGrid();
             }
         }
 
@@ -90,6 +101,7 @@ namespace ProjetoMTA.UI.Cliente
                 else bindingSource.ResetBindings(false);
             }
             frm.Dispose();
+            CarregarGrid();
         }
     }
 }

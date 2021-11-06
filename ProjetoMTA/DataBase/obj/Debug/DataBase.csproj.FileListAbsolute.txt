@@ -43,3 +43,8 @@ C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBas
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.CopyComplete
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.dll
 C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.pdb
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\Dapper.Contrib.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\Dapper.dll
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\Dapper.xml
+C:\Users\vinim\Documents\Projeto_Faculdade\ProjetoMTA\DataBase\bin\Debug\Dapper.Contrib.xml

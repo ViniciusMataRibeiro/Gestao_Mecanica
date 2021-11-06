@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
@@ -38,7 +39,9 @@
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -176,6 +179,10 @@
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormMecanicoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +196,7 @@
             this.Load += new System.EventHandler(this.FormMecanicoCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +213,6 @@
         private MetroFramework.Controls.MetroLabel lblNome;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

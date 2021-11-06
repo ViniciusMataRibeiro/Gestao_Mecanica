@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
@@ -35,7 +36,6 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtEndereco = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -44,18 +44,21 @@
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Controls.Add(this.metroLabel5);
-            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.txtTelefone);
@@ -151,7 +154,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(7, 112);
+            this.metroLabel5.Location = new System.Drawing.Point(7, 108);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(67, 19);
             this.metroLabel5.TabIndex = 35;
@@ -161,36 +164,6 @@
             this.metroLabel5.UseCustomForeColor = true;
             this.metroLabel5.UseStyleColors = true;
             this.metroLabel5.UseWaitCursor = true;
-            // 
-            // txtEmail
-            // 
-            // 
-            // 
-            // 
-            this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(188, 1);
-            this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtEmail.CustomButton.TabIndex = 1;
-            this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtEmail.CustomButton.UseSelectable = true;
-            this.txtEmail.CustomButton.Visible = false;
-            this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(80, 112);
-            this.txtEmail.MaxLength = 32767;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.SelectionLength = 0;
-            this.txtEmail.SelectionStart = 0;
-            this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(210, 23);
-            this.txtEmail.TabIndex = 34;
-            this.txtEmail.UseSelectable = true;
-            this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtEndereco
             // 
@@ -207,7 +180,7 @@
             this.txtEndereco.CustomButton.UseSelectable = true;
             this.txtEndereco.CustomButton.Visible = false;
             this.txtEndereco.Lines = new string[0];
-            this.txtEndereco.Location = new System.Drawing.Point(80, 71);
+            this.txtEndereco.Location = new System.Drawing.Point(80, 108);
             this.txtEndereco.MaxLength = 32767;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.PasswordChar = '\0';
@@ -298,6 +271,40 @@
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtEmail
+            // 
+            // 
+            // 
+            // 
+            this.txtEmail.CustomButton.Image = null;
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(188, 1);
+            this.txtEmail.CustomButton.Name = "";
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtEmail.CustomButton.TabIndex = 1;
+            this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtEmail.CustomButton.UseSelectable = true;
+            this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.Lines = new string[0];
+            this.txtEmail.Location = new System.Drawing.Point(80, 67);
+            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.SelectionLength = 0;
+            this.txtEmail.SelectionStart = 0;
+            this.txtEmail.ShortcutsEnabled = true;
+            this.txtEmail.Size = new System.Drawing.Size(210, 23);
+            this.txtEmail.TabIndex = 40;
+            this.txtEmail.UseSelectable = true;
+            this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // FormClienteCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,8 +315,10 @@
             this.Controls.Add(this.BtGravar);
             this.Controls.Add(this.btCancelar);
             this.Name = "FormClienteCadastro";
+            this.Load += new System.EventHandler(this.FormClienteCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,7 +332,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel lblNome;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroTextBox txtEndereco;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
@@ -332,5 +340,7 @@
         private MetroFramework.Controls.MetroButton btGravarContinuar;
         private MetroFramework.Controls.MetroButton BtGravar;
         private MetroFramework.Controls.MetroButton btCancelar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private MetroFramework.Controls.MetroTextBox txtEmail;
     }
 }

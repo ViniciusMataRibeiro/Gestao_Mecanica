@@ -15,6 +15,8 @@ namespace ProjetoMTA.UI.Mecanico
 {
     public partial class FormMecanicoCadastro : FormBaseCadastro
     {
+        MecanicoDto mecanicoDto;
+
         public MecanicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
 
@@ -28,7 +30,7 @@ namespace ProjetoMTA.UI.Mecanico
 
         private void FormMecanicoCadastro_Load(object sender, EventArgs e)
         {
-
+            LerDados(true);
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -38,9 +40,13 @@ namespace ProjetoMTA.UI.Mecanico
 
         private void BtGravar_Click(object sender, EventArgs e)
         {
+            mecanicoDto = new MecanicoDto();
+            if (!VereficarDados())
+                return;
             try
             {
-                // Gravou = await Insert
+                LerDados(false);
+                Gravou = mecanicoDto.Insert(Dto);
                 if (Gravou)
                 {
                     Close();
@@ -56,9 +62,13 @@ namespace ProjetoMTA.UI.Mecanico
 
         private void btGravarContinuar_Click(object sender, EventArgs e)
         {
+            mecanicoDto = new MecanicoDto();
+            if (!VereficarDados())
+                return;
             try
             {
-                //CriarNovo = Gravou = await insert
+                LerDados(false);
+                CriarNovo = Gravou = mecanicoDto.Insert(Dto);
                 if (Gravou)
                 {
                     Close();
@@ -69,6 +79,47 @@ namespace ProjetoMTA.UI.Mecanico
             {
                 DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
+        }
+
+        private void LerDados(bool Load)
+        {
+            if (Load)
+            {
+                txtNome.Text = Dto.Nome;
+                txtCpf.Text = Dto.CPF;
+                txtTelefone.Text = Dto.Telefone;
+            }
+            else
+            {
+                Dto.Nome = txtNome.Text;
+                Dto.CPF = txtCpf.Text.Replace(',', '.');
+                Dto.Telefone = txtTelefone.Text;
+            }
+        }
+        private bool VereficarDados()
+        {
+            bool Valido = true;
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(txtNome.Text))
+            {
+                errorProvider1.SetError(txtNome, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+            var Cpf = txtCpf.Text.Replace(',', ' ').Replace('-', ' ').Trim();
+            if (string.IsNullOrEmpty(Cpf))
+            {
+                errorProvider1.SetError(txtCpf, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+            var telefone = txtTelefone.Text.Replace('(', ' ').Replace(')', ' ').Replace('-', ' ').Trim();
+            if (string.IsNullOrEmpty(telefone))
+            {
+                errorProvider1.SetError(txtTelefone, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+            
+
+            return Valido;
         }
     }
 }

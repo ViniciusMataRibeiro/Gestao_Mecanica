@@ -37,12 +37,12 @@
             this.btAlterar = new System.Windows.Forms.Button();
             this.BtIncluir = new System.Windows.Forms.Button();
             this.Grid = new MetroFramework.Controls.MetroGrid();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PainelOpcao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -181,14 +181,14 @@
             // 
             // IdCliente
             // 
-            this.IdCliente.DataPropertyName = "IdCliente";
+            this.IdCliente.DataPropertyName = "Id";
             this.IdCliente.HeaderText = "Id";
             this.IdCliente.Name = "IdCliente";
             this.IdCliente.ReadOnly = true;
             // 
             // NomeCliente
             // 
-            this.NomeCliente.DataPropertyName = "NomeCliente";
+            this.NomeCliente.DataPropertyName = "Nome";
             this.NomeCliente.HeaderText = "Nome";
             this.NomeCliente.Name = "NomeCliente";
             this.NomeCliente.ReadOnly = true;

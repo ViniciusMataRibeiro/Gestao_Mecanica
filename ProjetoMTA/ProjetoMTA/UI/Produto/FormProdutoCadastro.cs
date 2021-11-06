@@ -15,6 +15,7 @@ namespace ProjetoMTA.UI.Produto
 {
     public partial class FormProdutoCadastro : FormBaseCadastro
     {
+        ProdutoDto produtoDto;
         public ProdutoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
 
@@ -29,8 +30,9 @@ namespace ProjetoMTA.UI.Produto
 
         private void FormProdutoCadastro_Load(object sender, EventArgs e)
         {
-
+            LerDados(true);
         }
+
 
         private void txtObservacao_TextChanged(object sender, EventArgs e)
         {
@@ -38,16 +40,16 @@ namespace ProjetoMTA.UI.Produto
             lblContagemObservacao.Text = contagem.ToString("000") + "/200";
         }
 
-        private void btCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void BtGravar_Click(object sender, EventArgs e)
         {
+            produtoDto = new ProdutoDto();
+
+            if (!VereficarDados())
+                return;
             try
             {
-                // Gravou = await Insert
+                LerDados(false);
+                Gravou = produtoDto.Insert(Dto);
                 if (Gravou)
                 {
                     Close();
@@ -63,9 +65,12 @@ namespace ProjetoMTA.UI.Produto
 
         private void btGravarContinuar_Click(object sender, EventArgs e)
         {
+            produtoDto = new ProdutoDto();
+            if (!VereficarDados())
+                return;
             try
             {
-                //CriarNovo = Gravou = await insert
+                CriarNovo = Gravou = produtoDto.Insert(Dto);
                 if (Gravou)
                 {
                     Close();
@@ -76,6 +81,65 @@ namespace ProjetoMTA.UI.Produto
             {
                 DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
+        }
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void LerDados(bool Load)
+        {
+            if (Load)
+            {
+                if (Dto.Id != 0)
+                {
+                    txtNome.Text = Dto.Nome;
+                    ndQuantidade.Value = decimal.Parse(Dto.Quantidade);
+                    ndValorUn.Value = decimal.Parse(Dto.ValorUni);
+                    txtObservacao.Text = Dto.Descricao;
+                }
+                
+            }
+            else
+            {
+                Dto.Nome = txtNome.Text;
+                Dto.Quantidade = ndQuantidade.Value.ToString();
+                Dto.ValorUni = ndValorUn.Value.ToString();
+                Dto.Descricao = txtObservacao.Text;
+
+            }
+        }
+        private bool VereficarDados()
+        {
+            bool Valido = true;
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(txtNome.Text))
+            {
+                errorProvider1.SetError(txtNome, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+            if (ndValorUn.Value < 0)
+            {
+                errorProvider1.SetError(ndValorUn, "Campo não pode ser negativo");
+                Valido = false;
+            }
+            if (ndValorUn.Value == 0)
+            {
+                errorProvider1.SetError(ndValorUn, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+            if (ndQuantidade.Value < 0)
+            {
+                errorProvider1.SetError(ndQuantidade, "Campo não pode ser negativo");
+                Valido = false;
+            }
+            if (ndQuantidade.Value == 0)
+            {
+                errorProvider1.SetError(ndQuantidade, "Campo Obrigatorio!!");
+                Valido = false;
+            }
+
+            return Valido;
         }
     }
 }
