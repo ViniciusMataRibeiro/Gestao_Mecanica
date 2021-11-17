@@ -1,4 +1,5 @@
-﻿using ProjetoMTA.Base;
+﻿using DataBase;
+using ProjetoMTA.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,15 @@ namespace ProjetoMTA.UI.Serviços
 {
     public partial class FormServicoCadastro : FormBaseCadastro
     {
-        public FormServicoCadastro()
+        public ServicoDto Dto { get; set; }
+        public bool ErroAoGravar { get; set; }
+
+        public FormServicoCadastro(string Status, ServicoDto dto)
         {
             InitializeComponent();
+            this.Text = Status;
+
+            Dto = dto;
         }
 
         private void FormServicoCadastro_Load(object sender, EventArgs e)
