@@ -1,4 +1,5 @@
-﻿using Dapper.Contrib.Extensions;
+﻿using Dapper;
+using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -25,6 +26,14 @@ namespace DataBase
             using (SqlConnection connection = new SqlConnection(Banco))
             {
                 return connection.GetAll<ClienteDto>().ToList();
+            }
+        }
+
+        public List<VeiculoDto> GetVeiculoCliente(int IdCliente, string Banco)
+        {
+            using (SqlConnection connection = new SqlConnection(Banco))
+            {
+                return (List<VeiculoDto>)connection.Query<VeiculoDto>($"select * from Veiculo where IdCliente = {IdCliente}");
             }
         }
 

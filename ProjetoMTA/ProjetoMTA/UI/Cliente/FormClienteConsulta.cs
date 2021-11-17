@@ -110,7 +110,7 @@ namespace ProjetoMTA.UI.Cliente
                     if (deletou)
                     {
                         bindingSource.Remove(obj);
-                        DisplayMessage("Equipamento removido com sucesso", "Dado deletado");
+                        DisplayMessage("Cliente removido com sucesso", "Dado deletado");
                     }
                     else
                     {
@@ -172,6 +172,8 @@ namespace ProjetoMTA.UI.Cliente
             }
             frm.Dispose();
             CarregarGridCliente();
+            if (OficinaMessageBox.Show($"Deseja Cadastrar um veiculo ao cliente?", "Incluir", OFButtons.YesNo, OFIcon.Question) == DialogResult.Yes)
+                AdicionarDadoVeiculo();
         }
         private void AdicionarDadoVeiculo()
         {
