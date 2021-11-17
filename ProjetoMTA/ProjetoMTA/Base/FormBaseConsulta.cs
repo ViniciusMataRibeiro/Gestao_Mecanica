@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -37,6 +38,11 @@ namespace ProjetoMTA.Base
         private void BindingSource_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
         {
             lblTotalRegistro.Text = bindingSource.Count + @" itens";
+        }
+
+        public static string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["Contexto"].ConnectionString;
         }
     }
 }

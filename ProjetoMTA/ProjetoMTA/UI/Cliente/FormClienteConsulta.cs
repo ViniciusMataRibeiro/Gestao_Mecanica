@@ -33,7 +33,7 @@ namespace ProjetoMTA.UI.Cliente
         private void CarregarGridCliente()
         {
             clientedto = new ClienteDto();
-            var Result = clientedto.GetAll();
+            var Result = clientedto.GetAll(GetConnectionString());
             if (Result != null)
             {
                 Grid.DataSource = Result;
@@ -106,7 +106,7 @@ namespace ProjetoMTA.UI.Cliente
                 {
                     if (OficinaMessageBox.Show("Deseja realmente remover este Cliente?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
                         return;
-                    var deletou = clientedto.Delete(obj.Id);
+                    var deletou = clientedto.Delete(obj.Id, GetConnectionString());
                     if (deletou)
                     {
                         bindingSource.Remove(obj);

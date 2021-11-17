@@ -39,7 +39,7 @@ namespace ProjetoMTA.UI.Cliente
             try
             {
                 LerDados(false);
-                Gravou = clienteDto.Insert(Dto);
+                Gravou = clienteDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();
@@ -120,7 +120,7 @@ namespace ProjetoMTA.UI.Cliente
             LerDados(false);
             try
             {
-                CriarNovo = Gravou = clienteDto.Insert(Dto);
+                CriarNovo = Gravou = clienteDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();

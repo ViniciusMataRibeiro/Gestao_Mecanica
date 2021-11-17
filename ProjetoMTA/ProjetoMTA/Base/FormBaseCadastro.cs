@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -36,6 +37,11 @@ namespace ProjetoMTA.Base
                     e.Cancel = true;
                 }
             }
+        }
+
+        public static string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["Contexto"].ConnectionString;
         }
     }
 }
