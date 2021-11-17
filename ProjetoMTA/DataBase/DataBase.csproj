@@ -58,7 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\ConnectionDados.cs" />
     <Compile Include="Classes\ThemeColor.cs" />
     <Compile Include="Dto\ClienteDto.cs" />
     <Compile Include="Dto\MecanicoDto.cs" />
