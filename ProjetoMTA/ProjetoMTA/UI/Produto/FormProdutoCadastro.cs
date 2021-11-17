@@ -49,7 +49,7 @@ namespace ProjetoMTA.UI.Produto
             try
             {
                 LerDados(false);
-                Gravou = produtoDto.Insert(Dto);
+                Gravou = produtoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();
@@ -70,7 +70,7 @@ namespace ProjetoMTA.UI.Produto
                 return;
             try
             {
-                CriarNovo = Gravou = produtoDto.Insert(Dto);
+                CriarNovo = Gravou = produtoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();

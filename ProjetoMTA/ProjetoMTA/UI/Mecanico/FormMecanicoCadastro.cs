@@ -46,7 +46,7 @@ namespace ProjetoMTA.UI.Mecanico
             try
             {
                 LerDados(false);
-                Gravou = mecanicoDto.Insert(Dto);
+                Gravou = mecanicoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();
@@ -68,7 +68,7 @@ namespace ProjetoMTA.UI.Mecanico
             try
             {
                 LerDados(false);
-                CriarNovo = Gravou = mecanicoDto.Insert(Dto);
+                CriarNovo = Gravou = mecanicoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();

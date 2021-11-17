@@ -11,8 +11,6 @@ namespace DataBase
     [Table("Produto")]
     public class ProdutoDto
     {
-        private readonly string conn = "SERVER=VINICIUSMR\\SQLEXPRESS;Database=Mechanical Technology Automotive;UID=sa;PWD=8520;";
-
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -20,28 +18,28 @@ namespace DataBase
         public string ValorUni { get; set; }
         public string Descricao { get; set; }
 
-        public List<ProdutoDto> GetAll()
+        public List<ProdutoDto> GetAll(string Banco)
         {
-            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlConnection connection = new SqlConnection(Banco))
             {
                 return connection.GetAll<ProdutoDto>().ToList();
             }
         }
 
-        public bool Insert(ProdutoDto entity)
+        public bool Insert(ProdutoDto entity, string Banco)
         {
             try
             {
                 if (entity.Id == 0)
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Insert(entity);
                     }
                 }
                 else
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Update(entity);
                     }
@@ -55,13 +53,13 @@ namespace DataBase
             }
         }
 
-        public bool Delete(int id)
+        public bool Delete(int id, string Banco)
         {
             var Sucesso = false;
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlConnection connection = new SqlConnection(Banco))
                 {
                     var Result = connection.Delete(new ProdutoDto() { Id = id });
                     Sucesso = Result;

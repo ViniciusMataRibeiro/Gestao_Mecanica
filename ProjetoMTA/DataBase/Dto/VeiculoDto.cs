@@ -12,8 +12,6 @@ namespace DataBase
     [Table("Veiculo")]
     public class VeiculoDto
     {
-        private readonly string conn = "SERVER=VINICIUSMR\\SQLEXPRESS;Database=Mechanical Technology Automotive;UID=sa;PWD=8520;";
-
         [Key]
         public int Id { get; set; }
         public int IdCliente { get; set; }
@@ -27,36 +25,36 @@ namespace DataBase
         [Write(false)]
         public string NomeClienteVeiculo { get; set; }
 
-        public List<VeiculoDto> GetAll()
+        public List<VeiculoDto> GetAll(string Banco)
         {
-            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlConnection connection = new SqlConnection(Banco))
             {
                 return (List<VeiculoDto>)connection.Query<VeiculoDto>("select v.*,c.Nome as NomeClienteVeiculo from Veiculo v inner join Cliente c on c.Id = v.IdCliente");
             }
         }
 
-        public List<ClienteDto> GetCombo()
+        public List<ClienteDto> GetCombo(string Banco)
         {
-            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlConnection connection = new SqlConnection(Banco))
             {
                 return (List<ClienteDto>)connection.Query<ClienteDto>("Select * from Cliente");
             }
         }
 
-        public bool Insert(VeiculoDto entity)
+        public bool Insert(VeiculoDto entity, string Banco)
         {
             try
             {
                 if (entity.Id == 0)
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Insert(entity);
                     }
                 }
                 else
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Update(entity);
                     }
@@ -70,13 +68,13 @@ namespace DataBase
             }
         }
 
-        public bool Delete(int id)
+        public bool Delete(int id, string Banco)
         {
             var Sucesso = false;
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlConnection connection = new SqlConnection(Banco))
                 {
                     var Result = connection.Delete(new VeiculoDto() { Id = id });
                     Sucesso = Result;

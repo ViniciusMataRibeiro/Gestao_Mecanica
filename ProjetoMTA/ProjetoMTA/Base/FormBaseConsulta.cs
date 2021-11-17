@@ -42,7 +42,7 @@ namespace ProjetoMTA.Base
 
         public static string GetConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["Contexto"].ConnectionString;
+            return "SERVER=VINICIUSMR\\SQLEXPRESS;Database=Mechanical Technology Automotive;UID=sa;PWD=8520;";
         }
     }
 }

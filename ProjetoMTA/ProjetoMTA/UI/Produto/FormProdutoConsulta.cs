@@ -30,7 +30,7 @@ namespace ProjetoMTA.UI.Produto
         private void CarregarGrid()
         {
             produtoDto = new ProdutoDto();
-            var Result = produtoDto.GetAll();
+            var Result = produtoDto.GetAll(GetConnectionString());
             if (Result != null)
             {
                 Grid.DataSource = Result;
@@ -69,7 +69,7 @@ namespace ProjetoMTA.UI.Produto
             {
                 if (OficinaMessageBox.Show("Deseja realmente remover este Cliente?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
                     return;
-                var deletou = produtoDto.Delete(obj.Id);
+                var deletou = produtoDto.Delete(obj.Id, GetConnectionString());
                 if (deletou)
                 {
                     bindingSource.Remove(obj);

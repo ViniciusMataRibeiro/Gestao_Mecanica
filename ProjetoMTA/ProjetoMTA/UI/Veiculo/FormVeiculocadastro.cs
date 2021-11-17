@@ -34,7 +34,7 @@ namespace ProjetoMTA.UI.Veiculo
         private void CarregarCombo()
         {
             veiculoDto = new VeiculoDto();
-            var Result = veiculoDto.GetCombo();
+            var Result = veiculoDto.GetCombo(GetConnectionString());
             if (Result != null)
             {
                 cbCliente.DisplayMember = "Nome";
@@ -55,7 +55,7 @@ namespace ProjetoMTA.UI.Veiculo
             try
             {
                 LerDados(false);
-                Gravou = veiculoDto.Insert(Dto);
+                Gravou = veiculoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();
@@ -77,7 +77,7 @@ namespace ProjetoMTA.UI.Veiculo
             LerDados(false);
             try
             {
-                CriarNovo = Gravou = veiculoDto.Insert(Dto);
+                CriarNovo = Gravou = veiculoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {
                     Close();

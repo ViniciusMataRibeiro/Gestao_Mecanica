@@ -42,7 +42,7 @@ namespace ProjetoMTA.UI.Cliente
         private void CarregarGridVeiculo()
         {
             veiculoDto = new VeiculoDto();
-            var Result = veiculoDto.GetAll();
+            var Result = veiculoDto.GetAll(GetConnectionString());
             if (Result != null)
             {
                 GridVeiculo.DataSource = Result;
@@ -138,7 +138,7 @@ namespace ProjetoMTA.UI.Cliente
                 {
                     if (OficinaMessageBox.Show("Deseja realmente remover este Veiculo?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
                         return;
-                    var deletou = veiculoDto.Delete(obj.Id);
+                    var deletou = veiculoDto.Delete(obj.Id, GetConnectionString());
                     if (deletou)
                     {
                         bindingSourceVeiculo.Remove(obj);

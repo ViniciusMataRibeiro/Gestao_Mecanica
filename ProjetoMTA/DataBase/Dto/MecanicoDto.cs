@@ -11,36 +11,34 @@ namespace DataBase
     [Table("Mecanico")]
     public class MecanicoDto
     {
-        private readonly string conn = "SERVER=VINICIUSMR\\SQLEXPRESS;Database=Mechanical Technology Automotive;UID=sa;PWD=8520;";
-
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
 
-        public List<MecanicoDto> GetAll()
+        public List<MecanicoDto> GetAll(string Banco)
         {
-            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlConnection connection = new SqlConnection(Banco))
             {
                 return connection.GetAll<MecanicoDto>().ToList();
             }
         }
 
-        public bool Insert(MecanicoDto entity)
+        public bool Insert(MecanicoDto entity, string Banco)
         {
             try
             {
                 if (entity.Id == 0)
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Insert(entity);
                     }
                 }
                 else
                 {
-                    using (SqlConnection connection = new SqlConnection(conn))
+                    using (SqlConnection connection = new SqlConnection(Banco))
                     {
                         var Result = connection.Update(entity);
                     }
@@ -54,13 +52,13 @@ namespace DataBase
             }
         }
 
-        public bool Delete(int id)
+        public bool Delete(int id, string Banco)
         {
             var Sucesso = false;
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlConnection connection = new SqlConnection(Banco))
                 {
                     var Result = connection.Delete(new MecanicoDto() { Id = id });
                     Sucesso = Result;
