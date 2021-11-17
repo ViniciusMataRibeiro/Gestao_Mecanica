@@ -4,6 +4,7 @@ using ProjetoMTA.Components;
 using ProjetoMTA.UI.Cliente;
 using ProjetoMTA.UI.Mecanico;
 using ProjetoMTA.UI.Produto;
+using ProjetoMTA.UI.Serviços;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -193,6 +194,8 @@ namespace ProjetoMTA
         private void btServico_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            btClose.Visible = true;
+            openChildForm(new FormServicoConsulta(), sender);
         }
 
         private void btProduto_Click(object sender, EventArgs e)

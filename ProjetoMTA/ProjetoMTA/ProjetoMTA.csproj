@@ -140,6 +140,12 @@
     <Compile Include="UI\Produto\FormProdutoConsulta.Designer.cs">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Serviços\FormServicoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Serviços\FormServicoCadastro.Designer.cs">
+      <DependentUpon>FormServicoCadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Serviços\FormServicoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     <EmbeddedResource Include="UI\Produto\FormProdutoConsulta.resx">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Serviços\FormServicoCadastro.resx">
+      <DependentUpon>FormServicoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Serviços\FormServicoConsulta.resx">
       <DependentUpon>FormServicoConsulta.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,7 +242,9 @@
   <ItemGroup>
     <None Include="Resources\Delete_32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\LogProjeto.jpeg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Menu_32.png" />
   </ItemGroup>
@@ -242,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pessoa_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto Principal.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using ProjetoMTA.Base;
+﻿using DataBase;
+using ProjetoMTA.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace ProjetoMTA.UI.Serviços
 {
     public partial class FormServicoConsulta : FormBaseConsulta
     {
+        ServicoDto servicodto;
         public FormServicoConsulta()
         {
             InitializeComponent();
+            InitGridBaseConsulta<ServicoDto>(Grid);
         }
         private void FormServicoConsulta_Load(object sender, EventArgs e)
         {
@@ -24,7 +27,12 @@ namespace ProjetoMTA.UI.Serviços
 
         private void carregarGrid()
         {
-
+            servicodto = new ServicoDto();
+            var Result = servicodto.GetAll(GetConnectionString());
+            if (Result != null)
+            {
+                Grid.DataSource = Result;
+            }
         }
 
         private void BtIncluir_Click(object sender, EventArgs e)

@@ -39,24 +39,30 @@ namespace ProjetoMTA
             this.btRelatorio = new System.Windows.Forms.Button();
             this.btServico = new System.Windows.Forms.Button();
             this.BtCadastro = new System.Windows.Forms.Button();
-            this.btvoltar = new System.Windows.Forms.Button();
             this.panelTitulo = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btMaximizar = new System.Windows.Forms.Button();
             this.btCloseForm = new System.Windows.Forms.Button();
             this.btMinimizar = new System.Windows.Forms.Button();
-            this.btClose = new System.Windows.Forms.Button();
             this.metrolblTitulo = new MetroFramework.Controls.MetroLabel();
             this.PanelDesktop = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btClose = new System.Windows.Forms.Button();
+            this.btvoltar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroPanelLogo.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.PanelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanelLogo
             // 
             this.metroPanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanelLogo.Controls.Add(this.pictureBox1);
             this.metroPanelLogo.Controls.Add(this.metroLabel1);
             resources.ApplyResources(this.metroPanelLogo, "metroPanelLogo");
             this.metroPanelLogo.HorizontalScrollbarBarColor = true;
@@ -163,16 +169,6 @@ namespace ProjetoMTA
             this.BtCadastro.UseVisualStyleBackColor = true;
             this.BtCadastro.Click += new System.EventHandler(this.btCadastro_Click);
             // 
-            // btvoltar
-            // 
-            resources.ApplyResources(this.btvoltar, "btvoltar");
-            this.btvoltar.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btvoltar.FlatAppearance.BorderSize = 0;
-            this.btvoltar.Image = global::ProjetoMTA.Properties.Resources.arrow_left_icon;
-            this.btvoltar.Name = "btvoltar";
-            this.btvoltar.UseVisualStyleBackColor = true;
-            this.btvoltar.Click += new System.EventHandler(this.btvoltar_Click);
-            // 
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -230,14 +226,6 @@ namespace ProjetoMTA
             this.btMinimizar.UseVisualStyleBackColor = true;
             this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
             // 
-            // btClose
-            // 
-            resources.ApplyResources(this.btClose, "btClose");
-            this.btClose.FlatAppearance.BorderSize = 0;
-            this.btClose.Name = "btClose";
-            this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
             // metrolblTitulo
             // 
             resources.ApplyResources(this.metrolblTitulo, "metrolblTitulo");
@@ -251,6 +239,7 @@ namespace ProjetoMTA
             // 
             // PanelDesktop
             // 
+            this.PanelDesktop.Controls.Add(this.pictureBox2);
             resources.ApplyResources(this.PanelDesktop, "PanelDesktop");
             this.PanelDesktop.HorizontalScrollbarBarColor = true;
             this.PanelDesktop.HorizontalScrollbarHighlightOnWheel = false;
@@ -259,6 +248,36 @@ namespace ProjetoMTA
             this.PanelDesktop.VerticalScrollbarBarColor = true;
             this.PanelDesktop.VerticalScrollbarHighlightOnWheel = false;
             this.PanelDesktop.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // btClose
+            // 
+            resources.ApplyResources(this.btClose, "btClose");
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.Name = "btClose";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // btvoltar
+            // 
+            resources.ApplyResources(this.btvoltar, "btvoltar");
+            this.btvoltar.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btvoltar.FlatAppearance.BorderSize = 0;
+            this.btvoltar.Image = global::ProjetoMTA.Properties.Resources.arrow_left_icon;
+            this.btvoltar.Name = "btvoltar";
+            this.btvoltar.UseVisualStyleBackColor = true;
+            this.btvoltar.Click += new System.EventHandler(this.btvoltar_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // FormPrincipal
             // 
@@ -276,6 +295,9 @@ namespace ProjetoMTA
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.PanelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,6 +321,8 @@ namespace ProjetoMTA
         private System.Windows.Forms.Button btCliente;
         private System.Windows.Forms.Button btMecanico;
         private System.Windows.Forms.Button btProduto;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
