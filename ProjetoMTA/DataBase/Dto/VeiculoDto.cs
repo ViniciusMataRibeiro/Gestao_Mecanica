@@ -16,7 +16,6 @@ namespace DataBase
         public int Id { get; set; }
         public int IdCliente { get; set; }
         public string Marca { get; set; }
-        public int TipoVeiculo { get; set; }
         public string Placa { get; set; }
 
         [Write(false)]

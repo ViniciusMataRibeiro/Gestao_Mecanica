@@ -140,6 +140,12 @@
     <Compile Include="UI\Produto\FormProdutoConsulta.Designer.cs">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Serviços\FormServicoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Serviços\FormServicoConsulta.Designer.cs">
+      <DependentUpon>FormServicoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Veiculo\FormVeiculocadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Produto\FormProdutoConsulta.resx">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Serviços\FormServicoConsulta.resx">
+      <DependentUpon>FormServicoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Veiculo\FormVeiculocadastro.resx">
       <DependentUpon>FormVeiculocadastro.cs</DependentUpon>
