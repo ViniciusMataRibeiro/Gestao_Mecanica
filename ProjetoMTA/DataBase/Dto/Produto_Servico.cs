@@ -16,5 +16,7 @@ namespace DataBase
         public int IdServico { get; set; }
         public int QuantidadePecas { get; set; }
         public decimal ValorProduto { get; set; }
+        [Write(false)]
+        public decimal ValorTotal { get; set; }
     }
 }

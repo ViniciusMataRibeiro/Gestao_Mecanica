@@ -1,5 +1,6 @@
 ﻿using DataBase;
 using ProjetoMTA.Base;
+using ProjetoMTA.Components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace ProjetoMTA.UI.Serviços
 {
     public partial class FormServicoCadastro : FormBaseCadastro
     {
+        private List<Produto_Servico> ListaProduto;
+
         public ServicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
 
@@ -28,6 +31,25 @@ namespace ProjetoMTA.UI.Serviços
         private void FormServicoCadastro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btAdicionar_Click(object sender, EventArgs e)
+        {
+            var fmr = new FormPesquisa();
+            fmr.ListaProdutos = ListaProduto;
+            fmr.ShowDialog();
+            if (fmr.gravou)
+            {
+                bindingSource.Add(fmr.Servico);
+            }
+            fmr.Dispose();
+        }
+
+        private void btExcluirProduto_Click(object sender, EventArgs e)
+        {
+            var obj = (ServicoDto)GridProduto.CurrentRow?.DataBoundItem;
+            if (obj != null)
+                bindingSource.Remove(obj);
         }
     }
 }

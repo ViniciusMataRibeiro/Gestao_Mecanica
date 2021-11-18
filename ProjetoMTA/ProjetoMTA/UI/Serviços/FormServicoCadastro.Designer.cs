@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,6 +47,7 @@
             this.QuantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbMecanico = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.cbCliente = new MetroFramework.Controls.MetroComboBox();
@@ -63,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,7 +95,6 @@
             // npdValorPago
             // 
             this.npdValorPago.DecimalPlaces = 2;
-            this.npdValorPago.Enabled = false;
             this.npdValorPago.Location = new System.Drawing.Point(485, 426);
             this.npdValorPago.Name = "npdValorPago";
             this.npdValorPago.Size = new System.Drawing.Size(71, 20);
@@ -168,27 +170,30 @@
             // 
             // btAdicionar
             // 
-            this.btAdicionar.Location = new System.Drawing.Point(414, 207);
+            this.btAdicionar.Location = new System.Drawing.Point(285, 207);
             this.btAdicionar.Name = "btAdicionar";
             this.btAdicionar.Size = new System.Drawing.Size(120, 30);
             this.btAdicionar.TabIndex = 45;
-            this.btAdicionar.Text = "Adcionar Produto";
+            this.btAdicionar.Text = "Adicionar Produto";
             this.btAdicionar.UseSelectable = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
             // btExcluirProduto
             // 
             this.btExcluirProduto.BackColor = System.Drawing.Color.Transparent;
             this.btExcluirProduto.ForeColor = System.Drawing.Color.Transparent;
-            this.btExcluirProduto.Location = new System.Drawing.Point(285, 207);
+            this.btExcluirProduto.Location = new System.Drawing.Point(411, 207);
             this.btExcluirProduto.Name = "btExcluirProduto";
             this.btExcluirProduto.Size = new System.Drawing.Size(123, 30);
             this.btExcluirProduto.TabIndex = 44;
             this.btExcluirProduto.Text = "Excluir Produto";
             this.btExcluirProduto.UseSelectable = true;
+            this.btExcluirProduto.Click += new System.EventHandler(this.btExcluirProduto_Click);
             // 
             // GridProduto
             // 
             this.GridProduto.AllowUserToResizeRows = false;
+            this.GridProduto.AutoGenerateColumns = false;
             this.GridProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.GridProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -209,6 +214,7 @@
             this.ValorUn,
             this.ValorTotal});
             this.GridProduto.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.GridProduto.DataSource = this.bindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -403,6 +409,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,5 +442,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.NumericUpDown npdValorPago;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.BindingSource bindingSource;
     }
 }

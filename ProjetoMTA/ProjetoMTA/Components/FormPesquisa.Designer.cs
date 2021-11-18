@@ -151,6 +151,7 @@
             this.btAdicionar.TabIndex = 46;
             this.btAdicionar.Text = "Adcionar Produto";
             this.btAdicionar.UseSelectable = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
             // FormPesquisa
             // 
@@ -161,6 +162,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormPesquisa";
             this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.FormPesquisa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).EndInit();

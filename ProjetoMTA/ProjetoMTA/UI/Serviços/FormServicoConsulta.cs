@@ -1,5 +1,6 @@
 ﻿using DataBase;
 using ProjetoMTA.Base;
+using ProjetoMTA.Components;
 using ProjetoMTA.UI.Cliente;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,23 @@ namespace ProjetoMTA.UI.Serviços
         {
             //carregarGrid();
         }
-
+        private void AdicionarDado()
+        {
+            FormServicoCadastro frm = new FormServicoCadastro("incluir", new ServicoDto());
+            frm.ShowDialog();
+            if (frm.Gravou)
+            {
+                bindingSource.Add(frm.Dto);
+                if (frm.CriarNovo)
+                {
+                    //carregarGrid();
+                    AdicionarDado();
+                }
+                else bindingSource.ResetBindings(false);
+            }
+            frm.Dispose();
+            //carregarGrid();
+        }
         private void carregarGrid()
         {
             servicodto = new ServicoDto();
@@ -38,10 +55,55 @@ namespace ProjetoMTA.UI.Serviços
 
         private void BtIncluir_Click(object sender, EventArgs e)
         {
-            FormServicoCadastro a = new FormServicoCadastro("Incluir", new ServicoDto());
-            a.ShowDialog();
+            AdicionarDado();
         }
 
-        
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+            var obj = (ServicoDto)Grid.CurrentRow?.DataBoundItem;
+            if (obj == null) return;
+
+            FormServicoCadastro frm = new FormServicoCadastro("Alterar", obj);
+            frm.ShowDialog();
+            if (frm.ErroAoGravar) carregarGrid();
+            else
+            {
+                bindingSource.ResetBindings(false);
+            }
+            frm.Dispose();
+            // carregarGrid();
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            var obj = (ServicoDto)Grid.CurrentRow?.DataBoundItem;
+            if (obj == null) return;
+
+            servicodto = new ServicoDto();
+
+            try
+            {
+                if (OficinaMessageBox.Show("Deseja realmente remover este Serviço?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
+                    return;
+                var deletou = true;//ServicoDto.Delete(obj.Id, GetConnectionString());
+                if (deletou)
+                {
+                    bindingSource.Remove(obj);
+                    DisplayMessage("Serviço removido com sucesso", "Dado deletado");
+                }
+                else
+                {
+                    throw new Exception("Não foi possível deletar Serviço");
+                }
+            }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Problema ao deletar registro", OFIcon.Warning);
+            }
+            finally
+            {
+                //carregarGrid();
+            }
+        }
     }
 }
