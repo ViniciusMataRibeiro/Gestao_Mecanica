@@ -1,5 +1,6 @@
 ﻿using DataBase;
 using ProjetoMTA.Base;
+using ProjetoMTA.UI.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace ProjetoMTA.UI.Serviços
         }
         private void FormServicoConsulta_Load(object sender, EventArgs e)
         {
-            carregarGrid();
+            //carregarGrid();
         }
 
         private void carregarGrid()
@@ -37,7 +38,8 @@ namespace ProjetoMTA.UI.Serviços
 
         private void BtIncluir_Click(object sender, EventArgs e)
         {
-
+            FormServicoCadastro a = new FormServicoCadastro("Incluir", new ServicoDto());
+            a.ShowDialog();
         }
 
         

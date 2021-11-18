@@ -12,6 +12,11 @@ namespace DataBase
     [Table("Servico")]
     public class ServicoDto
     {
+        public ServicoDto()
+        {
+            Produtos = new List<Produto_Servico>();
+        }
+
         [Key]
         public int Id { get; set; }
         public int IdMecanico { get; set; }
@@ -27,6 +32,10 @@ namespace DataBase
         public string NomeCliente { get; set; }
         [Write(false)]
         public string NomeVeiculo { get; set; }
+        [Write(false)]
+        public List<Produto_Servico> Produtos { get; set; }
+
+
 
         public List<ServicoDto> GetAll(string Banco)
         {
