@@ -359,7 +359,7 @@
             this.Controls.Add(this.PainelOpcao);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FormClienteConsulta";
-            this.Text = "FormClienteConsulta";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FormClienteConsulta_Load);
             this.Controls.SetChildIndex(this.PainelOpcao, 0);
             this.Controls.SetChildIndex(this.Grid, 0);

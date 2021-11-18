@@ -110,7 +110,7 @@ namespace ProjetoMTA
         private void Reset()
         {
             DisableButton();
-            metrolblTitulo.Text = "HOME";
+            metrolblTitulo.Text = "Tela Inicial";
             panelTitulo.BackColor = Color.FromArgb(0, 150, 136);
             currentButton = null;
             btClose.Visible = false;

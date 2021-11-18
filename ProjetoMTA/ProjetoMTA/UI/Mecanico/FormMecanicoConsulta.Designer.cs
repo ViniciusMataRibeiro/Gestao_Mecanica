@@ -225,7 +225,7 @@
             this.Controls.Add(this.PainelOpcao);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FormMecanicoConsulta";
-            this.Text = "FormMecanicoConsulta";
+            this.Text = "Mecanico";
             this.Load += new System.EventHandler(this.FormMecanicoConsulta_Load);
             this.Controls.SetChildIndex(this.PainelOpcao, 0);
             this.Controls.SetChildIndex(this.panel1, 0);

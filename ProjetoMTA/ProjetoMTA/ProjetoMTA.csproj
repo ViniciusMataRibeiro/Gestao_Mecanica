@@ -266,5 +266,11 @@
   <ItemGroup>
     <None Include="Resources\Foto Principal.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MTA_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MTA_1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

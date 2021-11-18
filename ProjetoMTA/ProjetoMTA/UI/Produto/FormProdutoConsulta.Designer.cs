@@ -38,16 +38,16 @@ namespace ProjetoMTA.UI.Produto
             this.btAlterar = new System.Windows.Forms.Button();
             this.BtIncluir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Grid = new MetroFramework.Controls.MetroGrid();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PainelOpcao.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // PainelOpcao
@@ -230,14 +230,14 @@ namespace ProjetoMTA.UI.Produto
             this.Controls.Add(this.PainelOpcao);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FormProdutoConsulta";
-            this.Text = "ProdutoConsulta";
+            this.Text = "Produto";
             this.Load += new System.EventHandler(this.ProdutoConsulta_Load);
             this.Controls.SetChildIndex(this.PainelOpcao, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.PainelOpcao.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

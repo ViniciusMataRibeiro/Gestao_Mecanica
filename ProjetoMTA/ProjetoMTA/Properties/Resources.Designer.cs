@@ -153,6 +153,26 @@ namespace ProjetoMTA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MTA_1 {
+            get {
+                object obj = ResourceManager.GetObject("MTA_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MTA_2 {
+            get {
+                object obj = ResourceManager.GetObject("MTA_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pessoa_32 {
             get {
                 object obj = ResourceManager.GetObject("Pessoa_32", resourceCulture);
