@@ -14,8 +14,8 @@ namespace DataBase
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Quantidade { get; set; }
-        public string ValorUni { get; set; }
+        public float Quantidade { get; set; }
+        public float ValorUn { get; set; }
         public string Descricao { get; set; }
 
         public List<ProdutoDto> GetAll(string Banco)

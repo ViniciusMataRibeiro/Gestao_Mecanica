@@ -100,7 +100,7 @@ namespace ProjetoMTA.UI.Veiculo
             if (Load)
             {
                 txtMarca.Text = Dto.Marca;
-                txtModelo.Text = "Arrumar Banco";
+                txtModelo.Text = Dto.Modelo;
                 txtPlaca.Text = Dto.Placa;
             }
             else

@@ -71,7 +71,6 @@
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
             this.metroLabel1.UseStyleColors = true;
-            this.metroLabel1.UseWaitCursor = true;
             // 
             // txtNome
             // 
@@ -123,7 +122,6 @@
             this.lblNome.UseCustomBackColor = true;
             this.lblNome.UseCustomForeColor = true;
             this.lblNome.UseStyleColors = true;
-            this.lblNome.UseWaitCursor = true;
             // 
             // txtTelefone
             // 
@@ -145,7 +143,6 @@
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.UseStyleColors = true;
-            this.metroLabel3.UseWaitCursor = true;
             // 
             // btGravarContinuar
             // 

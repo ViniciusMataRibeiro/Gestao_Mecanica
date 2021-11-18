@@ -94,8 +94,8 @@ namespace ProjetoMTA.UI.Produto
                 if (Dto.Id != 0)
                 {
                     txtNome.Text = Dto.Nome;
-                    ndQuantidade.Value = decimal.Parse(Dto.Quantidade);
-                    ndValorUn.Value = decimal.Parse(Dto.ValorUni);
+                    ndQuantidade.Value = Convert.ToDecimal(Dto.Quantidade);
+                    ndValorUn.Value = Convert.ToDecimal(Dto.ValorUn);
                     txtObservacao.Text = Dto.Descricao;
                 }
                 
@@ -103,8 +103,8 @@ namespace ProjetoMTA.UI.Produto
             else
             {
                 Dto.Nome = txtNome.Text;
-                Dto.Quantidade = ndQuantidade.Value.ToString();
-                Dto.ValorUni = ndValorUn.Value.ToString();
+                Dto.Quantidade = (float)ndQuantidade.Value;
+                Dto.ValorUn = (float)ndValorUn.Value;
                 Dto.Descricao = txtObservacao.Text;
 
             }
