@@ -43,10 +43,6 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.GridProduto = new MetroFramework.Controls.MetroGrid();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeClienteVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btAdicionar = new MetroFramework.Controls.MetroButton();
             this.btExcluirProduto = new MetroFramework.Controls.MetroButton();
             this.lblContagemObservacao = new System.Windows.Forms.Label();
@@ -55,13 +51,27 @@
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
+            this.npdValorOS = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.npdTotal = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorUn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.npdTotal);
+            this.groupBox1.Controls.Add(this.metroLabel6);
+            this.groupBox1.Controls.Add(this.npdValorOS);
+            this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.lblContagemObservacao);
             this.groupBox1.Controls.Add(this.txtObservacao);
             this.groupBox1.Controls.Add(this.metroLabel4);
@@ -77,7 +87,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(20, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(572, 559);
+            this.groupBox1.Size = new System.Drawing.Size(572, 589);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
@@ -107,7 +117,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(216, 92);
+            this.metroLabel1.Location = new System.Drawing.Point(212, 92);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(90, 19);
             this.metroLabel1.TabIndex = 28;
@@ -121,7 +131,7 @@
             // 
             this.cbEquipamento.FormattingEnabled = true;
             this.cbEquipamento.ItemHeight = 23;
-            this.cbEquipamento.Location = new System.Drawing.Point(216, 114);
+            this.cbEquipamento.Location = new System.Drawing.Point(212, 114);
             this.cbEquipamento.Name = "cbEquipamento";
             this.cbEquipamento.Size = new System.Drawing.Size(144, 29);
             this.cbEquipamento.TabIndex = 29;
@@ -154,7 +164,7 @@
             // 
             this.cbMecanico.FormattingEnabled = true;
             this.cbMecanico.ItemHeight = 23;
-            this.cbMecanico.Location = new System.Drawing.Point(412, 114);
+            this.cbMecanico.Location = new System.Drawing.Point(409, 114);
             this.cbMecanico.Name = "cbMecanico";
             this.cbMecanico.Size = new System.Drawing.Size(144, 29);
             this.cbMecanico.TabIndex = 33;
@@ -163,7 +173,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(412, 92);
+            this.metroLabel3.Location = new System.Drawing.Point(409, 92);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 32;
@@ -203,10 +213,10 @@
             this.GridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.NomeClienteVeiculo,
-            this.Marca,
-            this.Placa});
+            this.NomeProduto,
+            this.QuantidadeProduto,
+            this.ValorUn,
+            this.ValorTotal});
             this.GridProduto.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -239,34 +249,6 @@
             this.GridProduto.UseCustomForeColor = true;
             this.GridProduto.Visible = false;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // NomeClienteVeiculo
-            // 
-            this.NomeClienteVeiculo.DataPropertyName = "NomeClienteVeiculo";
-            this.NomeClienteVeiculo.HeaderText = "Proprietário";
-            this.NomeClienteVeiculo.Name = "NomeClienteVeiculo";
-            this.NomeClienteVeiculo.ReadOnly = true;
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            // 
-            // Placa
-            // 
-            this.Placa.DataPropertyName = "Placa";
-            this.Placa.HeaderText = "Placa";
-            this.Placa.Name = "Placa";
-            this.Placa.ReadOnly = true;
-            // 
             // btAdicionar
             // 
             this.btAdicionar.Location = new System.Drawing.Point(414, 207);
@@ -290,7 +272,7 @@
             // lblContagemObservacao
             // 
             this.lblContagemObservacao.AutoSize = true;
-            this.lblContagemObservacao.Location = new System.Drawing.Point(502, 445);
+            this.lblContagemObservacao.Location = new System.Drawing.Point(505, 457);
             this.lblContagemObservacao.Name = "lblContagemObservacao";
             this.lblContagemObservacao.Size = new System.Drawing.Size(48, 13);
             this.lblContagemObservacao.TabIndex = 46;
@@ -299,13 +281,13 @@
             // txtObservacao
             // 
             this.txtObservacao.CasasDecimais = ((byte)(0));
-            this.txtObservacao.Location = new System.Drawing.Point(19, 461);
+            this.txtObservacao.Location = new System.Drawing.Point(16, 490);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.SaveLayout = false;
             this.txtObservacao.SetTag = null;
             this.txtObservacao.SetText = null;
-            this.txtObservacao.Size = new System.Drawing.Size(531, 82);
+            this.txtObservacao.Size = new System.Drawing.Size(537, 82);
             this.txtObservacao.TabIndex = 45;
             this.txtObservacao.Text = "OFTextBox";
             this.txtObservacao.Tipo_Controle = ProjetoMTA.Components.OFTextBox.TipoControle.texto;
@@ -313,7 +295,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(19, 439);
+            this.metroLabel4.Location = new System.Drawing.Point(16, 457);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(68, 19);
             this.metroLabel4.TabIndex = 44;
@@ -325,7 +307,7 @@
             // 
             // btGravarContinuar
             // 
-            this.btGravarContinuar.Location = new System.Drawing.Point(232, 625);
+            this.btGravarContinuar.Location = new System.Drawing.Point(232, 655);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
             this.btGravarContinuar.TabIndex = 52;
@@ -334,7 +316,7 @@
             // 
             // BtGravar
             // 
-            this.BtGravar.Location = new System.Drawing.Point(368, 625);
+            this.BtGravar.Location = new System.Drawing.Point(368, 655);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
             this.BtGravar.TabIndex = 51;
@@ -345,18 +327,83 @@
             // 
             this.btCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btCancelar.Location = new System.Drawing.Point(483, 625);
+            this.btCancelar.Location = new System.Drawing.Point(483, 655);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
             this.btCancelar.TabIndex = 50;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             // 
+            // npdValorOS
+            // 
+            this.npdValorOS.Location = new System.Drawing.Point(151, 420);
+            this.npdValorOS.Name = "npdValorOS";
+            this.npdValorOS.Size = new System.Drawing.Size(71, 20);
+            this.npdValorOS.TabIndex = 50;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(19, 420);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(126, 19);
+            this.metroLabel5.TabIndex = 49;
+            this.metroLabel5.Text = "Valor Mão de Obra:";
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel5.UseCustomBackColor = true;
+            this.metroLabel5.UseCustomForeColor = true;
+            this.metroLabel5.UseStyleColors = true;
+            // 
+            // npdTotal
+            // 
+            this.npdTotal.Enabled = false;
+            this.npdTotal.Location = new System.Drawing.Point(480, 421);
+            this.npdTotal.Name = "npdTotal";
+            this.npdTotal.Size = new System.Drawing.Size(71, 20);
+            this.npdTotal.TabIndex = 52;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(402, 422);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel6.TabIndex = 51;
+            this.metroLabel6.Text = "Valor Total:";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel6.UseCustomBackColor = true;
+            this.metroLabel6.UseCustomForeColor = true;
+            this.metroLabel6.UseStyleColors = true;
+            // 
+            // NomeProduto
+            // 
+            this.NomeProduto.HeaderText = "Produto";
+            this.NomeProduto.Name = "NomeProduto";
+            this.NomeProduto.ReadOnly = true;
+            // 
+            // QuantidadeProduto
+            // 
+            this.QuantidadeProduto.HeaderText = "Quantidade";
+            this.QuantidadeProduto.Name = "QuantidadeProduto";
+            this.QuantidadeProduto.ReadOnly = true;
+            // 
+            // ValorUn
+            // 
+            this.ValorUn.HeaderText = "Valor Unitario";
+            this.ValorUn.Name = "ValorUn";
+            this.ValorUn.ReadOnly = true;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.HeaderText = "Total";
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.ReadOnly = true;
+            // 
             // FormServicoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 679);
+            this.ClientSize = new System.Drawing.Size(612, 713);
             this.Controls.Add(this.btGravarContinuar);
             this.Controls.Add(this.BtGravar);
             this.Controls.Add(this.btCancelar);
@@ -367,6 +414,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,10 +433,6 @@
         private MetroFramework.Controls.MetroComboBox cbEquipamento;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid GridProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeClienteVeiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Placa;
         private MetroFramework.Controls.MetroButton btAdicionar;
         private MetroFramework.Controls.MetroButton btExcluirProduto;
         private System.Windows.Forms.Label lblContagemObservacao;
@@ -396,5 +441,13 @@
         private MetroFramework.Controls.MetroButton btGravarContinuar;
         private MetroFramework.Controls.MetroButton BtGravar;
         private MetroFramework.Controls.MetroButton btCancelar;
+        private System.Windows.Forms.NumericUpDown npdTotal;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private System.Windows.Forms.NumericUpDown npdValorOS;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantidadeProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
     }
 }
