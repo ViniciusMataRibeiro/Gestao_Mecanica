@@ -35,14 +35,14 @@ namespace DataBase
                 return (List<ServicoDto>)connection.Query<ServicoDto>(@"select s.*,
                                                                         m.Nome as NomeMecanico, 
                                                                         c.Nome as NomeCliente, 
-                                                                        CONCAT(v.Marca, ' - ', v.Modelo) as NomeVeiculo,
+                                                                        CONCAT(v.Marca, ' - '  ) as NomeVeiculo,
                                                                         s.DataManutencao, 
                                                                         s.ValorTotal 
                                                                         from Servico s 
                                                                         inner join Mecanico m on s.IdMecanico = m.Id 
                                                                         inner join Veiculo v on s.IdVeiculo = v.Id 
                                                                         inner join Cliente c on c.Id = v.IdCliente");
-            }
+            }//, v.Modelo
         }
 
         public bool Insert(ProdutoDto entity, string Banco)

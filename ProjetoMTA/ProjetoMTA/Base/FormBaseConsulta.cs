@@ -42,7 +42,7 @@ namespace ProjetoMTA.Base
 
         public static string GetConnectionString()
         {
-            return "SERVER=VINICIUSMR\\SQLEXPRESS;Database=Mechanical Technology Automotive;UID=sa;PWD=8520;";
+            return "SERVER=VINICIUSMR\\SQLEXPRESS;Database=MTA;UID=sa;PWD=8520;";
         }
     }
 }
