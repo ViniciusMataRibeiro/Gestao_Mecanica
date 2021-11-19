@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.npdValorPago = new System.Windows.Forms.NumericUpDown();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -54,7 +54,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.cbEquipamento = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.DtServico = new MetroFramework.Controls.MetroDateTime();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
@@ -83,7 +83,7 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.cbEquipamento);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Controls.Add(this.metroDateTime1);
+            this.groupBox1.Controls.Add(this.DtServico);
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(20, 60);
@@ -199,14 +199,14 @@
             this.GridProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridProduto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridProduto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.GridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeProduto,
@@ -215,14 +215,14 @@
             this.ValorTotal});
             this.GridProduto.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.GridProduto.DataSource = this.bindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridProduto.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridProduto.DefaultCellStyle = dataGridViewCellStyle2;
             this.GridProduto.Dock = System.Windows.Forms.DockStyle.Top;
             this.GridProduto.EnableHeadersVisualStyles = false;
             this.GridProduto.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -230,14 +230,14 @@
             this.GridProduto.Location = new System.Drawing.Point(3, 16);
             this.GridProduto.Name = "GridProduto";
             this.GridProduto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridProduto.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridProduto.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GridProduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GridProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridProduto.Size = new System.Drawing.Size(534, 185);
@@ -340,15 +340,15 @@
             this.metroLabel1.UseCustomForeColor = true;
             this.metroLabel1.UseStyleColors = true;
             // 
-            // metroDateTime1
+            // DtServico
             // 
-            this.metroDateTime1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime1.Location = new System.Drawing.Point(16, 47);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(120, 29);
-            this.metroDateTime1.TabIndex = 27;
+            this.DtServico.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtServico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtServico.Location = new System.Drawing.Point(16, 47);
+            this.DtServico.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtServico.Name = "DtServico";
+            this.DtServico.Size = new System.Drawing.Size(120, 29);
+            this.DtServico.TabIndex = 27;
             // 
             // lblNome
             // 
@@ -371,6 +371,7 @@
             this.btGravarContinuar.TabIndex = 52;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
+            this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
             // 
             // BtGravar
             // 
@@ -380,6 +381,7 @@
             this.BtGravar.TabIndex = 51;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
+            this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
             // 
             // btCancelar
             // 
@@ -391,6 +393,7 @@
             this.btCancelar.TabIndex = 50;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // FormServicoCadastro
             // 
@@ -418,7 +421,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime DtServico;
         private MetroFramework.Controls.MetroLabel lblNome;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroComboBox cbMecanico;

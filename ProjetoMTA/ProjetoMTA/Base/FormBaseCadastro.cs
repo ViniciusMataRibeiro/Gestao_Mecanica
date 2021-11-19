@@ -43,5 +43,10 @@ namespace ProjetoMTA.Base
         {
             return "SERVER=VINICIUSMR\\SQLEXPRESS;Database=MTA;UID=sa;PWD=8520;";
         }
+
+        public void InitGridBaseConsulta<T>(DataGridView grid)
+        {
+            bindingSource.DataSource = new List<T>();
+        }
     }
 }

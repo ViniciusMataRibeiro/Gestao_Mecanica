@@ -24,7 +24,7 @@ namespace ProjetoMTA.UI.Serviços
         }
         private void FormServicoConsulta_Load(object sender, EventArgs e)
         {
-            carregarGrid();
+            //carregarGrid();
         }
         private void AdicionarDado()
         {
@@ -70,7 +70,7 @@ namespace ProjetoMTA.UI.Serviços
         {
             var obj = (ServicoDto)Grid.CurrentRow?.DataBoundItem;
             if (obj == null) return;
-
+            
             FormServicoCadastro frm = new FormServicoCadastro("Alterar", obj);
             frm.ShowDialog();
             if (frm.ErroAoGravar) carregarGrid();

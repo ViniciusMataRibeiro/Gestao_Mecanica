@@ -18,5 +18,7 @@ namespace DataBase
         public decimal ValorProduto { get; set; }
         [Write(false)]
         public decimal ValorTotal { get; set; }
+        [Write(false)]
+        public decimal NomeProduto { get; set; }
     }
 }

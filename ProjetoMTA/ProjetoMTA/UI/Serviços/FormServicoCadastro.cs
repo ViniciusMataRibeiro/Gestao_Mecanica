@@ -17,6 +17,8 @@ namespace ProjetoMTA.UI.Serviços
     {
         public ServicoDto servicodto;
 
+        public decimal ValorTotalServico = 0;
+
         public ServicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
 
@@ -27,16 +29,19 @@ namespace ProjetoMTA.UI.Serviços
             InitializeComponent();
             this.Text = Status;
 
+            InitGridBaseConsulta<Produto_Servico>(GridProduto);
+
             Dto = dto;
         }
-
+                                                                         
         private void FormServicoCadastro_Load(object sender, EventArgs e)
         {
             CarregarProduto();
             CarregarCliente();
             CarregarMecanico();
+            LerDados(true);
         }
-
+        #region CarregarCombos
         private void CarregarMecanico()
         {
             MecanicoDto mecanicoDto = new MecanicoDto();
@@ -80,7 +85,9 @@ namespace ProjetoMTA.UI.Serviços
             ProdutoDto produtoDto = new ProdutoDto();
             ListaProduto = produtoDto.GetAll(GetConnectionString());
         }
+        #endregion
 
+        #region Produto
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             var fmr = new FormPesquisa();
@@ -100,6 +107,8 @@ namespace ProjetoMTA.UI.Serviços
                 bindingSource.Remove(obj);
         }
 
+        #endregion 
+
         private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbCliente.SelectedValue != null)
@@ -109,6 +118,99 @@ namespace ProjetoMTA.UI.Serviços
             else
             {
                 CarregarVeiculo(0);
+            }
+        }
+
+        private void BtGravar_Click(object sender, EventArgs e)
+        {
+            servicodto = new ServicoDto();
+
+            if (!VereficarDados())
+                return;
+            try
+            {
+                LerDados(false);
+                Gravou = servicodto.Insert(Dto, GetConnectionString());
+                if (Gravou)
+                {
+                    Close();
+                    DisplayMessage("Serviço gravado com sucesso", "Salvo");
+                }
+            }
+            catch (Exception x)
+            {
+                ErroAoGravar = true;
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
+            }
+        }
+
+        private void btGravarContinuar_Click(object sender, EventArgs e)
+        {
+            servicodto = new ServicoDto();
+            if (!VereficarDados())
+                return;
+            try
+            {
+                CriarNovo = Gravou = servicodto.Insert(Dto, GetConnectionString());
+                if (Gravou)
+                {
+                    Close();
+                    DisplayMessage("Serviço gravado com sucesso", "Salvo");
+                }
+            }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
+            }
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private bool VereficarDados()
+        {
+            var Verif = false;
+
+            return Verif;
+        }
+
+        private void LerDados(bool v)
+        {
+            if (v)
+            {
+                if (Dto.Id != 0)
+                {
+                    DtServico.Value = Dto.DataManutencao;
+                    npdValorOS.Value = Dto.ValorOS;
+                    ValorTotalServico = Dto.ValorTotal;
+                    npdValorPago.Value = Dto.ValorPago;
+                    cbEquipamento.SelectedItem = Dto.IdVeiculo;
+                    cbMecanico.SelectedItem = Dto.IdMecanico;
+
+                    //Trazer o Cliente pelo Veiculo
+                    try
+                    {
+                        servicodto = new ServicoDto();
+                        var Cliente = servicodto.GetClientePeloVeiculo(GetConnectionString(), Dto.IdVeiculo);
+                        cbCliente.SelectedItem = Cliente.Id;
+                    }
+                    catch (Exception x)
+                    {
+                        DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
+                    }
+                }
+
+            }
+            else
+            {
+                Dto.IdMecanico = (int)cbMecanico.SelectedValue;
+                Dto.IdVeiculo = (int)cbEquipamento.SelectedValue;
+                Dto.DataManutencao = DtServico.Value;
+                Dto.ValorOS = npdValorOS.Value;
+                Dto.ValorTotal = ValorTotalServico;
+                Dto.ValorPago = npdValorPago.Value;
             }
         }
     }
