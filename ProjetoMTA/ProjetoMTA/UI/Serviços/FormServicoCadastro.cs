@@ -15,10 +15,12 @@ namespace ProjetoMTA.UI.Serviços
 {
     public partial class FormServicoCadastro : FormBaseCadastro
     {
-        private List<Produto_Servico> ListaProduto;
+        public ServicoDto servicodto;
 
         public ServicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
+
+        public List<ProdutoDto> ListaProduto = new List<ProdutoDto>();
 
         public FormServicoCadastro(string Status, ServicoDto dto)
         {
@@ -30,7 +32,53 @@ namespace ProjetoMTA.UI.Serviços
 
         private void FormServicoCadastro_Load(object sender, EventArgs e)
         {
+            CarregarProduto();
+            CarregarCliente();
+            CarregarMecanico();
+        }
 
+        private void CarregarMecanico()
+        {
+            MecanicoDto mecanicoDto = new MecanicoDto();
+            var Result = mecanicoDto.GetAll(GetConnectionString());
+            if (Result != null)
+            {
+                cbMecanico.DisplayMember = "Nome";
+                cbMecanico.ValueMember = "Id";
+                cbMecanico.DataSource = Result;
+                cbMecanico.SelectedItem = null;
+            }
+        }
+
+        private void CarregarVeiculo(int IdCliente)
+        {
+
+            VeiculoDto veiculoDto = new VeiculoDto();
+            var Result = veiculoDto.GetVeiculoCliente(GetConnectionString(), IdCliente);
+            cbEquipamento.DisplayMember = "Marca";
+            cbEquipamento.ValueMember = "Id";
+            cbEquipamento.DataSource = Result;
+            cbEquipamento.SelectedItem = null;
+        }
+
+        private void CarregarCliente()
+        {
+            VeiculoDto veiculoDto = new VeiculoDto();
+            var Result = veiculoDto.GetCombo(GetConnectionString());
+            if (Result != null)
+            {
+                cbCliente.DisplayMember = "Nome";
+                cbCliente.ValueMember = "Id";
+                cbCliente.DataSource = Result;
+                cbCliente.SelectedItem = null;
+
+            }
+        }
+
+        private void CarregarProduto()
+        {
+            ProdutoDto produtoDto = new ProdutoDto();
+            ListaProduto = produtoDto.GetAll(GetConnectionString());
         }
 
         private void btAdicionar_Click(object sender, EventArgs e)
@@ -50,6 +98,18 @@ namespace ProjetoMTA.UI.Serviços
             var obj = (ServicoDto)GridProduto.CurrentRow?.DataBoundItem;
             if (obj != null)
                 bindingSource.Remove(obj);
+        }
+
+        private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbCliente.SelectedValue != null)
+            {
+                CarregarVeiculo((int)cbCliente.SelectedValue);
+            }
+            else
+            {
+                CarregarVeiculo(0);
+            }
         }
     }
 }

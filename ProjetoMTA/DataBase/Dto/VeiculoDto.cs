@@ -38,6 +38,14 @@ namespace DataBase
             }
         }
 
+        public List<VeiculoDto> GetVeiculoCliente(string Banco, int IdCliente)
+        {
+            using (SqlConnection connection = new SqlConnection(Banco))
+            {
+                return (List<VeiculoDto>)connection.Query<VeiculoDto>($"select v.Id, CONCAT(v.Marca, ' - ', v.Modelo) as Marca from Veiculo v inner join Cliente c on c.Id = v.IdCliente where c.Id = {IdCliente}");
+            }
+        }
+
         public bool Insert(VeiculoDto entity, string Banco)
         {
             try

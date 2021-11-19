@@ -24,7 +24,7 @@ namespace ProjetoMTA.UI.Serviços
         }
         private void FormServicoConsulta_Load(object sender, EventArgs e)
         {
-            //carregarGrid();
+            carregarGrid();
         }
         private void AdicionarDado()
         {
@@ -35,13 +35,13 @@ namespace ProjetoMTA.UI.Serviços
                 bindingSource.Add(frm.Dto);
                 if (frm.CriarNovo)
                 {
-                    //carregarGrid();
+                    carregarGrid();
                     AdicionarDado();
                 }
                 else bindingSource.ResetBindings(false);
             }
             frm.Dispose();
-            //carregarGrid();
+            carregarGrid();
         }
         private void carregarGrid()
         {
@@ -71,7 +71,7 @@ namespace ProjetoMTA.UI.Serviços
                 bindingSource.ResetBindings(false);
             }
             frm.Dispose();
-            // carregarGrid();
+            carregarGrid();
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace ProjetoMTA.UI.Serviços
             }
             finally
             {
-                //carregarGrid();
+                carregarGrid();
             }
         }
     }

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbProduto = new System.Windows.Forms.ComboBox();
-            this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.ndpQuantidade = new System.Windows.Forms.NumericUpDown();
-            this.npdValorUn = new System.Windows.Forms.NumericUpDown();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.npdTotal = new System.Windows.Forms.NumericUpDown();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.npdValorUn = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.ndpQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblNome = new MetroFramework.Controls.MetroLabel();
+            this.cbProduto = new System.Windows.Forms.ComboBox();
             this.btAdicionar = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,49 +60,31 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // cbProduto
+            // npdTotal
             // 
-            this.cbProduto.FormattingEnabled = true;
-            this.cbProduto.Location = new System.Drawing.Point(18, 41);
-            this.cbProduto.Name = "cbProduto";
-            this.cbProduto.Size = new System.Drawing.Size(116, 21);
-            this.cbProduto.TabIndex = 0;
+            this.npdTotal.DecimalPlaces = 2;
+            this.npdTotal.Enabled = false;
+            this.npdTotal.Location = new System.Drawing.Point(178, 97);
+            this.npdTotal.Name = "npdTotal";
+            this.npdTotal.Size = new System.Drawing.Size(81, 20);
+            this.npdTotal.TabIndex = 33;
             // 
-            // lblNome
+            // metroLabel3
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(18, 16);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(60, 19);
-            this.lblNome.TabIndex = 27;
-            this.lblNome.Text = "Produto:";
-            this.lblNome.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.lblNome.UseCustomBackColor = true;
-            this.lblNome.UseCustomForeColor = true;
-            this.lblNome.UseStyleColors = true;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(178, 16);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel1.TabIndex = 28;
-            this.metroLabel1.Text = "Quantidade:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // ndpQuantidade
-            // 
-            this.ndpQuantidade.Location = new System.Drawing.Point(178, 42);
-            this.ndpQuantidade.Name = "ndpQuantidade";
-            this.ndpQuantidade.Size = new System.Drawing.Size(81, 20);
-            this.ndpQuantidade.TabIndex = 29;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(178, 75);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel3.TabIndex = 32;
+            this.metroLabel3.Text = "Total:";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel3.UseCustomBackColor = true;
+            this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel3.UseStyleColors = true;
             // 
             // npdValorUn
             // 
+            this.npdValorUn.DecimalPlaces = 2;
             this.npdValorUn.Enabled = false;
             this.npdValorUn.Location = new System.Drawing.Point(21, 97);
             this.npdValorUn.Name = "npdValorUn";
@@ -122,26 +104,48 @@
             this.metroLabel2.UseCustomForeColor = true;
             this.metroLabel2.UseStyleColors = true;
             // 
-            // npdTotal
+            // ndpQuantidade
             // 
-            this.npdTotal.Enabled = false;
-            this.npdTotal.Location = new System.Drawing.Point(178, 97);
-            this.npdTotal.Name = "npdTotal";
-            this.npdTotal.Size = new System.Drawing.Size(81, 20);
-            this.npdTotal.TabIndex = 33;
+            this.ndpQuantidade.Location = new System.Drawing.Point(178, 42);
+            this.ndpQuantidade.Name = "ndpQuantidade";
+            this.ndpQuantidade.Size = new System.Drawing.Size(81, 20);
+            this.ndpQuantidade.TabIndex = 29;
+            this.ndpQuantidade.ValueChanged += new System.EventHandler(this.ndpQuantidade_ValueChanged);
             // 
-            // metroLabel3
+            // metroLabel1
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(178, 75);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel3.TabIndex = 32;
-            this.metroLabel3.Text = "Total:";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel3.UseCustomBackColor = true;
-            this.metroLabel3.UseCustomForeColor = true;
-            this.metroLabel3.UseStyleColors = true;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(178, 16);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel1.TabIndex = 28;
+            this.metroLabel1.Text = "Quantidade:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel1.UseStyleColors = true;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(18, 16);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(60, 19);
+            this.lblNome.TabIndex = 27;
+            this.lblNome.Text = "Produto:";
+            this.lblNome.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblNome.UseCustomBackColor = true;
+            this.lblNome.UseCustomForeColor = true;
+            this.lblNome.UseStyleColors = true;
+            // 
+            // cbProduto
+            // 
+            this.cbProduto.FormattingEnabled = true;
+            this.cbProduto.Location = new System.Drawing.Point(18, 41);
+            this.cbProduto.Name = "cbProduto";
+            this.cbProduto.Size = new System.Drawing.Size(116, 21);
+            this.cbProduto.TabIndex = 0;
+            this.cbProduto.SelectedIndexChanged += new System.EventHandler(this.cbProduto_SelectedIndexChanged);
             // 
             // btAdicionar
             // 
@@ -165,9 +169,9 @@
             this.Load += new System.EventHandler(this.FormPesquisa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -19,14 +19,13 @@ namespace ProjetoMTA.Components
             InitializeComponent();
         }
 
-        public List<Produto_Servico> ListaProdutos { get; set; }
+        public List<ProdutoDto> ListaProdutos { get; set; }
 
         public Produto_Servico Servico;
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
-
-            Servico.IdProduto = cbProduto.SelectedIndex;
+            Servico.IdProduto = (int)cbProduto.SelectedValue;
             Servico.QuantidadePecas = (int)ndpQuantidade.Value;
             Servico.ValorProduto = npdValorUn.Value;
             Servico.ValorTotal = npdTotal.Value;
@@ -60,6 +59,18 @@ namespace ProjetoMTA.Components
             cbProduto.ValueMember = "Id";
             cbProduto.DisplayMember = "Nome";
             cbProduto.DataSource = ListaProdutos;
+        }
+
+        private void ndpQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+            npdTotal.Value = npdValorUn.Value * ndpQuantidade.Value;
+        }
+
+        private void cbProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var IdProduto = (int)cbProduto.SelectedValue;
+            var Result = ListaProdutos.Where(w=> w.Id == IdProduto).ToList();
+            npdValorUn.Value = Convert.ToDecimal(Result[0].ValorUn);
         }
     }
 }
