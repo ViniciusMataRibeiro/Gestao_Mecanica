@@ -45,12 +45,20 @@ namespace ProjetoMTA.UI.Serviços
         }
         private void carregarGrid()
         {
-            servicodto = new ServicoDto();
-            var Result = servicodto.GetAll(GetConnectionString());
-            if (Result != null)
+            try
             {
-                Grid.DataSource = Result;
+                servicodto = new ServicoDto();
+                var Result = servicodto.GetAll(GetConnectionString());
+                if (Result != null)
+                {
+                    Grid.DataSource = Result;
+                }
             }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
+            }
+            
         }
 
         private void BtIncluir_Click(object sender, EventArgs e)

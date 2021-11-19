@@ -58,7 +58,7 @@ namespace DataBase
 
                 return true;
             }
-            catch (Exception x)
+            catch (Exception)
             {
                 return false;
             }
@@ -76,7 +76,7 @@ namespace DataBase
                     Sucesso = Result;
                 }
             }
-            catch (Exception x)
+            catch (Exception)
             {
                 return Sucesso;
 

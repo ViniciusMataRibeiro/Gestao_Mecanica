@@ -29,11 +29,18 @@ namespace ProjetoMTA.UI.Mecanico
 
         private void CarregarGrid()
         {
-            mecanicoDto = new MecanicoDto();
-            var Result = mecanicoDto.GetAll(GetConnectionString());
-            if (Result != null)
+            try
             {
-                Grid.DataSource = Result;
+                mecanicoDto = new MecanicoDto();
+                var Result = mecanicoDto.GetAll(GetConnectionString());
+                if (Result != null)
+                {
+                    Grid.DataSource = Result;
+                }
+            }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
         }
 

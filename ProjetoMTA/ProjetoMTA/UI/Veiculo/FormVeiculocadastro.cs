@@ -33,17 +33,24 @@ namespace ProjetoMTA.UI.Veiculo
 
         private void CarregarCombo()
         {
-            veiculoDto = new VeiculoDto();
-            var Result = veiculoDto.GetCombo(GetConnectionString());
-            if (Result != null)
+            try
             {
-                cbCliente.DisplayMember = "Nome";
-                cbCliente.ValueMember = "Id";
-                cbCliente.DataSource = Result;
+                veiculoDto = new VeiculoDto();
+                var Result = veiculoDto.GetCombo(GetConnectionString());
+                if (Result != null)
+                {
+                    cbCliente.DisplayMember = "Nome";
+                    cbCliente.ValueMember = "Id";
+                    cbCliente.DataSource = Result;
+                }
+                if (Dto.IdCliente != 0)
+                {
+                    cbCliente.SelectedItem = Dto.IdCliente;
+                }
             }
-            if (Dto.IdCliente != 0)
+            catch (Exception x)
             {
-                cbCliente.SelectedItem = Dto.IdCliente;
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
         }
 
@@ -132,11 +139,11 @@ namespace ProjetoMTA.UI.Veiculo
                 Valido = false;
 
             }
-            //if (string.IsNullOrEmpty(txtModelo.Text))
-            //{
-            //    errorProvider1.SetError(txtModelo, "Campo Obrigatorio!!");
-            //    Valido = false;
-            //}
+            if (string.IsNullOrEmpty(txtModelo.Text))
+            {
+                errorProvider1.SetError(txtModelo, "Campo Obrigatorio!!");
+                Valido = false;
+            }
             return Valido;
         }
     }

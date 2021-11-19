@@ -32,22 +32,38 @@ namespace ProjetoMTA.UI.Cliente
 
         private void CarregarGridCliente()
         {
-            clientedto = new ClienteDto();
-            var Result = clientedto.GetAll(GetConnectionString());
-            if (Result != null)
+            try
             {
-                Grid.DataSource = Result;
+                clientedto = new ClienteDto();
+                var Result = clientedto.GetAll(GetConnectionString());
+                if (Result != null)
+                {
+                    Grid.DataSource = Result;
+                }
             }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
+            }
+            
         }
         private void CarregarGridVeiculo()
         {
-            veiculoDto = new VeiculoDto();
-            var Result = veiculoDto.GetAll(GetConnectionString());
-            if (Result != null)
+            try
             {
-                GridVeiculo.DataSource = Result;
+                veiculoDto = new VeiculoDto();
+                var Result = veiculoDto.GetAll(GetConnectionString());
+                if (Result != null)
+                {
+                    GridVeiculo.DataSource = Result;
+                }
+            }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
         }
+
         private void BtIncluir_Click(object sender, EventArgs e)
         {
             if (btOpcao.Text == "   Veiculos")
@@ -63,33 +79,40 @@ namespace ProjetoMTA.UI.Cliente
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-            if (btOpcao.Text == "   Veiculos")
+            try
             {
-                var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
-                if (obj == null) return;
+                if (btOpcao.Text == "   Veiculos")
+                {
+                    var obj = (ClienteDto)Grid.CurrentRow?.DataBoundItem;
+                    if (obj == null) return;
 
-                FormClienteCadastro frm = new FormClienteCadastro("Alterar", obj);
-                frm.ShowDialog();
-                if (frm.ErroAoGravar) CarregarGridCliente();
+                    FormClienteCadastro frm = new FormClienteCadastro("Alterar", obj);
+                    frm.ShowDialog();
+                    if (frm.ErroAoGravar) CarregarGridCliente();
+                    else
+                    {
+                        bindingSource.ResetBindings(false);
+                    }
+                    frm.Dispose();
+                }
                 else
                 {
-                    bindingSource.ResetBindings(false);
+                    var obj = (VeiculoDto)GridVeiculo.CurrentRow?.DataBoundItem;
+                    if (obj == null) return;
+
+                    FormVeiculocadastro frm = new FormVeiculocadastro("Alterar", obj);
+                    frm.ShowDialog();
+                    if (frm.ErroAoGravar) CarregarGridVeiculo();
+                    else
+                    {
+                        bindingSourceVeiculo.ResetBindings(false);
+                    }
+                    frm.Dispose();
                 }
-                frm.Dispose();
             }
-            else
+            catch (Exception x)
             {
-                var obj = (VeiculoDto)GridVeiculo.CurrentRow?.DataBoundItem;
-                if (obj == null) return;
-
-                FormVeiculocadastro frm = new FormVeiculocadastro("Alterar", obj);
-                frm.ShowDialog();
-                if (frm.ErroAoGravar) CarregarGridVeiculo();
-                else
-                {
-                    bindingSourceVeiculo.ResetBindings(false);
-                }
-                frm.Dispose();
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
         }
 

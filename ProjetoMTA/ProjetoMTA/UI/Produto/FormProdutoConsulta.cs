@@ -29,11 +29,18 @@ namespace ProjetoMTA.UI.Produto
 
         private void CarregarGrid()
         {
-            produtoDto = new ProdutoDto();
-            var Result = produtoDto.GetAll(GetConnectionString());
-            if (Result != null)
+            try
             {
-                Grid.DataSource = Result;
+                produtoDto = new ProdutoDto();
+                var Result = produtoDto.GetAll(GetConnectionString());
+                if (Result != null)
+                {
+                    Grid.DataSource = Result;
+                }
+            }
+            catch (Exception x)
+            {
+                DisplayMessage(x.Message, "Operação cancelada", OFIcon.Warning);
             }
         }
 
