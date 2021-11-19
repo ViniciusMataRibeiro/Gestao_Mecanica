@@ -24,7 +24,7 @@ namespace ProjetoMTA.UI.Serviços
         }
         private void FormServicoConsulta_Load(object sender, EventArgs e)
         {
-            //carregarGrid();
+            carregarGrid();
         }
         private void AdicionarDado()
         {

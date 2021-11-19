@@ -14,11 +14,11 @@ namespace DataBase
         public int Id { get; set; }
         public int IdProduto { get; set; }
         public int IdServico { get; set; }
-        public int QuantidadePecas { get; set; }
+        public int QtdPecas { get; set; }
         public decimal ValorProduto { get; set; }
         [Write(false)]
         public decimal ValorTotal { get; set; }
         [Write(false)]
-        public decimal NomeProduto { get; set; }
+        public string NomeProduto { get; set; }
     }
 }

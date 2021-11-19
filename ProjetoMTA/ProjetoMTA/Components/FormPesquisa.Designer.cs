@@ -65,6 +65,11 @@
             this.npdTotal.DecimalPlaces = 2;
             this.npdTotal.Enabled = false;
             this.npdTotal.Location = new System.Drawing.Point(178, 97);
+            this.npdTotal.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
             this.npdTotal.Name = "npdTotal";
             this.npdTotal.Size = new System.Drawing.Size(81, 20);
             this.npdTotal.TabIndex = 33;
@@ -87,6 +92,11 @@
             this.npdValorUn.DecimalPlaces = 2;
             this.npdValorUn.Enabled = false;
             this.npdValorUn.Location = new System.Drawing.Point(21, 97);
+            this.npdValorUn.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
             this.npdValorUn.Name = "npdValorUn";
             this.npdValorUn.Size = new System.Drawing.Size(81, 20);
             this.npdValorUn.TabIndex = 31;
@@ -107,6 +117,11 @@
             // ndpQuantidade
             // 
             this.ndpQuantidade.Location = new System.Drawing.Point(178, 42);
+            this.ndpQuantidade.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
             this.ndpQuantidade.Name = "ndpQuantidade";
             this.ndpQuantidade.Size = new System.Drawing.Size(81, 20);
             this.ndpQuantidade.TabIndex = 29;

@@ -17,19 +17,19 @@ namespace ProjetoMTA.UI.Serviços
     {
         public ServicoDto servicodto;
 
-        public decimal ValorTotalServico = 0;
-
         public ServicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
 
         public List<ProdutoDto> ListaProduto = new List<ProdutoDto>();
+        public List<Produto_Servico> ListaProdutoFinal = new List<Produto_Servico>();
+
 
         public FormServicoCadastro(string Status, ServicoDto dto)
         {
             InitializeComponent();
             this.Text = Status;
 
-            InitGridBaseConsulta<Produto_Servico>(GridProduto);
+            InitGridBaseConsulta<Produto_Servico>(Grid);
 
             Dto = dto;
         }
@@ -98,13 +98,15 @@ namespace ProjetoMTA.UI.Serviços
                 bindingSource.Add(fmr.Servico);
             }
             fmr.Dispose();
+            npdValorOS_ValueChanged(null, null);
         }
 
         private void btExcluirProduto_Click(object sender, EventArgs e)
         {
-            var obj = (ServicoDto)GridProduto.CurrentRow?.DataBoundItem;
+            var obj = (Produto_Servico)Grid.CurrentRow?.DataBoundItem;
             if (obj != null)
                 bindingSource.Remove(obj);
+            npdValorOS_ValueChanged(null, null);
         }
 
         #endregion 
@@ -171,7 +173,7 @@ namespace ProjetoMTA.UI.Serviços
 
         private bool VereficarDados()
         {
-            var Verif = false;
+            var Verif = true;
 
             return Verif;
         }
@@ -183,18 +185,18 @@ namespace ProjetoMTA.UI.Serviços
                 if (Dto.Id != 0)
                 {
                     DtServico.Value = Dto.DataManutencao;
-                    npdValorOS.Value = Dto.ValorOS;
-                    ValorTotalServico = Dto.ValorTotal;
+                    npdValorOS.Value = Dto.ValorMaoDeObra;
+                    npdTotal.Value = Dto.ValorTotal;
                     npdValorPago.Value = Dto.ValorPago;
-                    cbEquipamento.SelectedItem = Dto.IdVeiculo;
-                    cbMecanico.SelectedItem = Dto.IdMecanico;
+                    cbMecanico.SelectedValue = Dto.IdMecanico;
 
                     //Trazer o Cliente pelo Veiculo
                     try
                     {
                         servicodto = new ServicoDto();
                         var Cliente = servicodto.GetClientePeloVeiculo(GetConnectionString(), Dto.IdVeiculo);
-                        cbCliente.SelectedItem = Cliente.Id;
+                        cbCliente.SelectedValue = Cliente[0].Id;
+                        cbEquipamento.SelectedValue = Dto.IdVeiculo;
                     }
                     catch (Exception x)
                     {
@@ -208,10 +210,27 @@ namespace ProjetoMTA.UI.Serviços
                 Dto.IdMecanico = (int)cbMecanico.SelectedValue;
                 Dto.IdVeiculo = (int)cbEquipamento.SelectedValue;
                 Dto.DataManutencao = DtServico.Value;
-                Dto.ValorOS = npdValorOS.Value;
-                Dto.ValorTotal = ValorTotalServico;
+                Dto.ValorMaoDeObra = npdValorOS.Value;
+                Dto.ValorTotal = npdTotal.Value;
                 Dto.ValorPago = npdValorPago.Value;
+                foreach (Produto_Servico item in bindingSource.List)
+                {
+                    ListaProdutoFinal.Add(item);
+                }
+                Dto.Produtos = ListaProdutoFinal;
             }
+        }
+
+        private void npdValorOS_ValueChanged(object sender, EventArgs e)
+        {
+             List<decimal> ValorProduto = new List<decimal>();
+
+            foreach (Produto_Servico item in bindingSource.List)
+            {
+                ValorProduto.Add(item.ValorTotal);
+            }
+            var Soma = ValorProduto.Sum();
+            npdTotal.Value = npdValorOS.Value + Soma;
         }
     }
 }

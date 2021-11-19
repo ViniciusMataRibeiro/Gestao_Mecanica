@@ -252,7 +252,7 @@ namespace ProjetoMTA
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::ProjetoMTA.Properties.Resources.MTA_1;
+            this.pictureBox2.Image = global::ProjetoMTA.Properties.Resources.MTA_3;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 

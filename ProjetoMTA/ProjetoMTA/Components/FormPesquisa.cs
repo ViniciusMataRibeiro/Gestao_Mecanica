@@ -26,9 +26,10 @@ namespace ProjetoMTA.Components
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             Servico.IdProduto = (int)cbProduto.SelectedValue;
-            Servico.QuantidadePecas = (int)ndpQuantidade.Value;
+            Servico.QtdPecas = (int)ndpQuantidade.Value;
             Servico.ValorProduto = npdValorUn.Value;
             Servico.ValorTotal = npdTotal.Value;
+            Servico.NomeProduto = ListaProdutos.Where(w=> w.Id == Servico.IdProduto).FirstOrDefault().Nome;
 
             gravou = true;
             Close();
@@ -48,7 +49,7 @@ namespace ProjetoMTA.Components
                 this.Text = "Alteração";
 
                 cbProduto.SelectedIndex = Servico.IdProduto;
-                ndpQuantidade.Value = Servico.QuantidadePecas;
+                ndpQuantidade.Value = Servico.QtdPecas;
                 npdValorUn.Value = Servico.ValorProduto;
                 npdTotal.Value = Servico.ValorTotal;
             }

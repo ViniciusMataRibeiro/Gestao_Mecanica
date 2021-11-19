@@ -42,10 +42,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btAdicionar = new MetroFramework.Controls.MetroButton();
             this.btExcluirProduto = new MetroFramework.Controls.MetroButton();
-            this.GridProduto = new MetroFramework.Controls.MetroGrid();
+            this.Grid = new MetroFramework.Controls.MetroGrid();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorUn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantidadePecas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbMecanico = new MetroFramework.Controls.MetroComboBox();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +96,11 @@
             // 
             this.npdValorPago.DecimalPlaces = 2;
             this.npdValorPago.Location = new System.Drawing.Point(485, 426);
+            this.npdValorPago.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
             this.npdValorPago.Name = "npdValorPago";
             this.npdValorPago.Size = new System.Drawing.Size(71, 20);
             this.npdValorPago.TabIndex = 54;
@@ -118,6 +123,11 @@
             this.npdTotal.DecimalPlaces = 2;
             this.npdTotal.Enabled = false;
             this.npdTotal.Location = new System.Drawing.Point(322, 426);
+            this.npdTotal.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
             this.npdTotal.Name = "npdTotal";
             this.npdTotal.Size = new System.Drawing.Size(71, 20);
             this.npdTotal.TabIndex = 52;
@@ -139,9 +149,15 @@
             // 
             this.npdValorOS.DecimalPlaces = 2;
             this.npdValorOS.Location = new System.Drawing.Point(151, 426);
+            this.npdValorOS.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
             this.npdValorOS.Name = "npdValorOS";
             this.npdValorOS.Size = new System.Drawing.Size(71, 20);
             this.npdValorOS.TabIndex = 50;
+            this.npdValorOS.ValueChanged += new System.EventHandler(this.npdValorOS_ValueChanged);
             // 
             // metroLabel5
             // 
@@ -161,7 +177,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Controls.Add(this.btAdicionar);
             this.groupBox2.Controls.Add(this.btExcluirProduto);
-            this.groupBox2.Controls.Add(this.GridProduto);
+            this.groupBox2.Controls.Add(this.Grid);
             this.groupBox2.Location = new System.Drawing.Point(16, 160);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(540, 246);
@@ -190,15 +206,15 @@
             this.btExcluirProduto.UseSelectable = true;
             this.btExcluirProduto.Click += new System.EventHandler(this.btExcluirProduto_Click);
             // 
-            // GridProduto
+            // Grid
             // 
-            this.GridProduto.AllowUserToResizeRows = false;
-            this.GridProduto.AutoGenerateColumns = false;
-            this.GridProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridProduto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridProduto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Grid.AllowUserToResizeRows = false;
+            this.Grid.AutoGenerateColumns = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -206,15 +222,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.GridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeProduto,
-            this.QuantidadeProduto,
-            this.ValorUn,
+            this.ValorProduto,
+            this.QuantidadePecas,
             this.ValorTotal});
-            this.GridProduto.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.GridProduto.DataSource = this.bindingSource;
+            this.Grid.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Grid.DataSource = this.bindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -222,14 +238,14 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridProduto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GridProduto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GridProduto.EnableHeadersVisualStyles = false;
-            this.GridProduto.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.GridProduto.GridColor = System.Drawing.Color.White;
-            this.GridProduto.Location = new System.Drawing.Point(3, 16);
-            this.GridProduto.Name = "GridProduto";
-            this.GridProduto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Grid.GridColor = System.Drawing.Color.White;
+            this.Grid.Location = new System.Drawing.Point(3, 16);
+            this.Grid.Name = "Grid";
+            this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -237,35 +253,38 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridProduto.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.GridProduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.GridProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridProduto.Size = new System.Drawing.Size(534, 185);
-            this.GridProduto.TabIndex = 5;
-            this.GridProduto.UseCustomBackColor = true;
-            this.GridProduto.UseCustomForeColor = true;
-            this.GridProduto.Visible = false;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(534, 185);
+            this.Grid.TabIndex = 5;
+            this.Grid.UseCustomBackColor = true;
+            this.Grid.UseCustomForeColor = true;
             // 
             // NomeProduto
             // 
+            this.NomeProduto.DataPropertyName = "NomeProduto";
             this.NomeProduto.HeaderText = "Produto";
             this.NomeProduto.Name = "NomeProduto";
             this.NomeProduto.ReadOnly = true;
             // 
-            // QuantidadeProduto
+            // ValorProduto
             // 
-            this.QuantidadeProduto.HeaderText = "Quantidade";
-            this.QuantidadeProduto.Name = "QuantidadeProduto";
-            this.QuantidadeProduto.ReadOnly = true;
+            this.ValorProduto.DataPropertyName = "ValorProduto";
+            this.ValorProduto.HeaderText = "Valor Unitario";
+            this.ValorProduto.Name = "ValorProduto";
+            this.ValorProduto.ReadOnly = true;
             // 
-            // ValorUn
+            // QuantidadePecas
             // 
-            this.ValorUn.HeaderText = "Valor Unitario";
-            this.ValorUn.Name = "ValorUn";
-            this.ValorUn.ReadOnly = true;
+            this.QuantidadePecas.DataPropertyName = "QuantidadePecas";
+            this.QuantidadePecas.HeaderText = "Quantidade";
+            this.QuantidadePecas.Name = "QuantidadePecas";
+            this.QuantidadePecas.ReadOnly = true;
             // 
             // ValorTotal
             // 
+            this.ValorTotal.DataPropertyName = "ValorTotal";
             this.ValorTotal.HeaderText = "Total";
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.ReadOnly = true;
@@ -275,6 +294,7 @@
             this.cbMecanico.FormattingEnabled = true;
             this.cbMecanico.ItemHeight = 23;
             this.cbMecanico.Location = new System.Drawing.Point(409, 114);
+            this.cbMecanico.MaxDropDownItems = 10;
             this.cbMecanico.Name = "cbMecanico";
             this.cbMecanico.Size = new System.Drawing.Size(144, 29);
             this.cbMecanico.TabIndex = 33;
@@ -298,6 +318,7 @@
             this.cbCliente.FormattingEnabled = true;
             this.cbCliente.ItemHeight = 23;
             this.cbCliente.Location = new System.Drawing.Point(16, 114);
+            this.cbCliente.MaxDropDownItems = 10;
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(144, 29);
             this.cbCliente.TabIndex = 31;
@@ -322,6 +343,7 @@
             this.cbEquipamento.FormattingEnabled = true;
             this.cbEquipamento.ItemHeight = 23;
             this.cbEquipamento.Location = new System.Drawing.Point(212, 114);
+            this.cbEquipamento.MaxDropDownItems = 10;
             this.cbEquipamento.Name = "cbEquipamento";
             this.cbEquipamento.Size = new System.Drawing.Size(153, 29);
             this.cbEquipamento.TabIndex = 29;
@@ -412,7 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdValorOS)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GridProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -430,7 +452,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroComboBox cbEquipamento;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroGrid GridProduto;
+        private MetroFramework.Controls.MetroGrid Grid;
         private MetroFramework.Controls.MetroButton btAdicionar;
         private MetroFramework.Controls.MetroButton btExcluirProduto;
         private MetroFramework.Controls.MetroButton btGravarContinuar;
@@ -440,12 +462,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.NumericUpDown npdValorOS;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantidadeProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.NumericUpDown npdValorPago;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.BindingSource bindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantidadePecas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
     }
 }
