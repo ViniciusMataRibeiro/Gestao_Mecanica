@@ -72,17 +72,18 @@
             this.PainelOpcao.Dock = System.Windows.Forms.DockStyle.Top;
             this.PainelOpcao.HorizontalScrollbarBarColor = true;
             this.PainelOpcao.HorizontalScrollbarHighlightOnWheel = false;
-            this.PainelOpcao.HorizontalScrollbarSize = 10;
+            this.PainelOpcao.HorizontalScrollbarSize = 12;
             this.PainelOpcao.Location = new System.Drawing.Point(0, 0);
+            this.PainelOpcao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PainelOpcao.Name = "PainelOpcao";
-            this.PainelOpcao.Size = new System.Drawing.Size(800, 55);
+            this.PainelOpcao.Size = new System.Drawing.Size(1067, 68);
             this.PainelOpcao.TabIndex = 2;
             this.PainelOpcao.UseCustomBackColor = true;
             this.PainelOpcao.UseCustomForeColor = true;
             this.PainelOpcao.UseStyleColors = true;
             this.PainelOpcao.VerticalScrollbarBarColor = false;
             this.PainelOpcao.VerticalScrollbarHighlightOnWheel = false;
-            this.PainelOpcao.VerticalScrollbarSize = 10;
+            this.PainelOpcao.VerticalScrollbarSize = 13;
             // 
             // btOpcao
             // 
@@ -94,9 +95,10 @@
             this.btOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btOpcao.Image = global::ProjetoMTA.Properties.Resources.Carro_32;
             this.btOpcao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btOpcao.Location = new System.Drawing.Point(204, 0);
+            this.btOpcao.Location = new System.Drawing.Point(272, 0);
+            this.btOpcao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btOpcao.Name = "btOpcao";
-            this.btOpcao.Size = new System.Drawing.Size(118, 55);
+            this.btOpcao.Size = new System.Drawing.Size(157, 68);
             this.btOpcao.TabIndex = 16;
             this.btOpcao.Text = "   Veiculos";
             this.btOpcao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,9 +115,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button1.Image = global::ProjetoMTA.Properties.Resources.Menu_32;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(189, 0);
+            this.button1.Location = new System.Drawing.Point(252, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(15, 55);
+            this.button1.Size = new System.Drawing.Size(20, 68);
             this.button1.TabIndex = 15;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -130,9 +133,10 @@
             this.btExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btExcluir.Image = global::ProjetoMTA.Properties.Resources.Delete_32;
             this.btExcluir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btExcluir.Location = new System.Drawing.Point(126, 0);
+            this.btExcluir.Location = new System.Drawing.Point(168, 0);
+            this.btExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(63, 55);
+            this.btExcluir.Size = new System.Drawing.Size(84, 68);
             this.btExcluir.TabIndex = 14;
             this.btExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btExcluir.UseVisualStyleBackColor = true;
@@ -148,9 +152,10 @@
             this.btAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btAlterar.Image = global::ProjetoMTA.Properties.Resources.Change_32;
             this.btAlterar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btAlterar.Location = new System.Drawing.Point(63, 0);
+            this.btAlterar.Location = new System.Drawing.Point(84, 0);
+            this.btAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAlterar.Name = "btAlterar";
-            this.btAlterar.Size = new System.Drawing.Size(63, 55);
+            this.btAlterar.Size = new System.Drawing.Size(84, 68);
             this.btAlterar.TabIndex = 13;
             this.btAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btAlterar.UseVisualStyleBackColor = true;
@@ -167,8 +172,9 @@
             this.BtIncluir.Image = global::ProjetoMTA.Properties.Resources.Add_32;
             this.BtIncluir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BtIncluir.Location = new System.Drawing.Point(0, 0);
+            this.BtIncluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtIncluir.Name = "BtIncluir";
-            this.BtIncluir.Size = new System.Drawing.Size(63, 55);
+            this.BtIncluir.Size = new System.Drawing.Size(84, 68);
             this.BtIncluir.TabIndex = 12;
             this.BtIncluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtIncluir.UseVisualStyleBackColor = true;
@@ -212,7 +218,8 @@
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Grid.GridColor = System.Drawing.Color.White;
-            this.Grid.Location = new System.Drawing.Point(0, 55);
+            this.Grid.Location = new System.Drawing.Point(0, 68);
+            this.Grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -223,9 +230,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid.RowHeadersWidth = 51;
             this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(800, 373);
+            this.Grid.Size = new System.Drawing.Size(1067, 464);
             this.Grid.TabIndex = 3;
             this.Grid.UseCustomBackColor = true;
             this.Grid.UseCustomForeColor = true;
@@ -234,6 +242,7 @@
             // 
             this.IdCliente.DataPropertyName = "Id";
             this.IdCliente.HeaderText = "Id";
+            this.IdCliente.MinimumWidth = 6;
             this.IdCliente.Name = "IdCliente";
             this.IdCliente.ReadOnly = true;
             // 
@@ -241,6 +250,7 @@
             // 
             this.NomeCliente.DataPropertyName = "Nome";
             this.NomeCliente.HeaderText = "Nome";
+            this.NomeCliente.MinimumWidth = 6;
             this.NomeCliente.Name = "NomeCliente";
             this.NomeCliente.ReadOnly = true;
             // 
@@ -248,6 +258,7 @@
             // 
             this.CPF.DataPropertyName = "CPF";
             this.CPF.HeaderText = "CPF";
+            this.CPF.MinimumWidth = 6;
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
             // 
@@ -255,6 +266,7 @@
             // 
             this.RG.DataPropertyName = "RG";
             this.RG.HeaderText = "RG";
+            this.RG.MinimumWidth = 6;
             this.RG.Name = "RG";
             this.RG.ReadOnly = true;
             // 
@@ -262,6 +274,7 @@
             // 
             this.Telefone.DataPropertyName = "Telefone";
             this.Telefone.HeaderText = "Telefone";
+            this.Telefone.MinimumWidth = 6;
             this.Telefone.Name = "Telefone";
             this.Telefone.ReadOnly = true;
             // 
@@ -302,7 +315,8 @@
             this.GridVeiculo.EnableHeadersVisualStyles = false;
             this.GridVeiculo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridVeiculo.GridColor = System.Drawing.Color.White;
-            this.GridVeiculo.Location = new System.Drawing.Point(0, 55);
+            this.GridVeiculo.Location = new System.Drawing.Point(0, 68);
+            this.GridVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GridVeiculo.Name = "GridVeiculo";
             this.GridVeiculo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -313,9 +327,10 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GridVeiculo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.GridVeiculo.RowHeadersWidth = 51;
             this.GridVeiculo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GridVeiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridVeiculo.Size = new System.Drawing.Size(800, 373);
+            this.GridVeiculo.Size = new System.Drawing.Size(1067, 464);
             this.GridVeiculo.TabIndex = 4;
             this.GridVeiculo.UseCustomBackColor = true;
             this.GridVeiculo.UseCustomForeColor = true;
@@ -325,6 +340,7 @@
             // 
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             // 
@@ -332,6 +348,7 @@
             // 
             this.NomeClienteVeiculo.DataPropertyName = "NomeClienteVeiculo";
             this.NomeClienteVeiculo.HeaderText = "Proprietário";
+            this.NomeClienteVeiculo.MinimumWidth = 6;
             this.NomeClienteVeiculo.Name = "NomeClienteVeiculo";
             this.NomeClienteVeiculo.ReadOnly = true;
             // 
@@ -339,6 +356,7 @@
             // 
             this.Marca.DataPropertyName = "Marca";
             this.Marca.HeaderText = "Marca";
+            this.Marca.MinimumWidth = 6;
             this.Marca.Name = "Marca";
             this.Marca.ReadOnly = true;
             // 
@@ -346,18 +364,20 @@
             // 
             this.Placa.DataPropertyName = "Placa";
             this.Placa.HeaderText = "Placa";
+            this.Placa.MinimumWidth = 6;
             this.Placa.Name = "Placa";
             this.Placa.ReadOnly = true;
             // 
             // FormClienteConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.GridVeiculo);
             this.Controls.Add(this.Grid);
             this.Controls.Add(this.PainelOpcao);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FormClienteConsulta";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FormClienteConsulta_Load);

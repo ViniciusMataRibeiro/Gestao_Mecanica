@@ -175,6 +175,20 @@ namespace ProjetoMTA.UI.Serviços
         private bool VereficarDados()
         {
             var Verif = true;
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(cbCliente.Text))
+            {
+                errorProvider1.SetError(cbCliente, "Selecione o Cliente !!");
+                Verif = false;
+            }
+            if (string.IsNullOrEmpty(cbEquipamento.Text))
+            {
+                errorProvider1.SetError(cbEquipamento, "Selecione o veiculo sobre manutenção !!!");
+            }
+            if (string.IsNullOrEmpty(cbMecanico.Text))
+            {
+                errorProvider1.SetError(cbMecanico, "Selecione o funcionario responsavel pela manutenção !!!");
+            }
             return Verif;
         }
 
