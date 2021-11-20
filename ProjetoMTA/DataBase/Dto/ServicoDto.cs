@@ -41,45 +41,35 @@ namespace DataBase
         {
             using (SqlConnection connection = new SqlConnection(Banco))
             {
-                var sql = @"select s.*,
-                                                                        m.Nome as NomeMecanico, 
-                                                                        c.Nome as NomeCliente, 
-                                                                        CONCAT(v.Marca, ' - ' ,v.Modelo) as NomeVeiculo,
-                                                                        s.DataManutencao, 
-                                                                        s.ValorTotal, 
-                                                                            
-                                                                            ps.IdServico Produtos_IdServico,
-                                                                            ps.IdProduto Produtos_IdProduto,
-                                                                            ps.QtdPecas Produtos_QtdPecas,
-                                                                            ps.ValorProduto Produtos_ValorProduto,
-                                                                            p.Nome as Produtos_NomeProduto
+                var Servico =  (List<ServicoDto>)connection.Query<ServicoDto>(@"select s.*,
+                                                                                m.Nome as NomeMecanico, 
+                                                                                c.Nome as NomeCliente, 
+                                                                                CONCAT(v.Marca, ' - ' ,v.Modelo) as NomeVeiculo,
+                                                                                s.DataManutencao, 
+                                                                                s.ValorTotal
+                                                                                from Servico s 
+                                                                                inner join Mecanico m on s.IdMecanico = m.Id 
+                                                                                inner join Veiculo v on s.IdVeiculo = v.Id 
+                                                                                inner join Cliente c on c.Id = v.IdCliente");
 
-                                                                        from Servico s 
-                                                                        inner join Mecanico m on s.IdMecanico = m.Id 
-                                                                        inner join Veiculo v on s.IdVeiculo = v.Id 
-                                                                        inner join Cliente c on c.Id = v.IdCliente
-                                                                        inner join Produto_Servico ps on ps.IdServico = s.Id
-                                                                        inner join Produto p on p.Id = ps.IdProduto";
+                var produto = (List<Produto_Servico>)connection.Query<Produto_Servico>(@"select ps.*, p.Nome as NomeProduto
+                                                                                            from Produto_Servico ps
+                                                                                            inner join Produto p on p.Id = ps.IdProduto");
 
-                return (List<ServicoDto>)connection.Query<ServicoDto>(@"select s.*,
-                                                                        m.Nome as NomeMecanico, 
-                                                                        c.Nome as NomeCliente, 
-                                                                        CONCAT(v.Marca, ' - ' ,v.Modelo) as NomeVeiculo,
-                                                                        s.DataManutencao, 
-                                                                        s.ValorTotal, 
-                                                                            
-                                                                            ps.IdServico Produtos_IdServico,
-                                                                            ps.IdProduto Produtos_IdProduto,
-                                                                            ps.QtdPecas Produtos_QtdPecas,
-                                                                            ps.ValorProduto Produtos_ValorProduto,
-                                                                            p.Nome as Produtos_NomeProduto
 
-                                                                        from Servico s 
-                                                                        inner join Mecanico m on s.IdMecanico = m.Id 
-                                                                        inner join Veiculo v on s.IdVeiculo = v.Id 
-                                                                        inner join Cliente c on c.Id = v.IdCliente
-                                                                        inner join Produto_Servico ps on ps.IdServico = s.Id
-                                                                        inner join Produto p on p.Id = ps.IdProduto");
+                foreach (var item in Servico)
+                {
+                    foreach (var item2 in produto)
+                    {
+                        if (item.Id == item2.IdServico)
+                        {
+                            item.Produtos.Add(item2);
+                        }
+                    }
+                }
+
+
+                return Servico;
             }
         }
 
@@ -136,7 +126,7 @@ namespace DataBase
                     {
                         foreach (var item in resultado)
                         {
-                            var a = (List<Produto_Servico>)connection.Query<ServicoDto>($@"Delete from Produto_Servico where IdServico = {result}");
+                            var a = (List<Produto_Servico>)connection.Query<Produto_Servico>($@"Delete from Produto_Servico where IdServico = {result}");
                         }
                     }
                 }
@@ -149,7 +139,6 @@ namespace DataBase
                         using (SqlConnection connection = new SqlConnection(Banco))
                         {
                             var Result = connection.Insert(produto);
-                            //var b = (List<Produto_Servico>)connection.Query<Produto_Servico>($@"Insert into Produto_Servico ( IdProduto, IdServico, QtdPecas, ValorProduto) values ({produto.IdProduto}, {produto.IdServico}, {produto.QuantidadePecas}, {produto.ValorProduto})");
                         }
                     }
                 }
@@ -170,7 +159,18 @@ namespace DataBase
             {
                 using (SqlConnection connection = new SqlConnection(Banco))
                 {
+                    var resultado = (List<Produto_Servico>)connection.Query<Produto_Servico>($@"Select * from Produto_Servico where IdServico = {id}");
+
+                    if (resultado.Count != 0)
+                    {
+                        foreach (var item in resultado)
+                        {
+                            var a = (List<Produto_Servico>)connection.Query<Produto_Servico>($@"Delete from Produto_Servico where IdServico = {id}");
+                        }
+                    }
+
                     var Result = connection.Delete(new ServicoDto() { Id = id });
+                    
                     Sucesso = Result;
                 }
             }

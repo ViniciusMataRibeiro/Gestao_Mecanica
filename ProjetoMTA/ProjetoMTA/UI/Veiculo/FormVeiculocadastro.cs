@@ -18,6 +18,8 @@ namespace ProjetoMTA.UI.Veiculo
         VeiculoDto veiculoDto;
         public VeiculoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
+        public int IdCliente { get; internal set; }
+
         public FormVeiculocadastro(string Status, VeiculoDto dto)
         {
             InitializeComponent();
@@ -43,9 +45,9 @@ namespace ProjetoMTA.UI.Veiculo
                     cbCliente.ValueMember = "Id";
                     cbCliente.DataSource = Result;
                 }
-                if (Dto.IdCliente != 0)
+                if (IdCliente != 0)
                 {
-                    cbCliente.SelectedItem = Dto.IdCliente;
+                    cbCliente.SelectedValue = IdCliente;
                 }
             }
             catch (Exception x)

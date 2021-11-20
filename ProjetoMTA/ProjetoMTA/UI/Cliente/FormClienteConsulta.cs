@@ -192,15 +192,17 @@ namespace ProjetoMTA.UI.Cliente
                 bindingSource.Add(frm.Dto);
                 if (frm.CriarNovo) AdicionarDado();
                 else bindingSource.ResetBindings(false);
+                if (OficinaMessageBox.Show($"Deseja Cadastrar um veiculo ao cliente?", "Incluir", OFButtons.YesNo, OFIcon.Question) == DialogResult.Yes)
+                    AdicionarDadoVeiculo(frm.Dto.Id);
             }
             frm.Dispose();
             CarregarGridCliente();
-            if (OficinaMessageBox.Show($"Deseja Cadastrar um veiculo ao cliente?", "Incluir", OFButtons.YesNo, OFIcon.Question) == DialogResult.Yes)
-                AdicionarDadoVeiculo(frm.Dto.Id);
+            
         }
         private void AdicionarDadoVeiculo(int id)
         {
             FormVeiculocadastro frm = new FormVeiculocadastro("incluir", new VeiculoDto());
+            frm.IdCliente = id;
             frm.ShowDialog();
             if (frm.Gravou)
             {

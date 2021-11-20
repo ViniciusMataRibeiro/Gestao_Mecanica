@@ -43,10 +43,6 @@
             this.btAdicionar = new MetroFramework.Controls.MetroButton();
             this.btExcluirProduto = new MetroFramework.Controls.MetroButton();
             this.Grid = new MetroFramework.Controls.MetroGrid();
-            this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantidadePecas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbMecanico = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -59,6 +55,10 @@
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
+            this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtdPecas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.npdValorPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).BeginInit();
@@ -227,7 +227,7 @@
             this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeProduto,
             this.ValorProduto,
-            this.QuantidadePecas,
+            this.QtdPecas,
             this.ValorTotal});
             this.Grid.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Grid.DataSource = this.bindingSource;
@@ -260,34 +260,6 @@
             this.Grid.TabIndex = 5;
             this.Grid.UseCustomBackColor = true;
             this.Grid.UseCustomForeColor = true;
-            // 
-            // NomeProduto
-            // 
-            this.NomeProduto.DataPropertyName = "NomeProduto";
-            this.NomeProduto.HeaderText = "Produto";
-            this.NomeProduto.Name = "NomeProduto";
-            this.NomeProduto.ReadOnly = true;
-            // 
-            // ValorProduto
-            // 
-            this.ValorProduto.DataPropertyName = "ValorProduto";
-            this.ValorProduto.HeaderText = "Valor Unitario";
-            this.ValorProduto.Name = "ValorProduto";
-            this.ValorProduto.ReadOnly = true;
-            // 
-            // QuantidadePecas
-            // 
-            this.QuantidadePecas.DataPropertyName = "QuantidadePecas";
-            this.QuantidadePecas.HeaderText = "Quantidade";
-            this.QuantidadePecas.Name = "QuantidadePecas";
-            this.QuantidadePecas.ReadOnly = true;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.DataPropertyName = "ValorTotal";
-            this.ValorTotal.HeaderText = "Total";
-            this.ValorTotal.Name = "ValorTotal";
-            this.ValorTotal.ReadOnly = true;
             // 
             // cbMecanico
             // 
@@ -417,6 +389,34 @@
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // NomeProduto
+            // 
+            this.NomeProduto.DataPropertyName = "NomeProduto";
+            this.NomeProduto.HeaderText = "Produto";
+            this.NomeProduto.Name = "NomeProduto";
+            this.NomeProduto.ReadOnly = true;
+            // 
+            // ValorProduto
+            // 
+            this.ValorProduto.DataPropertyName = "ValorProduto";
+            this.ValorProduto.HeaderText = "Valor Unitario";
+            this.ValorProduto.Name = "ValorProduto";
+            this.ValorProduto.ReadOnly = true;
+            // 
+            // QtdPecas
+            // 
+            this.QtdPecas.DataPropertyName = "QtdPecas";
+            this.QtdPecas.HeaderText = "Quantidade";
+            this.QtdPecas.Name = "QtdPecas";
+            this.QtdPecas.ReadOnly = true;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.DataPropertyName = "ValorTotal";
+            this.ValorTotal.HeaderText = "Total";
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.ReadOnly = true;
+            // 
             // FormServicoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,7 +467,7 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuantidadePecas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QtdPecas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
     }
 }

@@ -93,7 +93,7 @@ namespace ProjetoMTA.UI.Serviços
             {
                 if (OficinaMessageBox.Show("Deseja realmente remover este Serviço?", "Delete", OFButtons.YesNo, OFIcon.Question) == DialogResult.No)
                     return;
-                var deletou = true;//ServicoDto.Delete(obj.Id, GetConnectionString());
+                var deletou = servicodto.Delete(obj.Id, GetConnectionString());
                 if (deletou)
                 {
                     bindingSource.Remove(obj);

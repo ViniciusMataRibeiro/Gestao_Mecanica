@@ -19,6 +19,7 @@ namespace ProjetoMTA.UI.Serviços
 
         public ServicoDto Dto { get; set; }
         public bool ErroAoGravar { get; set; }
+        decimal CalculaValor = 0;
 
         public List<ProdutoDto> ListaProduto = new List<ProdutoDto>();
         public List<Produto_Servico> ListaProdutoFinal = new List<Produto_Servico>();
@@ -174,7 +175,6 @@ namespace ProjetoMTA.UI.Serviços
         private bool VereficarDados()
         {
             var Verif = true;
-
             return Verif;
         }
 
@@ -197,6 +197,11 @@ namespace ProjetoMTA.UI.Serviços
                         var Cliente = servicodto.GetClientePeloVeiculo(GetConnectionString(), Dto.IdVeiculo);
                         cbCliente.SelectedValue = Cliente[0].Id;
                         cbEquipamento.SelectedValue = Dto.IdVeiculo;
+                        foreach (var item in Dto.Produtos)
+                        {
+                            item.ValorTotal = item.ValorProduto * item.QtdPecas;
+                            bindingSource.Add(item);
+                        }
                     }
                     catch (Exception x)
                     {
