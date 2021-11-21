@@ -59,30 +59,30 @@ namespace ProjetoMTA.UI.Cliente
             errorProvider1.Clear();
             if (string.IsNullOrEmpty(txtNome.Text))
             {
-                errorProvider1.SetError(txtNome, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtNome, "Campo obrigatório!!");
                 Valido = false;
             }
             var Cpf = txtCpf.Text.Replace(',', ' ').Replace('-', ' ').Trim();
             if (string.IsNullOrEmpty(Cpf))
             {
-                errorProvider1.SetError(txtCpf, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtCpf, "Campo obrigatório!!");
                 Valido = false;
             }
             var Rg = txtRg.Text.Replace(',', ' ').Replace('-', ' ').Trim();
             if (string.IsNullOrEmpty(Rg))
             {
-                errorProvider1.SetError(txtRg, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtRg, "Campo obrigatório!!");
                 Valido = false;
             }
             var telefone = txtTelefone.Text.Replace('(', ' ').Replace(')', ' ').Replace('-', ' ').Trim();
             if (string.IsNullOrEmpty(telefone))
             {
-                errorProvider1.SetError(txtTelefone, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtTelefone, "Campo obrigatório!!");
                 Valido = false;
             }
             if (string.IsNullOrEmpty(txtEndereco.Text))
             {
-                errorProvider1.SetError(txtEndereco, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtEndereco, "Campo obrigatório!!");
                 Valido = false;
             }
 

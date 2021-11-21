@@ -22,7 +22,7 @@ namespace ProjetoMTA.Components
         public List<ProdutoDto> ListaProdutos { get; set; }
 
         public Produto_Servico Servico;
-
+        public int QtdProduto = 0;
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             Servico.IdProduto = (int)cbProduto.SelectedValue;
@@ -31,8 +31,43 @@ namespace ProjetoMTA.Components
             Servico.ValorTotal = npdTotal.Value;
             Servico.NomeProduto = ListaProdutos.Where(w=> w.Id == Servico.IdProduto).FirstOrDefault().Nome;
 
+            if (!vereficar()) return;
             gravou = true;
             Close();
+        }
+
+        private bool vereficar()
+        {
+            var Verific = true;
+            var QtdEstoque = ListaProdutos.Where(w => w.Id == (int)cbProduto.SelectedValue).FirstOrDefault().Quantidade;
+
+            if (cbProduto.SelectedValue == null)
+            {
+                errorProvider1.SetError(cbProduto, "Campo obrigatório!");
+                Verific = false;
+            }
+            if (ndpQuantidade.Value == 0)
+            {
+                errorProvider1.SetError(ndpQuantidade, "Campo obrigatório!");
+                Verific = false;
+            }
+            else if ((float)ndpQuantidade.Value > QtdEstoque)
+            {
+                errorProvider1.SetError(ndpQuantidade, $"Quantidade informada maior que a quantidade em estoque!\nQuantidade restante: {QtdEstoque} Unidades.");
+                Verific = false;
+            }
+            else
+            {
+                foreach (var item in ListaProdutos)
+                {
+                    if (item.Id == (int)cbProduto.SelectedValue)
+                    {
+                        item.Quantidade = item.Quantidade - QtdProduto;
+                    }
+                }
+            }
+
+            return Verific;
         }
 
         private void FormPesquisa_Load(object sender, EventArgs e)
@@ -65,6 +100,7 @@ namespace ProjetoMTA.Components
         private void ndpQuantidade_ValueChanged(object sender, EventArgs e)
         {
             npdTotal.Value = npdValorUn.Value * ndpQuantidade.Value;
+            QtdProduto = (int)ndpQuantidade.Value;
         }
 
         private void cbProduto_SelectedIndexChanged(object sender, EventArgs e)

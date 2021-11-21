@@ -39,11 +39,11 @@ namespace ProjetoMTA.UI.Produto
             this.BtIncluir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Grid = new MetroFramework.Controls.MetroGrid();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ValorUn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PainelOpcao.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
@@ -158,7 +158,7 @@ namespace ProjetoMTA.UI.Produto
             this.Id,
             this.Nome,
             this.Quantidade,
-            this.ValorUni});
+            this.ValorUn});
             this.Grid.DataSource = this.bindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -213,13 +213,13 @@ namespace ProjetoMTA.UI.Produto
             this.Quantidade.Name = "Quantidade";
             this.Quantidade.ReadOnly = true;
             // 
-            // ValorUni
+            // ValorUn
             // 
-            this.ValorUni.DataPropertyName = "ValorUni";
-            this.ValorUni.FillWeight = 99.49239F;
-            this.ValorUni.HeaderText = "Valor Unitario";
-            this.ValorUni.Name = "ValorUni";
-            this.ValorUni.ReadOnly = true;
+            this.ValorUn.DataPropertyName = "ValorUn";
+            this.ValorUn.FillWeight = 99.49239F;
+            this.ValorUn.HeaderText = "Valor Unitario";
+            this.ValorUn.Name = "ValorUn";
+            this.ValorUn.ReadOnly = true;
             // 
             // FormProdutoConsulta
             // 
@@ -255,6 +255,6 @@ namespace ProjetoMTA.UI.Produto
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorUn;
     }
 }

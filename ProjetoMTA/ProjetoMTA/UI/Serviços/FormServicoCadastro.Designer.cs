@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.npdValorPago = new System.Windows.Forms.NumericUpDown();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -88,35 +88,31 @@
             this.groupBox1.Controls.Add(this.DtServico);
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(36, 91);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(27, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(744, 580);
+            this.groupBox1.Size = new System.Drawing.Size(558, 471);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             // 
             // npdValorPago
             // 
             this.npdValorPago.DecimalPlaces = 2;
-            this.npdValorPago.Location = new System.Drawing.Point(647, 524);
-            this.npdValorPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.npdValorPago.Location = new System.Drawing.Point(479, 426);
             this.npdValorPago.Maximum = new decimal(new int[] {
             1316134912,
             2328,
             0,
             0});
             this.npdValorPago.Name = "npdValorPago";
-            this.npdValorPago.Size = new System.Drawing.Size(95, 22);
+            this.npdValorPago.Size = new System.Drawing.Size(71, 20);
             this.npdValorPago.TabIndex = 54;
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(545, 524);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(399, 426);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(76, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(75, 19);
             this.metroLabel4.TabIndex = 53;
             this.metroLabel4.Text = "Valor Pago:";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -128,24 +124,22 @@
             // 
             this.npdTotal.DecimalPlaces = 2;
             this.npdTotal.Enabled = false;
-            this.npdTotal.Location = new System.Drawing.Point(429, 524);
-            this.npdTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.npdTotal.Location = new System.Drawing.Point(312, 426);
             this.npdTotal.Maximum = new decimal(new int[] {
             -1486618624,
             232830643,
             0,
             0});
             this.npdTotal.Name = "npdTotal";
-            this.npdTotal.Size = new System.Drawing.Size(95, 22);
+            this.npdTotal.Size = new System.Drawing.Size(71, 20);
             this.npdTotal.TabIndex = 52;
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(325, 524);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel6.Location = new System.Drawing.Point(234, 426);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(74, 20);
+            this.metroLabel6.Size = new System.Drawing.Size(72, 19);
             this.metroLabel6.TabIndex = 51;
             this.metroLabel6.Text = "Valor Total:";
             this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -156,25 +150,23 @@
             // npdValorOS
             // 
             this.npdValorOS.DecimalPlaces = 2;
-            this.npdValorOS.Location = new System.Drawing.Point(201, 524);
-            this.npdValorOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.npdValorOS.Location = new System.Drawing.Point(148, 426);
             this.npdValorOS.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
             this.npdValorOS.Name = "npdValorOS";
-            this.npdValorOS.Size = new System.Drawing.Size(95, 22);
+            this.npdValorOS.Size = new System.Drawing.Size(71, 20);
             this.npdValorOS.TabIndex = 50;
             this.npdValorOS.ValueChanged += new System.EventHandler(this.npdValorOS_ValueChanged);
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(25, 524);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(16, 426);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(128, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(126, 19);
             this.metroLabel5.TabIndex = 49;
             this.metroLabel5.Text = "Valor Mão de Obra:";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -188,20 +180,17 @@
             this.groupBox2.Controls.Add(this.btAdicionar);
             this.groupBox2.Controls.Add(this.btExcluirProduto);
             this.groupBox2.Controls.Add(this.Grid);
-            this.groupBox2.Location = new System.Drawing.Point(21, 197);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(16, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(720, 303);
+            this.groupBox2.Size = new System.Drawing.Size(526, 246);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             // 
             // btAdicionar
             // 
-            this.btAdicionar.Location = new System.Drawing.Point(380, 255);
-            this.btAdicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAdicionar.Location = new System.Drawing.Point(271, 207);
             this.btAdicionar.Name = "btAdicionar";
-            this.btAdicionar.Size = new System.Drawing.Size(160, 37);
+            this.btAdicionar.Size = new System.Drawing.Size(120, 30);
             this.btAdicionar.TabIndex = 45;
             this.btAdicionar.Text = "Adicionar Produto";
             this.btAdicionar.UseSelectable = true;
@@ -211,10 +200,9 @@
             // 
             this.btExcluirProduto.BackColor = System.Drawing.Color.Transparent;
             this.btExcluirProduto.ForeColor = System.Drawing.Color.Transparent;
-            this.btExcluirProduto.Location = new System.Drawing.Point(548, 255);
-            this.btExcluirProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btExcluirProduto.Location = new System.Drawing.Point(397, 207);
             this.btExcluirProduto.Name = "btExcluirProduto";
-            this.btExcluirProduto.Size = new System.Drawing.Size(164, 37);
+            this.btExcluirProduto.Size = new System.Drawing.Size(123, 30);
             this.btExcluirProduto.TabIndex = 44;
             this.btExcluirProduto.Text = "Excluir Produto";
             this.btExcluirProduto.UseSelectable = true;
@@ -229,14 +217,14 @@
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeProduto,
@@ -245,34 +233,33 @@
             this.ValorTotal});
             this.Grid.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Grid.DataSource = this.bindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Top;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Grid.GridColor = System.Drawing.Color.White;
-            this.Grid.Location = new System.Drawing.Point(4, 19);
-            this.Grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Grid.Location = new System.Drawing.Point(3, 16);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Grid.RowHeadersWidth = 51;
             this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(712, 228);
+            this.Grid.Size = new System.Drawing.Size(520, 185);
             this.Grid.TabIndex = 5;
             this.Grid.UseCustomBackColor = true;
             this.Grid.UseCustomForeColor = true;
@@ -312,22 +299,20 @@
             // cbMecanico
             // 
             this.cbMecanico.FormattingEnabled = true;
-            this.cbMecanico.ItemHeight = 24;
-            this.cbMecanico.Location = new System.Drawing.Point(545, 140);
-            this.cbMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMecanico.ItemHeight = 23;
+            this.cbMecanico.Location = new System.Drawing.Point(386, 114);
             this.cbMecanico.MaxDropDownItems = 10;
             this.cbMecanico.Name = "cbMecanico";
-            this.cbMecanico.Size = new System.Drawing.Size(191, 30);
+            this.cbMecanico.Size = new System.Drawing.Size(140, 29);
             this.cbMecanico.TabIndex = 33;
             this.cbMecanico.UseSelectable = true;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(545, 113);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(386, 92);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(72, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 32;
             this.metroLabel3.Text = "Mecanico:";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -338,12 +323,11 @@
             // cbCliente
             // 
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.ItemHeight = 24;
-            this.cbCliente.Location = new System.Drawing.Point(21, 140);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCliente.ItemHeight = 23;
+            this.cbCliente.Location = new System.Drawing.Point(16, 114);
             this.cbCliente.MaxDropDownItems = 10;
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(191, 30);
+            this.cbCliente.Size = new System.Drawing.Size(144, 29);
             this.cbCliente.TabIndex = 31;
             this.cbCliente.UseSelectable = true;
             this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
@@ -351,10 +335,9 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(21, 113);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(16, 92);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(55, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(52, 19);
             this.metroLabel2.TabIndex = 30;
             this.metroLabel2.Text = "Cliente:";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -365,22 +348,20 @@
             // cbEquipamento
             // 
             this.cbEquipamento.FormattingEnabled = true;
-            this.cbEquipamento.ItemHeight = 24;
-            this.cbEquipamento.Location = new System.Drawing.Point(283, 140);
-            this.cbEquipamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEquipamento.ItemHeight = 23;
+            this.cbEquipamento.Location = new System.Drawing.Point(198, 114);
             this.cbEquipamento.MaxDropDownItems = 10;
             this.cbEquipamento.Name = "cbEquipamento";
-            this.cbEquipamento.Size = new System.Drawing.Size(203, 30);
+            this.cbEquipamento.Size = new System.Drawing.Size(151, 29);
             this.cbEquipamento.TabIndex = 29;
             this.cbEquipamento.UseSelectable = true;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(283, 113);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(198, 92);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(57, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(53, 19);
             this.metroLabel1.TabIndex = 28;
             this.metroLabel1.Text = "Veiculo:";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -392,20 +373,18 @@
             // 
             this.DtServico.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtServico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtServico.Location = new System.Drawing.Point(21, 58);
-            this.DtServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DtServico.MinimumSize = new System.Drawing.Size(0, 30);
+            this.DtServico.Location = new System.Drawing.Point(16, 47);
+            this.DtServico.MinimumSize = new System.Drawing.Size(0, 29);
             this.DtServico.Name = "DtServico";
-            this.DtServico.Size = new System.Drawing.Size(159, 30);
+            this.DtServico.Size = new System.Drawing.Size(106, 29);
             this.DtServico.TabIndex = 27;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(21, 20);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(16, 16);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(110, 20);
+            this.lblNome.Size = new System.Drawing.Size(106, 19);
             this.lblNome.TabIndex = 26;
             this.lblNome.Text = "Data do Serviço:";
             this.lblNome.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -415,10 +394,9 @@
             // 
             // btGravarContinuar
             // 
-            this.btGravarContinuar.Location = new System.Drawing.Point(309, 661);
-            this.btGravarContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btGravarContinuar.Location = new System.Drawing.Point(225, 551);
             this.btGravarContinuar.Name = "btGravarContinuar";
-            this.btGravarContinuar.Size = new System.Drawing.Size(173, 55);
+            this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
             this.btGravarContinuar.TabIndex = 52;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
@@ -426,10 +404,9 @@
             // 
             // BtGravar
             // 
-            this.BtGravar.Location = new System.Drawing.Point(491, 661);
-            this.BtGravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtGravar.Location = new System.Drawing.Point(361, 551);
             this.BtGravar.Name = "BtGravar";
-            this.BtGravar.Size = new System.Drawing.Size(145, 55);
+            this.BtGravar.Size = new System.Drawing.Size(109, 45);
             this.BtGravar.TabIndex = 51;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
@@ -439,10 +416,9 @@
             // 
             this.btCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btCancelar.Location = new System.Drawing.Point(644, 661);
-            this.btCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCancelar.Location = new System.Drawing.Point(476, 551);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(145, 55);
+            this.btCancelar.Size = new System.Drawing.Size(109, 45);
             this.btCancelar.TabIndex = 50;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
@@ -454,16 +430,16 @@
             // 
             // FormServicoCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 731);
+            this.ClientSize = new System.Drawing.Size(612, 609);
             this.Controls.Add(this.btGravarContinuar);
             this.Controls.Add(this.BtGravar);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormServicoCadastro";
-            this.Padding = new System.Windows.Forms.Padding(36, 91, 36, 31);
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Load += new System.EventHandler(this.FormServicoCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -115,7 +115,7 @@ namespace ProjetoMTA.UI.Produto
             errorProvider1.Clear();
             if (string.IsNullOrEmpty(txtNome.Text))
             {
-                errorProvider1.SetError(txtNome, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtNome, "Campo obrigatório!!");
                 Valido = false;
             }
             if (ndValorUn.Value < 0)
@@ -125,7 +125,7 @@ namespace ProjetoMTA.UI.Produto
             }
             if (ndValorUn.Value == 0)
             {
-                errorProvider1.SetError(ndValorUn, "Campo Obrigatorio!!");
+                errorProvider1.SetError(ndValorUn, "Campo obrigatório!!");
                 Valido = false;
             }
             if (ndQuantidade.Value < 0)
@@ -135,7 +135,7 @@ namespace ProjetoMTA.UI.Produto
             }
             if (ndQuantidade.Value == 0)
             {
-                errorProvider1.SetError(ndQuantidade, "Campo Obrigatorio!!");
+                errorProvider1.SetError(ndQuantidade, "Campo obrigatório!!");
                 Valido = false;
             }
 

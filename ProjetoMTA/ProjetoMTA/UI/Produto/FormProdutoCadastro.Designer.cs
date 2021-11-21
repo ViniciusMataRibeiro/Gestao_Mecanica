@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.ndValorUn = new System.Windows.Forms.NumericUpDown();
             this.lblContagemObservacao = new System.Windows.Forms.Label();
             this.txtObservacao = new ProjetoMTA.Components.OFTextBox(this.components);
@@ -43,7 +44,6 @@
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ndValorUn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ndQuantidade)).BeginInit();
@@ -69,6 +69,19 @@
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(360, 74);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(28, 19);
+            this.metroLabel3.TabIndex = 45;
+            this.metroLabel3.Text = "Un.";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel3.UseCustomBackColor = true;
+            this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel3.UseStyleColors = true;
+            // 
             // ndValorUn
             // 
             this.ndValorUn.DecimalPlaces = 2;
@@ -85,7 +98,7 @@
             // lblContagemObservacao
             // 
             this.lblContagemObservacao.AutoSize = true;
-            this.lblContagemObservacao.Location = new System.Drawing.Point(340, 113);
+            this.lblContagemObservacao.Location = new System.Drawing.Point(348, 113);
             this.lblContagemObservacao.Name = "lblContagemObservacao";
             this.lblContagemObservacao.Size = new System.Drawing.Size(48, 13);
             this.lblContagemObservacao.TabIndex = 43;
@@ -100,7 +113,7 @@
             this.txtObservacao.SaveLayout = false;
             this.txtObservacao.SetTag = null;
             this.txtObservacao.SetText = null;
-            this.txtObservacao.Size = new System.Drawing.Size(374, 75);
+            this.txtObservacao.Size = new System.Drawing.Size(382, 75);
             this.txtObservacao.TabIndex = 42;
             this.txtObservacao.Text = "OFTextBox";
             this.txtObservacao.Tipo_Controle = ProjetoMTA.Components.OFTextBox.TipoControle.texto;
@@ -150,7 +163,7 @@
             // 
             // 
             this.txtNome.CustomButton.Image = null;
-            this.txtNome.CustomButton.Location = new System.Drawing.Point(297, 1);
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(305, 1);
             this.txtNome.CustomButton.Name = "";
             this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -168,7 +181,7 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(319, 23);
+            this.txtNome.Size = new System.Drawing.Size(327, 23);
             this.txtNome.TabIndex = 25;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -235,19 +248,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(360, 74);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(28, 19);
-            this.metroLabel3.TabIndex = 45;
-            this.metroLabel3.Text = "Un.";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel3.UseCustomBackColor = true;
-            this.metroLabel3.UseCustomForeColor = true;
-            this.metroLabel3.UseStyleColors = true;
             // 
             // FormProdutoCadastro
             // 

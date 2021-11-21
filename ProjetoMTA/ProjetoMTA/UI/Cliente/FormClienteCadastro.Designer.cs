@@ -303,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 282);
+            this.ClientSize = new System.Drawing.Size(543, 278);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btGravarContinuar);
             this.Controls.Add(this.BtGravar);

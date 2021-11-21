@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.npdTotal = new System.Windows.Forms.NumericUpDown();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -38,10 +39,12 @@
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.cbProduto = new System.Windows.Forms.ComboBox();
             this.btAdicionar = new MetroFramework.Controls.MetroButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -172,6 +175,10 @@
             this.btAdicionar.UseSelectable = true;
             this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.npdTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdValorUn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ndpQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +211,6 @@
         private System.Windows.Forms.NumericUpDown ndpQuantidade;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btAdicionar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

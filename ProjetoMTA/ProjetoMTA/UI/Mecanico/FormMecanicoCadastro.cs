@@ -102,19 +102,19 @@ namespace ProjetoMTA.UI.Mecanico
             errorProvider1.Clear();
             if (string.IsNullOrEmpty(txtNome.Text))
             {
-                errorProvider1.SetError(txtNome, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtNome, "Campo obrigatório!!");
                 Valido = false;
             }
             var Cpf = txtCpf.Text.Replace(',', ' ').Replace('-', ' ').Trim();
             if (string.IsNullOrEmpty(Cpf))
             {
-                errorProvider1.SetError(txtCpf, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtCpf, "Campo obrigatório!!");
                 Valido = false;
             }
             var telefone = txtTelefone.Text.Replace('(', ' ').Replace(')', ' ').Replace('-', ' ').Trim();
             if (string.IsNullOrEmpty(telefone))
             {
-                errorProvider1.SetError(txtTelefone, "Campo Obrigatorio!!");
+                errorProvider1.SetError(txtTelefone, "Campo obrigatório!!");
                 Valido = false;
             }
             
