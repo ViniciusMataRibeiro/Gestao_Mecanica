@@ -13,7 +13,7 @@ namespace DataBase.Dto
         public string NomeCliente { get; set; }
         public string NomeVeiculo { get; set; }
         public string NomeMecanico { get; set; }
-        public string DataManutencao { get; set; }
+        public DateTime DataManutencao { get; set; }
         public string ValorTotal { get; set; }
         public string ValorPago { get; set; }
 
@@ -27,7 +27,8 @@ namespace DataBase.Dto
                                                                             from Servico s
                                                                             inner join Mecanico m on m.Id = s.IdMecanico
                                                                             inner join Veiculo v on v.Id = s.IdVeiculo
-                                                                            inner join Cliente c on c.Id = v.idCliente");
+                                                                            inner join Cliente c on c.Id = v.idCliente
+                                                                            order by c.nome ASC");
             }
         }
 
@@ -41,7 +42,8 @@ namespace DataBase.Dto
                                                                             inner join Mecanico m on m.Id = s.IdMecanico
                                                                             inner join Veiculo v on v.Id = s.IdVeiculo
                                                                             inner join Cliente c on c.Id = v.idCliente
-                                                                            where c.Id = {IdCliente}");
+                                                                            where c.Id = {IdCliente}
+                                                                            order by c.nome ASC");
             }
         }
     }

@@ -62,7 +62,7 @@ namespace ProjetoMTA.UI.Relatorio
             this.ClientSize = new System.Drawing.Size(147, 79);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRelatorioFiltro";
