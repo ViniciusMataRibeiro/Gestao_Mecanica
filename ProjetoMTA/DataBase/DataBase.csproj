@@ -63,6 +63,7 @@
     <Compile Include="Dto\MecanicoDto.cs" />
     <Compile Include="Dto\ProdutoDto.cs" />
     <Compile Include="Dto\Produto_Servico.cs" />
+    <Compile Include="Dto\RelatorioDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dto\ServicoDto.cs" />
     <Compile Include="Dto\VeiculoDto.cs" />

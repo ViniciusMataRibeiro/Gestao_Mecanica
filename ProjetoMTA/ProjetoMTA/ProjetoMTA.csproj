@@ -146,6 +146,18 @@
     <Compile Include="UI\Produto\FormProdutoConsulta.Designer.cs">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Relatorio\FormFiltroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Relatorio\FormFiltroCliente.Designer.cs">
+      <DependentUpon>FormFiltroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Relatorio\FormRelatorioFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Relatorio\FormRelatorioFiltro.Designer.cs">
+      <DependentUpon>FormRelatorioFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Serviços\FormServicoCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Produto\FormProdutoConsulta.resx">
       <DependentUpon>FormProdutoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Relatorio\FormFiltroCliente.resx">
+      <DependentUpon>FormFiltroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Relatorio\FormRelatorioFiltro.resx">
+      <DependentUpon>FormRelatorioFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Serviços\FormServicoCadastro.resx">
       <DependentUpon>FormServicoCadastro.cs</DependentUpon>
