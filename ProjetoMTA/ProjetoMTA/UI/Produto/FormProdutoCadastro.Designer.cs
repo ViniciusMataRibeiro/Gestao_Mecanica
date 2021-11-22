@@ -93,7 +93,7 @@
             0});
             this.ndValorUn.Name = "ndValorUn";
             this.ndValorUn.Size = new System.Drawing.Size(79, 20);
-            this.ndValorUn.TabIndex = 44;
+            this.ndValorUn.TabIndex = 2;
             // 
             // lblContagemObservacao
             // 
@@ -114,7 +114,7 @@
             this.txtObservacao.SetTag = null;
             this.txtObservacao.SetText = null;
             this.txtObservacao.Size = new System.Drawing.Size(382, 75);
-            this.txtObservacao.TabIndex = 42;
+            this.txtObservacao.TabIndex = 5;
             this.txtObservacao.Text = "OFTextBox";
             this.txtObservacao.Tipo_Controle = ProjetoMTA.Components.OFTextBox.TipoControle.texto;
             this.txtObservacao.TextChanged += new System.EventHandler(this.txtObservacao_TextChanged);
@@ -155,7 +155,7 @@
             0});
             this.ndQuantidade.Name = "ndQuantidade";
             this.ndQuantidade.Size = new System.Drawing.Size(74, 20);
-            this.ndQuantidade.TabIndex = 37;
+            this.ndQuantidade.TabIndex = 4;
             // 
             // txtNome
             // 
@@ -182,7 +182,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(327, 23);
-            this.txtNome.TabIndex = 25;
+            this.txtNome.TabIndex = 1;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -218,7 +218,7 @@
             this.btGravarContinuar.Location = new System.Drawing.Point(73, 284);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 40;
+            this.btGravarContinuar.TabIndex = 6;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
             this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
@@ -228,7 +228,7 @@
             this.BtGravar.Location = new System.Drawing.Point(209, 284);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 39;
+            this.BtGravar.TabIndex = 7;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
@@ -240,7 +240,7 @@
             this.btCancelar.Location = new System.Drawing.Point(324, 284);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 38;
+            this.btCancelar.TabIndex = 8;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

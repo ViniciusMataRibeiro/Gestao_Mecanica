@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.npdValorPago = new System.Windows.Forms.NumericUpDown();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -105,7 +105,7 @@
             0});
             this.npdValorPago.Name = "npdValorPago";
             this.npdValorPago.Size = new System.Drawing.Size(71, 20);
-            this.npdValorPago.TabIndex = 54;
+            this.npdValorPago.TabIndex = 10;
             // 
             // metroLabel4
             // 
@@ -132,7 +132,7 @@
             0});
             this.npdTotal.Name = "npdTotal";
             this.npdTotal.Size = new System.Drawing.Size(71, 20);
-            this.npdTotal.TabIndex = 52;
+            this.npdTotal.TabIndex = 9;
             // 
             // metroLabel6
             // 
@@ -158,7 +158,7 @@
             0});
             this.npdValorOS.Name = "npdValorOS";
             this.npdValorOS.Size = new System.Drawing.Size(71, 20);
-            this.npdValorOS.TabIndex = 50;
+            this.npdValorOS.TabIndex = 8;
             this.npdValorOS.ValueChanged += new System.EventHandler(this.npdValorOS_ValueChanged);
             // 
             // metroLabel5
@@ -191,7 +191,7 @@
             this.btAdicionar.Location = new System.Drawing.Point(271, 207);
             this.btAdicionar.Name = "btAdicionar";
             this.btAdicionar.Size = new System.Drawing.Size(120, 30);
-            this.btAdicionar.TabIndex = 45;
+            this.btAdicionar.TabIndex = 6;
             this.btAdicionar.Text = "Adicionar Produto";
             this.btAdicionar.UseSelectable = true;
             this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
@@ -203,7 +203,7 @@
             this.btExcluirProduto.Location = new System.Drawing.Point(397, 207);
             this.btExcluirProduto.Name = "btExcluirProduto";
             this.btExcluirProduto.Size = new System.Drawing.Size(123, 30);
-            this.btExcluirProduto.TabIndex = 44;
+            this.btExcluirProduto.TabIndex = 7;
             this.btExcluirProduto.Text = "Excluir Produto";
             this.btExcluirProduto.UseSelectable = true;
             this.btExcluirProduto.Click += new System.EventHandler(this.btExcluirProduto_Click);
@@ -217,14 +217,14 @@
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeProduto,
@@ -233,14 +233,14 @@
             this.ValorTotal});
             this.Grid.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Grid.DataSource = this.bindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Top;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -248,14 +248,14 @@
             this.Grid.Location = new System.Drawing.Point(3, 16);
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Grid.RowHeadersWidth = 51;
             this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -304,7 +304,7 @@
             this.cbMecanico.MaxDropDownItems = 10;
             this.cbMecanico.Name = "cbMecanico";
             this.cbMecanico.Size = new System.Drawing.Size(140, 29);
-            this.cbMecanico.TabIndex = 33;
+            this.cbMecanico.TabIndex = 4;
             this.cbMecanico.UseSelectable = true;
             // 
             // metroLabel3
@@ -328,7 +328,7 @@
             this.cbCliente.MaxDropDownItems = 10;
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(144, 29);
-            this.cbCliente.TabIndex = 31;
+            this.cbCliente.TabIndex = 2;
             this.cbCliente.UseSelectable = true;
             this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
             // 
@@ -353,7 +353,7 @@
             this.cbEquipamento.MaxDropDownItems = 10;
             this.cbEquipamento.Name = "cbEquipamento";
             this.cbEquipamento.Size = new System.Drawing.Size(151, 29);
-            this.cbEquipamento.TabIndex = 29;
+            this.cbEquipamento.TabIndex = 3;
             this.cbEquipamento.UseSelectable = true;
             // 
             // metroLabel1
@@ -377,7 +377,7 @@
             this.DtServico.MinimumSize = new System.Drawing.Size(0, 29);
             this.DtServico.Name = "DtServico";
             this.DtServico.Size = new System.Drawing.Size(106, 29);
-            this.DtServico.TabIndex = 27;
+            this.DtServico.TabIndex = 1;
             // 
             // lblNome
             // 
@@ -397,7 +397,7 @@
             this.btGravarContinuar.Location = new System.Drawing.Point(225, 551);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 52;
+            this.btGravarContinuar.TabIndex = 11;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
             this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
@@ -407,7 +407,7 @@
             this.BtGravar.Location = new System.Drawing.Point(361, 551);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 51;
+            this.BtGravar.TabIndex = 12;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
@@ -419,7 +419,7 @@
             this.btCancelar.Location = new System.Drawing.Point(476, 551);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 50;
+            this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

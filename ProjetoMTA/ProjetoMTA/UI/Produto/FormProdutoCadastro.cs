@@ -70,6 +70,7 @@ namespace ProjetoMTA.UI.Produto
                 return;
             try
             {
+                LerDados(false);
                 CriarNovo = Gravou = produtoDto.Insert(Dto, GetConnectionString());
                 if (Gravou)
                 {

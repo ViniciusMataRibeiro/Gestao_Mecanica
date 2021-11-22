@@ -97,7 +97,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(210, 23);
-            this.txtNome.TabIndex = 40;
+            this.txtNome.TabIndex = 1;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -108,7 +108,7 @@
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(99, 20);
-            this.txtCpf.TabIndex = 51;
+            this.txtCpf.TabIndex = 3;
             // 
             // lblNome
             // 
@@ -129,7 +129,7 @@
             this.txtTelefone.Mask = "(00)0 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(98, 20);
-            this.txtTelefone.TabIndex = 45;
+            this.txtTelefone.TabIndex = 2;
             // 
             // metroLabel3
             // 
@@ -149,7 +149,7 @@
             this.btGravarContinuar.Location = new System.Drawing.Point(20, 226);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 43;
+            this.btGravarContinuar.TabIndex = 4;
             this.btGravarContinuar.Text = "Gravar e Continuar";
             this.btGravarContinuar.UseSelectable = true;
             this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
@@ -159,7 +159,7 @@
             this.BtGravar.Location = new System.Drawing.Point(159, 226);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 42;
+            this.BtGravar.TabIndex = 5;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
@@ -171,7 +171,7 @@
             this.btCancelar.Location = new System.Drawing.Point(274, 226);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 41;
+            this.btCancelar.TabIndex = 6;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

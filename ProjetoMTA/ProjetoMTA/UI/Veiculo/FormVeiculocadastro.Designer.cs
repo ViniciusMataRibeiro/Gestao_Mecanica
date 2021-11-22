@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMarca = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
             this.txtModelo = new MetroFramework.Controls.MetroTextBox();
             this.lblMarca = new MetroFramework.Controls.MetroLabel();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
@@ -38,9 +41,6 @@
             this.btGravarContinuar = new MetroFramework.Controls.MetroButton();
             this.BtGravar = new MetroFramework.Controls.MetroButton();
             this.btCancelar = new MetroFramework.Controls.MetroButton();
-            this.cbCliente = new System.Windows.Forms.ComboBox();
-            this.txtMarca = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -62,6 +62,59 @@
             this.groupBox1.Size = new System.Drawing.Size(506, 118);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
+            // 
+            // txtMarca
+            // 
+            // 
+            // 
+            // 
+            this.txtMarca.CustomButton.Image = null;
+            this.txtMarca.CustomButton.Location = new System.Drawing.Point(154, 1);
+            this.txtMarca.CustomButton.Name = "";
+            this.txtMarca.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtMarca.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMarca.CustomButton.TabIndex = 1;
+            this.txtMarca.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMarca.CustomButton.UseSelectable = true;
+            this.txtMarca.CustomButton.Visible = false;
+            this.txtMarca.Lines = new string[0];
+            this.txtMarca.Location = new System.Drawing.Point(310, 70);
+            this.txtMarca.MaxLength = 32767;
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.PasswordChar = '\0';
+            this.txtMarca.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMarca.SelectedText = "";
+            this.txtMarca.SelectionLength = 0;
+            this.txtMarca.SelectionStart = 0;
+            this.txtMarca.ShortcutsEnabled = true;
+            this.txtMarca.Size = new System.Drawing.Size(176, 23);
+            this.txtMarca.TabIndex = 4;
+            this.txtMarca.UseSelectable = true;
+            this.txtMarca.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMarca.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(246, 72);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel1.TabIndex = 42;
+            this.metroLabel1.Text = "Marca:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel1.UseStyleColors = true;
+            this.metroLabel1.UseWaitCursor = true;
+            // 
+            // cbCliente
+            // 
+            this.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(80, 27);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(148, 21);
+            this.cbCliente.TabIndex = 1;
             // 
             // txtModelo
             // 
@@ -88,7 +141,7 @@
             this.txtModelo.SelectionStart = 0;
             this.txtModelo.ShortcutsEnabled = true;
             this.txtModelo.Size = new System.Drawing.Size(176, 23);
-            this.txtModelo.TabIndex = 40;
+            this.txtModelo.TabIndex = 2;
             this.txtModelo.UseSelectable = true;
             this.txtModelo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtModelo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -160,7 +213,7 @@
             this.txtPlaca.SelectionStart = 0;
             this.txtPlaca.ShortcutsEnabled = true;
             this.txtPlaca.Size = new System.Drawing.Size(148, 23);
-            this.txtPlaca.TabIndex = 33;
+            this.txtPlaca.TabIndex = 3;
             this.txtPlaca.UseSelectable = true;
             this.txtPlaca.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPlaca.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -170,7 +223,7 @@
             this.btGravarContinuar.Location = new System.Drawing.Point(166, 184);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 49;
+            this.btGravarContinuar.TabIndex = 5;
             this.btGravarContinuar.Text = "Gravar e Criar Novo";
             this.btGravarContinuar.UseSelectable = true;
             this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
@@ -180,7 +233,7 @@
             this.BtGravar.Location = new System.Drawing.Point(302, 184);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 48;
+            this.BtGravar.TabIndex = 6;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
@@ -192,63 +245,10 @@
             this.btCancelar.Location = new System.Drawing.Point(417, 184);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 47;
+            this.btCancelar.TabIndex = 7;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
-            // 
-            // cbCliente
-            // 
-            this.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(80, 27);
-            this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(148, 21);
-            this.cbCliente.TabIndex = 41;
-            // 
-            // txtMarca
-            // 
-            // 
-            // 
-            // 
-            this.txtMarca.CustomButton.Image = null;
-            this.txtMarca.CustomButton.Location = new System.Drawing.Point(154, 1);
-            this.txtMarca.CustomButton.Name = "";
-            this.txtMarca.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtMarca.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMarca.CustomButton.TabIndex = 1;
-            this.txtMarca.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMarca.CustomButton.UseSelectable = true;
-            this.txtMarca.CustomButton.Visible = false;
-            this.txtMarca.Lines = new string[0];
-            this.txtMarca.Location = new System.Drawing.Point(310, 70);
-            this.txtMarca.MaxLength = 32767;
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.PasswordChar = '\0';
-            this.txtMarca.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMarca.SelectedText = "";
-            this.txtMarca.SelectionLength = 0;
-            this.txtMarca.SelectionStart = 0;
-            this.txtMarca.ShortcutsEnabled = true;
-            this.txtMarca.Size = new System.Drawing.Size(176, 23);
-            this.txtMarca.TabIndex = 43;
-            this.txtMarca.UseSelectable = true;
-            this.txtMarca.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMarca.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(246, 72);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(49, 19);
-            this.metroLabel1.TabIndex = 42;
-            this.metroLabel1.Text = "Marca:";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.UseStyleColors = true;
-            this.metroLabel1.UseWaitCursor = true;
             // 
             // errorProvider1
             // 

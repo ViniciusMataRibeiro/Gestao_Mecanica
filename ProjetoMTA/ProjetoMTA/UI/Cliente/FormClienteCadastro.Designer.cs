@@ -96,7 +96,7 @@
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
             this.txtEmail.Size = new System.Drawing.Size(210, 23);
-            this.txtEmail.TabIndex = 40;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -139,7 +139,7 @@
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
             this.txtNome.Size = new System.Drawing.Size(210, 23);
-            this.txtNome.TabIndex = 25;
+            this.txtNome.TabIndex = 1;
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -150,7 +150,7 @@
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(99, 20);
-            this.txtCpf.TabIndex = 39;
+            this.txtCpf.TabIndex = 4;
             // 
             // metroLabel4
             // 
@@ -216,7 +216,7 @@
             this.txtEndereco.SelectionStart = 0;
             this.txtEndereco.ShortcutsEnabled = true;
             this.txtEndereco.Size = new System.Drawing.Size(210, 23);
-            this.txtEndereco.TabIndex = 33;
+            this.txtEndereco.TabIndex = 5;
             this.txtEndereco.UseSelectable = true;
             this.txtEndereco.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEndereco.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -240,7 +240,7 @@
             this.txtTelefone.Mask = "(00)0 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(98, 20);
-            this.txtTelefone.TabIndex = 32;
+            this.txtTelefone.TabIndex = 2;
             // 
             // txtRg
             // 
@@ -248,7 +248,7 @@
             this.txtRg.Mask = "CC.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(99, 20);
-            this.txtRg.TabIndex = 30;
+            this.txtRg.TabIndex = 6;
             // 
             // metroLabel3
             // 
@@ -268,7 +268,7 @@
             this.btGravarContinuar.Location = new System.Drawing.Point(163, 222);
             this.btGravarContinuar.Name = "btGravarContinuar";
             this.btGravarContinuar.Size = new System.Drawing.Size(130, 45);
-            this.btGravarContinuar.TabIndex = 44;
+            this.btGravarContinuar.TabIndex = 7;
             this.btGravarContinuar.Text = "Gravar e Criar Novo";
             this.btGravarContinuar.UseSelectable = true;
             this.btGravarContinuar.Click += new System.EventHandler(this.btGravarContinuar_Click);
@@ -278,7 +278,7 @@
             this.BtGravar.Location = new System.Drawing.Point(299, 222);
             this.BtGravar.Name = "BtGravar";
             this.BtGravar.Size = new System.Drawing.Size(109, 45);
-            this.BtGravar.TabIndex = 43;
+            this.BtGravar.TabIndex = 8;
             this.BtGravar.Text = "Gravar";
             this.BtGravar.UseSelectable = true;
             this.BtGravar.Click += new System.EventHandler(this.BtGravar_Click);
@@ -290,7 +290,7 @@
             this.btCancelar.Location = new System.Drawing.Point(414, 222);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(109, 45);
-            this.btCancelar.TabIndex = 42;
+            this.btCancelar.TabIndex = 9;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

@@ -41,7 +41,8 @@ namespace ProjetoMTA.Base
 
         public static string GetConnectionString()
         {
-            return "SERVER = DESKTOP-GGCE2TJ\\SQLEXPRESS;Database=MTA;UID=sa;PWD=123;";
+            return "SERVER = VINICIUSMR\\SQLEXPRESS;Database=MTA;UID=sa;PWD=8520;";
+            //return "SERVER = DESKTOP-GGCE2TJ\\SQLEXPRESS;Database=MTA;UID=sa;PWD=123;"; - Gabriel
         }
 
         public void InitGridBaseConsulta<T>(DataGridView grid)

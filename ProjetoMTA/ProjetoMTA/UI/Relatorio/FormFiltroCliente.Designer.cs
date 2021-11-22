@@ -45,7 +45,7 @@ namespace ProjetoMTA.UI.Relatorio
             this.cbCliente.MaxDropDownItems = 10;
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(144, 29);
-            this.cbCliente.TabIndex = 33;
+            this.cbCliente.TabIndex = 1;
             this.cbCliente.UseSelectable = true;
             // 
             // metroLabel2
@@ -67,7 +67,7 @@ namespace ProjetoMTA.UI.Relatorio
             this.BtImprimir.Location = new System.Drawing.Point(12, 122);
             this.BtImprimir.Name = "BtImprimir";
             this.BtImprimir.Size = new System.Drawing.Size(95, 35);
-            this.BtImprimir.TabIndex = 53;
+            this.BtImprimir.TabIndex = 2;
             this.BtImprimir.Text = "Imprimir";
             this.BtImprimir.UseSelectable = true;
             this.BtImprimir.Click += new System.EventHandler(this.BtImprimir_Click);
@@ -80,7 +80,7 @@ namespace ProjetoMTA.UI.Relatorio
             this.btCancelar.Location = new System.Drawing.Point(117, 122);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(95, 35);
-            this.btCancelar.TabIndex = 52;
+            this.btCancelar.TabIndex = 3;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseSelectable = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
