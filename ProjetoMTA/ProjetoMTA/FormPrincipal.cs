@@ -223,9 +223,13 @@ namespace ProjetoMTA
 
         private void btRelatorio_Click(object sender, EventArgs e)
         {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
             ActivateButton(sender);
-            btClose.Visible = true;
-            openChildForm(new FormRelatorioFiltro(), sender);
+            FormRelatorioFiltro frm = new FormRelatorioFiltro();
+            frm.ShowDialog();
+            frm.Dispose();
         }
     }
 }

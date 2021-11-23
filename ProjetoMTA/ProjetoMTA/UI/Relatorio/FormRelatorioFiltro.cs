@@ -13,7 +13,7 @@ using System.Drawing.Printing;
 
 namespace ProjetoMTA.UI.Relatorio
 {
-    public partial class FormRelatorioFiltro : FormBaseConsulta
+    public partial class FormRelatorioFiltro : MetroFramework.Forms.MetroForm
     {
         RelatorioDto relatorioDto;
 
@@ -22,6 +22,7 @@ namespace ProjetoMTA.UI.Relatorio
 
         public FormRelatorioFiltro()
         {
+            this.WindowState = FormWindowState.Normal;
             InitializeComponent();
         }
 
@@ -30,7 +31,7 @@ namespace ProjetoMTA.UI.Relatorio
         {
             relatorioDto = new RelatorioDto();
             Result = new List<RelatorioDto>();
-            Result = relatorioDto.GetAll(GetConnectionString());
+            Result = relatorioDto.GetAll("SERVER = VINICIUSMR\\SQLEXPRESS;Database=MTA;UID=sa;PWD=8520;");
 
             PrintDocument pd = new PrintDocument();
             pd.DocumentName = "";
@@ -152,7 +153,7 @@ namespace ProjetoMTA.UI.Relatorio
             {
                 relatorioDto = new RelatorioDto();
                 Result = new List<RelatorioDto>();
-                Result = relatorioDto.GetServicoCliente(Frm.IdCliente ,GetConnectionString());
+                Result = relatorioDto.GetServicoCliente(Frm.IdCliente , "SERVER = VINICIUSMR\\SQLEXPRESS;Database=MTA;UID=sa;PWD=8520;");
 
                 PrintDocument pd = new PrintDocument();
                 pd.DocumentName = "Serviços";
