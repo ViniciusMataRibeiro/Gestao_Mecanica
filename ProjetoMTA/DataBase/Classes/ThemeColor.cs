@@ -19,7 +19,13 @@ namespace DataBase.Classes
                                                                     "#DAA520",
                                                                     "#A020F0",
                                                                     "#00BFFF",
-                                                                    "#5C80BF"};
+                                                                    "#5C80BF",
+                                                                    "#00FF00",
+                                                                    "#00FFFF",
+                                                                    "#ADFF2F",
+                                                                    "#FF69B4",
+                                                                    "#D8BFD8",
+                                                                    "#FFFF00"};
         public static Color ChangeColorBrightness(Color color, double correctionFactor)
         {
             double red = color.R;
