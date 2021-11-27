@@ -16,7 +16,7 @@ Tópicos abordados:
 Código implementado por:
 * [Vinicius](https://github.com/ViniciusMataRibeiro)
 * [Gabriel](https://github.com/Gabriel-SRibeiro)
-* [Dayverson]
+* Dayverson
 
 #### Programas utilizados
 * [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
