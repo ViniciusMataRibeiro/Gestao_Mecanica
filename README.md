@@ -3,8 +3,8 @@
 Disciplina: __Linguagem e Técnicas de Programação II__</br>
 Professora: __Jaqueline Corrêa de Carvalho__</br>
 Linguagem utilizada: __C#__</br>
-NuGet ultilizado: Dapper.contrib
-framework ultilizado: Metro ui
+NuGet ultilizado: __Dapper.contrib__</br>
+framework ultilizado:  __Metro ui__</br>
 
 Tópicos abordados:
 - Tópico 1 – __Consultar__
