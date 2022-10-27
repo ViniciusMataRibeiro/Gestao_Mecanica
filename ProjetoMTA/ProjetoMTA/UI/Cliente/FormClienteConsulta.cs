@@ -16,6 +16,7 @@ namespace ProjetoMTA.UI.Cliente
 {
     public partial class FormClienteConsulta : FormBaseConsulta
     {
+
         ClienteDto clientedto;
         VeiculoDto veiculoDto;
         public FormClienteConsulta()
